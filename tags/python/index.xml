@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on Edi Liberato</title>
-    <link>https://examplesite.com/tags/python/</link>
+    <link>https://eddieliberato.github.io/tags/python/</link>
     <description>Recent content in python on Edi Liberato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://examplesite.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eddieliberato.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dovetail Guide</title>
-      <link>https://examplesite.com/blog/2019-04-01-dovetail-guide/</link>
+      <link>https://eddieliberato.github.io/blog/2019-04-01-dovetail-guide/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/blog/2019-04-01-dovetail-guide/</guid>
+      <guid>https://eddieliberato.github.io/blog/2019-04-01-dovetail-guide/</guid>
       <description>My take on dovetail guides. I designed this to be 3d printed and parametric.</description>
     </item>
     
     <item>
       <title>Kugelwellenhorn</title>
-      <link>https://examplesite.com/blog/2018-08-19-kugelwellenhorn/</link>
+      <link>https://eddieliberato.github.io/blog/2018-08-19-kugelwellenhorn/</link>
       <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/blog/2018-08-19-kugelwellenhorn/</guid>
+      <guid>https://eddieliberato.github.io/blog/2018-08-19-kugelwellenhorn/</guid>
       <description>I always have been intrigued by horns. Acctualy by passive devices in general, tunned mass dampers, RLC circuits, the anglepoise lamp to name a few.</description>
     </item>
     
     <item>
       <title>CD organizer</title>
-      <link>https://examplesite.com/blog/2018-08-18-cd-organizer/</link>
+      <link>https://eddieliberato.github.io/blog/2018-08-18-cd-organizer/</link>
       <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/blog/2018-08-18-cd-organizer/</guid>
+      <guid>https://eddieliberato.github.io/blog/2018-08-18-cd-organizer/</guid>
       <description>I had some old CDs lying around the house and I decided to organized them in a single place.</description>
     </item>
     
     <item>
       <title>Cadquery Turners Cube</title>
-      <link>https://examplesite.com/blog/2018-07-04-cadquery-turners-cube/</link>
+      <link>https://eddieliberato.github.io/blog/2018-07-04-cadquery-turners-cube/</link>
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/blog/2018-07-04-cadquery-turners-cube/</guid>
+      <guid>https://eddieliberato.github.io/blog/2018-07-04-cadquery-turners-cube/</guid>
       <description>Back in Brazil, during my machinist apprenticeship, one of the lathe tasks of the manual machining course was to make a turners cube.</description>
     </item>
     
     <item>
       <title>Cadquery Chess Set</title>
-      <link>https://examplesite.com/blog/2018-06-26-cadquery-chess-set/</link>
+      <link>https://eddieliberato.github.io/blog/2018-06-26-cadquery-chess-set/</link>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/blog/2018-06-26-cadquery-chess-set/</guid>
+      <guid>https://eddieliberato.github.io/blog/2018-06-26-cadquery-chess-set/</guid>
       <description>Recently I decided to join the 3d printing world, so I got me one cheap 3d printer kit and started having some fun.</description>
     </item>
     
