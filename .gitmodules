@@ -1,0 +1,3 @@
+[submodule "themes/livia"]
+	path = themes/livia
+	url = https://github.com/themefisher/liva-hugo.git
