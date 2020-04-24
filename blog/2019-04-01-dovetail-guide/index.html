@@ -5,9 +5,9 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this is meta description">
+  <meta name="description" content="3d printed parametric dovetail sawing guide for woodworking designed in cadquery">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.64.1" />
+  <meta name="generator" content="Hugo 0.69.1" />
 
   <!-- plugins -->
   
@@ -39,7 +39,7 @@
   <div class="container">
     
     <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom">
-      <a class="navbar-brand mobile-view" href="https://eddieliberato.github.io/"><img class="img-fluid"
+      <a class="navbar-brand mobile-view" href="https://eddieliberato.github.io"><img class="img-fluid"
           src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
         <i class="ti-menu h3"></i>
@@ -54,10 +54,6 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="https://www.instagram.com/eddieliberato/"><i class="ti-instagram"></i></a>
-            </li>
-            
-            <li class="nav-item">
               <a class="nav-link" href="https://github.com/eddieliberato"><i class="ti-github"></i></a>
             </li>
             
@@ -68,23 +64,17 @@
           </ul>
         </div>
 
-        <a class="navbar-brand mx-auto desktop-view" href="https://eddieliberato.github.io/"><img class="img-fluid"
+        <a class="navbar-brand mx-auto desktop-view" href="https://eddieliberato.github.io"><img class="img-fluid"
             src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
 
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="https://eddieliberato.github.io/"></a>
+            <a class="nav-link" href="https://eddieliberato.github.io"></a>
           </li>
           
           
           <li class="nav-item">
-            <a class="nav-link" href="https://eddieliberato.github.io/about/about">About</a>
-          </li>
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="https://eddieliberato.github.io/blog">Posts</a>
+            <a class="nav-link" href="https://eddieliberato.github.io/about">About</a>
           </li>
           
           
@@ -95,7 +85,7 @@
         <div class="search px-4">
           <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
           <div class="search-wrapper">
-            <form action="https://eddieliberato.github.io//search" class="h-100">
+            <form action="https://eddieliberato.github.io/search" class="h-100">
               <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
             </form>
             <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
@@ -130,30 +120,53 @@
         <img src="https://eddieliberato.github.io/images/post/dovetail_guide.png" class="img-fluid w-100 mb-4" alt="Dovetail Guide">
         
         <div class="content mb-5">
-          <p>My take on dovetail guides. I designed this to be 3d printed and parametric. Using parametric design makes it very easy to tune the dovetail ratio. Higher ratios (e.g 1:8) are good for hard woods and lower ratios (e.g. 1:5) are better suited for soft woods.</p>
-<p>I was inspired by <a href="http://www.davidbarronfurniture.co.uk/" title="David Barron website">David Barron</a>, so the ideia is the same, magnets holds the saw in position and this should make the dovetail cutting process easier for woodworking hobbyists like me.</p>
+          <p>This is my take on dovetail guides, I designed this to be 3d printed and parametric. Using parametric design makes it very easy to tune the dovetail ratio and to fit different magnets that one may have at hand. Higher ratios (e.g 1:8) are good for hard woods and lower ratios (e.g. 1:5) are better suited for soft woods.</p>
+<p>I was inspired by <a href="http://www.davidbarronfurniture.co.uk/" title="David Barron website">David Barron</a> and as seen is his videos, the simple jig works with magnets that holds the saw in position. This makes the dovetail cutting process easier for woodworking hobbyists like me.</p>
+<p>A 45° jig can also be easily made by using a ratio of 1:2. However the script crashes if you use an integer or &ldquo;2.0&rdquo; because you don&rsquo;t have a rectangle anymore but an edge. A quick walk around is to use a float like &ldquo;2.0001&rdquo;. Not very elegant but gets the job done.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
 
-size <span style="color:#f92672">=</span> <span style="color:#ae81ff">50.0</span>         <span style="color:#75715e">#mm</span>
-ratio <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.0</span>         <span style="color:#75715e">#dovetail ratio e.g. 1:6</span>
-magtab <span style="color:#f92672">=</span> <span style="color:#ae81ff">20.0</span>       <span style="color:#75715e">#thickness of the magnet tab</span>
-backtab <span style="color:#f92672">=</span> <span style="color:#ae81ff">20.0</span>      <span style="color:#75715e">#thickness of the back tab</span>
-width <span style="color:#f92672">=</span> <span style="color:#ae81ff">40.0</span>
-magnet_dia <span style="color:#f92672">=</span> <span style="color:#ae81ff">14.3</span>
-magthick <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.0</span>
+<span style="color:#75715e"># A simple dovetail saw guide for woodworking </span>
 
+size <span style="color:#f92672">=</span> <span style="color:#ae81ff">45.0</span>                      <span style="color:#75715e"># mm, size of the blank </span>
+ratio <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.0</span>                      <span style="color:#75715e"># dovetail ratio e.g. 1:6</span>
+tab_top <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>                   <span style="color:#75715e"># mm, thickness of the top tab</span>
+tab_back <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>                  <span style="color:#75715e"># mm, thickness of the back tab</span>
+magnet_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.2</span>           <span style="color:#75715e"># mm</span>
+magnet_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.0</span>          <span style="color:#75715e"># mm </span>
+magnet_spacing_between <span style="color:#f92672">=</span> <span style="color:#ae81ff">24.0</span>    <span style="color:#75715e"># mm</span>
 
-guide <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">top</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>rect(size, size)<span style="color:#f92672">.</span>workplane(offset<span style="color:#f92672">=</span>size)<span style="color:#f92672">.</span>rect(size<span style="color:#f92672">-</span>(size<span style="color:#f92672">/</span>ratio)<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, size)<span style="color:#f92672">.</span>loft(combine<span style="color:#f92672">=</span>True) <span style="color:#f92672">.</span>\
-    faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&gt;X</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>pushPoints([(<span style="color:#f92672">-</span><span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">15</span>), (<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">15</span>)])<span style="color:#f92672">.</span>hole(magnet_dia,magthick) <span style="color:#f92672">.</span>\
-    faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;X</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>pushPoints([(<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">12</span>), (<span style="color:#ae81ff">15</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">12</span>)])<span style="color:#f92672">.</span>hole(magnet_dia,magthick) <span style="color:#f92672">.</span>\
-    faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;Y</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>transformed(offset<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span>backtab))<span style="color:#f92672">.</span>rect(size,<span style="color:#f92672">-</span>(size<span style="color:#f92672">-</span>magtab)<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>cutThruAll()
-<span style="color:#75715e">#    edges(&#34;&gt;Z or &lt;Y or &lt;Z or &gt;Y&#34;).chamfer(2)</span>
+dovetail_guide <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;top&#34;</span>)<span style="color:#f92672">.</span>rect(size, size)<span style="color:#f92672">.</span>workplane(offset<span style="color:#f92672">=</span>size)<span style="color:#f92672">.</span>rect(size<span style="color:#f92672">-</span>(size<span style="color:#f92672">/</span>ratio)<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, size)<span style="color:#f92672">.</span>loft(combine<span style="color:#f92672">=</span>True) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;X&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>pushPoints([(<span style="color:#f92672">-</span>magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>), (magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)])<span style="color:#f92672">.</span>hole(magnet_diameter, magnet_thickness) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;X&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>pushPoints([(size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_back<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>), (size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_back<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span>magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)])<span style="color:#f92672">.</span>hole(magnet_diameter, magnet_thickness) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>transformed(offset<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>tab_top, <span style="color:#ae81ff">0</span>))<span style="color:#f92672">.</span>rect(size, size)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>size<span style="color:#f92672">+</span>tab_back)
 
-show_object(guide, options<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">rgba</span><span style="color:#e6db74">&#34;</span>:(<span style="color:#ae81ff">130</span>, <span style="color:#ae81ff">185</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.0</span>)})
+show_object(dovetail_guide)
 
+</code></pre></div><h5 id="update-23042020">UPDATE (23/04/2020)</h5>
+<p>Being lock down by the corona pandemic I took the time to improve things a bit. Now all the cadquery scripts on the website should be compatible with CQ 2.0.</p>
+<p>I also took the time to modify the script in order to create a right angle sawing guide. This one is inteded to aid making square cuts on wood with hand saws.</p>
+<p>Recently I got myself a Gyokucho 615 and I could test it with the jig. No need to say it works like a charm. The cut was square and the texture of the end grain after the cut was very smooth. What a saw, btw!</p>
+<p>I put 3 holes there so it fits right and left handed woodworkers.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
 
-</code></pre></div><p>Thanks for looking</p>
-<p>Edi Liberato</p>
+<span style="color:#75715e"># A simple woodworking jig for guiding a saw at right angles.  </span>
+
+size <span style="color:#f92672">=</span> <span style="color:#ae81ff">50.0</span>                     <span style="color:#75715e"># mm, size of the blank</span>
+width <span style="color:#f92672">=</span> <span style="color:#ae81ff">35.0</span>                    <span style="color:#75715e"># mm</span>
+tab_top <span style="color:#f92672">=</span> <span style="color:#ae81ff">18.0</span>                  <span style="color:#75715e"># mm, thickness of the top tab</span>
+tab_back <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.0</span>                 <span style="color:#75715e"># mm, thickness of the back tab</span>
+magnet_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.2</span>          <span style="color:#75715e"># mm</span>
+magnet_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.0</span>         <span style="color:#75715e"># mm </span>
+magnet_spacing_between <span style="color:#f92672">=</span> <span style="color:#ae81ff">30.0</span>   <span style="color:#75715e"># mm</span>
+
+right_angle_guide <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;top&#34;</span>)<span style="color:#f92672">.</span>box(width, size, size)<span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;X&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>pushPoints([(<span style="color:#f92672">-</span>magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>), (magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>), (<span style="color:#f92672">-</span>size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>tab_back<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span>magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)])<span style="color:#f92672">.</span>hole(magnet_diameter, magnet_thickness) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>transformed(offset<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>tab_top, <span style="color:#ae81ff">0</span>))<span style="color:#f92672">.</span>rect(size, size)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>size<span style="color:#f92672">+</span>tab_back)
+
+show_object(right_angle_guide)
+</code></pre></div><p>Even though this is a simple design I think it is good example of how cool cadquery is. A few lines of human readable code and you have an useful parametric model ready for 3d printing or cnc machining. Iterate the design is fast and easy.</p>
+<p>Thanks for looking</p>
+<p>Edi</p>
 
         </div>
 
@@ -170,14 +183,14 @@ show_object(guide, options<span style="color:#f92672">=</span>{<span style="colo
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <a href="https://eddieliberato.github.io/"><img src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
+        <a href="https://eddieliberato.github.io"><img src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
       </div>
       <div class="col-lg-3 col-sm-6 mb-5">
         <h6 class="mb-4">Contact Me</h6>
         <ul class="list-unstyled">
           <li class="mb-3"><a class="text-dark" href="tel:&#43;41%2077%20907%206439"><i
                 class="ti-mobile mr-3 text-primary"></i>&#43;41 77 907 6439</a></li>
-          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Zürich, Switzerland</li>
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>São Paulo, Brazil</li>
           <li class="mb-3"><a class="text-dark" href="mailto:eddie.liberatoe@gmail.com"><i
                 class="ti-email mr-3 text-primary"></i>eddie.liberatoe@gmail.com</a>
           </li>
@@ -188,8 +201,6 @@ show_object(guide, options<span style="color:#f92672">=</span>{<span style="colo
         <ul class="list-unstyled">
           
           <li class="mb-3"><a class="text-dark" href="https://www.youtube.com/user/eddiekvh">youtube</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://www.instagram.com/eddieliberato/">instagram</a></li>
           
           <li class="mb-3"><a class="text-dark" href="https://github.com/eddieliberato">github</a></li>
           
@@ -209,9 +220,7 @@ show_object(guide, options<span style="color:#f92672">=</span>{<span style="colo
         <h6 class="mb-4">Quick Links</h6>
         <ul class="list-unstyled">
           
-          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/about/about">About</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/blog">Post</a></li>
+          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/about">About</a></li>
           
         </ul>
       </div>

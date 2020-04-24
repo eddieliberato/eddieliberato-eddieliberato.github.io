@@ -5,9 +5,9 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this is meta description">
+  <meta name="description" content="parametric horn for 3d print designed in cadquery">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.64.1" />
+  <meta name="generator" content="Hugo 0.69.1" />
 
   <!-- plugins -->
   
@@ -39,7 +39,7 @@
   <div class="container">
     
     <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom">
-      <a class="navbar-brand mobile-view" href="https://eddieliberato.github.io/"><img class="img-fluid"
+      <a class="navbar-brand mobile-view" href="https://eddieliberato.github.io"><img class="img-fluid"
           src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
         <i class="ti-menu h3"></i>
@@ -54,10 +54,6 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="https://www.instagram.com/eddieliberato/"><i class="ti-instagram"></i></a>
-            </li>
-            
-            <li class="nav-item">
               <a class="nav-link" href="https://github.com/eddieliberato"><i class="ti-github"></i></a>
             </li>
             
@@ -68,23 +64,17 @@
           </ul>
         </div>
 
-        <a class="navbar-brand mx-auto desktop-view" href="https://eddieliberato.github.io/"><img class="img-fluid"
+        <a class="navbar-brand mx-auto desktop-view" href="https://eddieliberato.github.io"><img class="img-fluid"
             src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
 
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="https://eddieliberato.github.io/"></a>
+            <a class="nav-link" href="https://eddieliberato.github.io"></a>
           </li>
           
           
           <li class="nav-item">
-            <a class="nav-link" href="https://eddieliberato.github.io/about/about">About</a>
-          </li>
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="https://eddieliberato.github.io/blog">Posts</a>
+            <a class="nav-link" href="https://eddieliberato.github.io/about">About</a>
           </li>
           
           
@@ -95,7 +85,7 @@
         <div class="search px-4">
           <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
           <div class="search-wrapper">
-            <form action="https://eddieliberato.github.io//search" class="h-100">
+            <form action="https://eddieliberato.github.io/search" class="h-100">
               <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
             </form>
             <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
@@ -127,11 +117,11 @@
           
         </div>
         
-        <img src="https://eddieliberato.github.io/images/featured-post/horn_cad.png" class="img-fluid w-100 mb-4" alt="Kugelwellenhorn">
+        <img src="https://eddieliberato.github.io/images/post/horn_cad.png" class="img-fluid w-100 mb-4" alt="Kugelwellenhorn">
         
         <div class="content mb-5">
-          <p>I always have been intrigued by horns. Acctualy by passive devices in general, tunned mass dampers, RLC circuits, the anglepoise lamp to name a few. Researching more about horns I found two designs that I&rsquo;d like to explore more. One is the Kugelwellenhorn and the other is the Le Cleah&rsquo;c horn. More info about the former can be found <a href="http://www.rintelen.ch/download/JMMLC_horns_lecture_etf10.pdf" title="lecleach">here</a>, in a lecture apparently gaven by Le Cleach&rsquo;c himself when he was still alive. All the info about KugelWellen horn I read was from h</p>
-<p>About Kugellwellen horn, the design that I decided to approach first, all the info you need you can probably find in the site of <a href="http://kolbrek.hoyttalerdesign.no/index.php/horns/horn-theory" title="kolbrek horn theory">Bjorn Kolbrek</a>. Mr. Kolbrek seens to be an expert on subject, and I enjoyed a lot reading his articles. The math on his reports was a bit beyond my comprehension and I didn&rsquo;t want to dive so deep into the subject. My goal was only to design and materialize the horn. Turns out that this is hard at all, Just take a look at the script below and you&rsquo;ll see that with about 30 lines of code is done. Amazing!. Well, again hats off to cadquery developers that make it possible to in a few lines</p>
+          <p>I always have been intrigued by horns. Acctualy by passive devices in general, tunned mass dampers, RLC circuits to name a few. Researching more about horns I found two designs that I&rsquo;d like to explore more. One is the Kugelwellenhorn and the other is the Le Cleah&rsquo;c horn. More info about the former can be found <a href="http://www.rintelen.ch/download/JMMLC_horns_lecture_etf10.pdf" title="lecleach">here</a>, in a lecture apparently gaven by Le Cleach&rsquo;c himself when he was still alive.</p>
+<p>About Kugellwellen horn, the design that I decided to approach first, all the info you need you can probably find in the site of <a href="http://kolbrek.hoyttalerdesign.no/index.php/horns/horn-theory" title="kolbrek horn theory">Bjorn Kolbrek</a>. Mr. Kolbrek seens to be an expert on subject, and I enjoyed a lot reading his articles. The math on his reports was a bit beyond my comprehension and I didn&rsquo;t want to dive so deep into the subject. My goal was only to design and materialize the horn. Turns out that this is not hard at all, Just take a look at the script below and you&rsquo;ll see that with about 30 lines of code is done. Amazing!. Well, again hats off to cadquery developers that make it possible.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
 <span style="color:#f92672">import</span> math
 <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
@@ -157,19 +147,50 @@ edg_points <span style="color:#f92672">=</span> []
 edg_points[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> [y0, <span style="color:#ae81ff">0</span>]
 fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots()
 ax<span style="color:#f92672">.</span>plot(list(zip(<span style="color:#f92672">*</span>edg_points))[<span style="color:#ae81ff">1</span>], list(zip(<span style="color:#f92672">*</span>edg_points))[<span style="color:#ae81ff">0</span>])
-ax<span style="color:#f92672">.</span>set(xlabel<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">length (mm)</span><span style="color:#e6db74">&#39;</span>, ylabel<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">contour (mm)</span><span style="color:#e6db74">&#39;</span>,
-       title<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Kugelwellen horn profile</span><span style="color:#e6db74">&#39;</span>)
+ax<span style="color:#f92672">.</span>set(xlabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;length (mm)&#39;</span>, ylabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;contour (mm)&#39;</span>,
+       title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Kugelwellen horn profile&#39;</span>)
 ax<span style="color:#f92672">.</span>grid()
 plt<span style="color:#f92672">.</span>show()
 
-horn <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">XY</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>move(y0<span style="color:#f92672">-</span><span style="color:#ae81ff">0.01</span>,<span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>spline(edg_points)<span style="color:#f92672">.</span>wire()<span style="color:#f92672">.</span>revolve()
+horn <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>move(y0<span style="color:#f92672">-</span><span style="color:#ae81ff">0.01</span>,<span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>spline(edg_points)<span style="color:#f92672">.</span>wire()<span style="color:#f92672">.</span>revolve()
 
-show_object(horn, options<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">rgba</span><span style="color:#e6db74">&#34;</span>:(<span style="color:#ae81ff">130</span>, <span style="color:#ae81ff">185</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.0</span>)})
-</code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>One thing that&rsquo;s interesting to notice, Mr. Lecleach suggests that it&rsquo;s important to shape the horn past 180 degrees but as you can see it can be tricky to 3d print the involute part of the horn. Would be interesting to come up with some 3d printing hack to print the involute. Maybe one day I come back to this topic to try something in this direction.</p>
+show_object(horn, options<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;rgba&#34;</span>:(<span style="color:#ae81ff">130</span>, <span style="color:#ae81ff">185</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.0</span>)})
+</code></pre></div><p>One thing that&rsquo;s interesting to notice, Mr. Lecleach suggests that it&rsquo;s important to shape the horn past 180 degrees but as you can see it can be tricky to 3d print the involute part of the horn. Would be interesting to come up with some 3d printing hack to print the involute. Maybe one day I come back to this topic to try something in this direction.</p>
+<h5 id="update-23042020">UPDATE (23/04/2020)</h5>
+<p>Being lock down by the corona pandemic I took the time to improve things a bit. Now all the cadquery scripts on the website should be compatible with CQ 2.0.</p>
+<p>Looking the script above that I wrote almost two years ago it&rsquo;s easy to understand why it crashes in CQ 2.0. It&rsquo;s a bit of a mess with this calling of matplotlib library. I must say it was convinient to look at the profile of the horn and to create the 3d model at the same time, but it&rsquo;s ugly code.</p>
+<p>I was looking at the script to generate cycloid gears from <a href="https://github.com/adam-urbanczyk">Adam Urbanczyk</a>, one of the developers of cadquery, and what an elegant code! This inspired me not only to remove this plotting part of the script, but also to modify it a bit in order to make it more elegant.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
+<span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> pi, sqrt, exp
+ 
+td <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>      <span style="color:#75715e"># mm throat diameter</span>
+steps <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span>  <span style="color:#75715e"># related to the length of the horn</span>
+fc <span style="color:#f92672">=</span> <span style="color:#ae81ff">480</span>     <span style="color:#75715e"># Hz cuttof frequency</span>
+
+c <span style="color:#f92672">=</span> <span style="color:#ae81ff">344000</span>   <span style="color:#75715e"># mm/s speed of sound through air</span>
+
+m <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">*</span>fc<span style="color:#f92672">/</span>c
+y0 <span style="color:#f92672">=</span> td<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+r0 <span style="color:#f92672">=</span> c<span style="color:#f92672">/</span>(pi<span style="color:#f92672">*</span>fc)
+h0 <span style="color:#f92672">=</span> r0 <span style="color:#f92672">-</span> sqrt(r0<span style="color:#f92672">*</span>r0<span style="color:#f92672">-</span>y0<span style="color:#f92672">*</span>y0)
+s0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">*</span>r0<span style="color:#f92672">*</span>h0
+edg_points <span style="color:#f92672">=</span> []
+
+<span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(steps):
+    h <span style="color:#f92672">=</span> h0<span style="color:#f92672">*</span>exp(m<span style="color:#f92672">*</span>x)
+    s <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">*</span>r0<span style="color:#f92672">*</span>h
+    y <span style="color:#f92672">=</span> sqrt((s<span style="color:#f92672">/</span>pi)<span style="color:#f92672">-</span>h<span style="color:#f92672">*</span>h)
+    xh <span style="color:#f92672">=</span> x<span style="color:#f92672">-</span>h<span style="color:#f92672">+</span>h0
+    edg_points<span style="color:#f92672">.</span>append([y, xh])
+
+edg_points[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> [y0, <span style="color:#ae81ff">0</span>]
+
+horn <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>move(y0, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>spline(edg_points)<span style="color:#f92672">.</span>wire()<span style="color:#f92672">.</span>revolve()
+
+show_object(horn)
+</code></pre></div><p>Much better isn&rsquo;t it ?</p>
 <p>Thanks for looking</p>
-<p>Edi Liberato</p>
+<p>Edi</p>
 
         </div>
 
@@ -186,14 +207,14 @@ show_object(horn, options<span style="color:#f92672">=</span>{<span style="color
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <a href="https://eddieliberato.github.io/"><img src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
+        <a href="https://eddieliberato.github.io"><img src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
       </div>
       <div class="col-lg-3 col-sm-6 mb-5">
         <h6 class="mb-4">Contact Me</h6>
         <ul class="list-unstyled">
           <li class="mb-3"><a class="text-dark" href="tel:&#43;41%2077%20907%206439"><i
                 class="ti-mobile mr-3 text-primary"></i>&#43;41 77 907 6439</a></li>
-          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Zürich, Switzerland</li>
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>São Paulo, Brazil</li>
           <li class="mb-3"><a class="text-dark" href="mailto:eddie.liberatoe@gmail.com"><i
                 class="ti-email mr-3 text-primary"></i>eddie.liberatoe@gmail.com</a>
           </li>
@@ -204,8 +225,6 @@ show_object(horn, options<span style="color:#f92672">=</span>{<span style="color
         <ul class="list-unstyled">
           
           <li class="mb-3"><a class="text-dark" href="https://www.youtube.com/user/eddiekvh">youtube</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://www.instagram.com/eddieliberato/">instagram</a></li>
           
           <li class="mb-3"><a class="text-dark" href="https://github.com/eddieliberato">github</a></li>
           
@@ -225,9 +244,7 @@ show_object(horn, options<span style="color:#f92672">=</span>{<span style="color
         <h6 class="mb-4">Quick Links</h6>
         <ul class="list-unstyled">
           
-          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/about/about">About</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/blog">Post</a></li>
+          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/about">About</a></li>
           
         </ul>
       </div>

@@ -5,9 +5,9 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this is meta description">
+  <meta name="description" content="Parametric 3d model of a turners cube designed in cadquery">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.64.1" />
+  <meta name="generator" content="Hugo 0.69.1" />
 
   <!-- plugins -->
   
@@ -39,7 +39,7 @@
   <div class="container">
     
     <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom">
-      <a class="navbar-brand mobile-view" href="https://eddieliberato.github.io/"><img class="img-fluid"
+      <a class="navbar-brand mobile-view" href="https://eddieliberato.github.io"><img class="img-fluid"
           src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
         <i class="ti-menu h3"></i>
@@ -54,10 +54,6 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="https://www.instagram.com/eddieliberato/"><i class="ti-instagram"></i></a>
-            </li>
-            
-            <li class="nav-item">
               <a class="nav-link" href="https://github.com/eddieliberato"><i class="ti-github"></i></a>
             </li>
             
@@ -68,23 +64,17 @@
           </ul>
         </div>
 
-        <a class="navbar-brand mx-auto desktop-view" href="https://eddieliberato.github.io/"><img class="img-fluid"
+        <a class="navbar-brand mx-auto desktop-view" href="https://eddieliberato.github.io"><img class="img-fluid"
             src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
 
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="https://eddieliberato.github.io/"></a>
+            <a class="nav-link" href="https://eddieliberato.github.io"></a>
           </li>
           
           
           <li class="nav-item">
-            <a class="nav-link" href="https://eddieliberato.github.io/about/about">About</a>
-          </li>
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="https://eddieliberato.github.io/blog">Posts</a>
+            <a class="nav-link" href="https://eddieliberato.github.io/about">About</a>
           </li>
           
           
@@ -95,7 +85,7 @@
         <div class="search px-4">
           <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
           <div class="search-wrapper">
-            <form action="https://eddieliberato.github.io//search" class="h-100">
+            <form action="https://eddieliberato.github.io/search" class="h-100">
               <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
             </form>
             <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
@@ -130,35 +120,39 @@
         <img src="https://eddieliberato.github.io/images/post/turners_cube.png" class="img-fluid w-100 mb-4" alt="Cadquery Turners Cube">
         
         <div class="content mb-5">
-          <p>Back in Brazil, during my machinist apprenticeship, one of the lathe tasks of the manual machining course was to make a turners cube. Basically you need to turn a cube in the lathe and make some holes, that if carefully bored to specific dimensions, you end with usually two captive cubes inside one another. At the time I was only a young teenager, and it was to me a very attractive challenge. I naively thought that only round parts could be made at the lathe, so I was impressed with the cube with other cubes inside coming out of the machine. Sadly nowadays I don&rsquo;t know anymore where mine is. Hopefully at my mom&rsquo;s house.</p>
-<p>Back to the point, being a parametric thing, you can have as many cubes as you want inside. Usually the ones who actually made the cube went for three, so I did and I still think that three is the right number. Two is too easy. Four is annoying because it is a lot of repetition of the same operations. Three is a good number because you proved your point in showing the instructor what you&rsquo;re capable of, and is not as annoying to make as the four cubes version. Leaving 2003 behind and back to 2018, I was thinking that the parametric nature of the object makes it a nice model for cadqquery. So here is the script that I came up with:</p>
+          <p>Back in Brazil, during my machinist apprenticeship, one of the lathe tasks of the manual machining course was to make a turners cube. Basically you need to turn a cube in the lathe and make some holes, that if carefully bored to specific dimensions, you end up with usually two captive cubes inside one another. At the time I was only a young teenager and the captive cube was a very attractive challenge to me. I naively thought that only round parts could be made at the lathe, so I was impressed with the cube with other cubes inside coming out of the machine. Sadly nowadays I don&rsquo;t know anymore where mine is. Hopefully at my mom&rsquo;s house.</p>
+<p>You can have as many cubes as you want inside. Back then,  the ones who actually made the cube usually went for three, so I did and I still think that three is the right number if you&rsquo;re doing it on the manual lathe. Two is too easy. Four is annoying because it is a lot of repetition of the same operations. Three is a good number because you proved your point in showing the instructor what you&rsquo;re capable of, and is not as annoying to make as the four cubes version.</p>
+<p>Leaving 2003 behind and back to 2018, I was thinking that the parametric nature of the object makes it a nice model for cadqquery. So here is the script that I came up with:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
-<span style="color:#f92672">import</span> math
+<span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> sqrt
 
-captive_cube <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>     <span style="color:#75715e"># mm</span>
-n_of_cubes <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>        <span style="color:#75715e"># besides the innermost captive cube</span>
-small_holes <span style="color:#f92672">=</span> True    <span style="color:#75715e"># False for the smallest cube without holes</span>
-csize <span style="color:#f92672">=</span> captive_cube<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#f92672">*</span>n_of_cubes
-sh_size <span style="color:#f92672">=</span> captive_cube<span style="color:#f92672">/</span>math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">2</span>)
+captive_cube_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>    <span style="color:#75715e"># mm</span>
+n_of_cubes <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>            <span style="color:#75715e"># besides the innermost captive cube</span>
+small_holes <span style="color:#f92672">=</span> True        <span style="color:#75715e"># False = innermost captive cube without holes</span>
 
-cube <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">front</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>box(csize, csize, csize)
-<span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span>  range(n_of_cubes):
-    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&gt;X</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube<span style="color:#f92672">*</span>(math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">*</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (csize<span style="color:#f92672">-</span>captive_cube<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#f92672">*</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
-    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&gt;Y</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube<span style="color:#f92672">*</span>(math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">*</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (csize<span style="color:#f92672">-</span>captive_cube<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#f92672">*</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
-    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&gt;Z</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube<span style="color:#f92672">*</span>(math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">*</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (csize<span style="color:#f92672">-</span>captive_cube<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#f92672">*</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
-    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;X</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube<span style="color:#f92672">*</span>(math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">*</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (csize<span style="color:#f92672">-</span>captive_cube<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#f92672">*</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
-    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;Y</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube<span style="color:#f92672">*</span>(math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">*</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (csize<span style="color:#f92672">-</span>captive_cube<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#f92672">*</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
-    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;Z</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube<span style="color:#f92672">*</span>(math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">*</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (csize<span style="color:#f92672">-</span>captive_cube<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#f92672">*</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+cube_size <span style="color:#f92672">=</span> captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>n_of_cubes  <span style="color:#75715e"># total size of the cube</span>
+sh_size <span style="color:#f92672">=</span> captive_cube_size<span style="color:#f92672">/</span>sqrt(<span style="color:#ae81ff">2</span>)          <span style="color:#75715e"># diameter of the hole on the smallest cube</span>
+
+cube <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(cube_size, cube_size, cube_size)
+<span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(n_of_cubes):
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;X&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;X&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
 
 <span style="color:#66d9ef">if</span> small_holes:
-    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;X</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(sh_size)
-    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;Y</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(sh_size)
-    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;Z</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(sh_size)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;X&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(sh_size)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(sh_size)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(sh_size)
 
-show_object(cube, options<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">rgba</span><span style="color:#e6db74">&#34;</span>:(<span style="color:#ae81ff">130</span>, <span style="color:#ae81ff">185</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.5</span>)})
+show_object(cube)
 </code></pre></div><p>I based my script in the innermost captive cube and in the square root of 2, which is a number associated with circles and squares. That makes the cube looks good and proportional. The drawback is that the final size grows quadratically with the number of cubes resulting in a big thing if you go for a lot of cubes.</p>
+<h5 id="update-23042020">UPDATE (23/04/2020)</h5>
+<p>Being lock down by the corona pandemic I took the time to improve things a bit. Now all the cadquery scripts on the website should be compatible with CQ 2.0.</p>
 <p>Thanks for looking</p>
-<p>Edi Liberato</p>
+<p>Edi</p>
 
         </div>
 
@@ -175,14 +169,14 @@ show_object(cube, options<span style="color:#f92672">=</span>{<span style="color
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <a href="https://eddieliberato.github.io/"><img src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
+        <a href="https://eddieliberato.github.io"><img src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato"></a>
       </div>
       <div class="col-lg-3 col-sm-6 mb-5">
         <h6 class="mb-4">Contact Me</h6>
         <ul class="list-unstyled">
           <li class="mb-3"><a class="text-dark" href="tel:&#43;41%2077%20907%206439"><i
                 class="ti-mobile mr-3 text-primary"></i>&#43;41 77 907 6439</a></li>
-          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Zürich, Switzerland</li>
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>São Paulo, Brazil</li>
           <li class="mb-3"><a class="text-dark" href="mailto:eddie.liberatoe@gmail.com"><i
                 class="ti-email mr-3 text-primary"></i>eddie.liberatoe@gmail.com</a>
           </li>
@@ -193,8 +187,6 @@ show_object(cube, options<span style="color:#f92672">=</span>{<span style="color
         <ul class="list-unstyled">
           
           <li class="mb-3"><a class="text-dark" href="https://www.youtube.com/user/eddiekvh">youtube</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://www.instagram.com/eddieliberato/">instagram</a></li>
           
           <li class="mb-3"><a class="text-dark" href="https://github.com/eddieliberato">github</a></li>
           
@@ -214,9 +206,7 @@ show_object(cube, options<span style="color:#f92672">=</span>{<span style="color
         <h6 class="mb-4">Quick Links</h6>
         <ul class="list-unstyled">
           
-          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/about/about">About</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/blog">Post</a></li>
+          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/about">About</a></li>
           
         </ul>
       </div>
