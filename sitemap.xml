@@ -3,12 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://eddieliberato.github.io/about/</loc>
-    <lastmod>2019-10-29T13:49:23+06:00</lastmod>
+    <loc>https://eddieliberato.github.io/tags/3d-printing/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eddieliberato.github.io/blog/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eddieliberato.github.io/tags/cad/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eddieliberato.github.io/tags/cadquery/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eddieliberato.github.io/categories/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eddieliberato.github.io/categories/computer-aided-design/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eddieliberato.github.io/blog/2020-05-08-dovetail-jg-revisited/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://eddieliberato.github.io/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eddieliberato.github.io/tags/python/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eddieliberato.github.io/blog/2020-05-08-sawing_guides/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eddieliberato.github.io/tags/</loc>
+    <lastmod>2020-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eddieliberato.github.io/about/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
   </url>
   
@@ -18,47 +68,7 @@
   </url>
   
   <url>
-    <loc>https://eddieliberato.github.io/tags/3d-printing/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eddieliberato.github.io/blog/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eddieliberato.github.io/tags/cad/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eddieliberato.github.io/tags/cadquery/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eddieliberato.github.io/categories/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eddieliberato.github.io/categories/computer-aided-design/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://eddieliberato.github.io/blog/2019-04-01-dovetail-guide/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eddieliberato.github.io/tags/python/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eddieliberato.github.io/tags/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
   </url>
   
