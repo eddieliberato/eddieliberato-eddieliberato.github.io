@@ -6,10 +6,19 @@
     <description>Recent content in python on Edi Liberato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://eddieliberato.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Parametric Spiral Lampshade</title>
+      <link>https://eddieliberato.github.io/blog/2020-05-12-parametric-lampshade/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/blog/2020-05-12-parametric-lampshade/</guid>
+      <description>I had the idea to make a 3d printed bedside lamp as a b-day present for my friend Akarsh.</description>
+    </item>
     
     <item>
       <title>Dovetail Jig Revisited</title>
@@ -21,12 +30,12 @@
     </item>
     
     <item>
-      <title>Sawing guides</title>
-      <link>https://eddieliberato.github.io/blog/2020-05-08-sawing_guides/</link>
+      <title>Sawing Guides</title>
+      <link>https://eddieliberato.github.io/blog/2020-05-08-sawing-guides/</link>
       <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://eddieliberato.github.io/blog/2020-05-08-sawing_guides/</guid>
-      <description>The idea here is the same of my dovetail jig but now one is inteded to aid making square cuts on wood with hand saws and the other 45 degrees cut for joinery.</description>
+      <guid>https://eddieliberato.github.io/blog/2020-05-08-sawing-guides/</guid>
+      <description>The idea here is the same as my dovetail jig but now one is inteded to aid making square cuts on wood with hand saws and the other 45 degrees cut for joinery.</description>
     </item>
     
     <item>
@@ -44,11 +53,11 @@
       <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/blog/2018-08-19-kugelwellenhorn/</guid>
-      <description>I always have been intrigued by horns. Acctualy by passive devices in general, tunned mass dampers, RLC circuits to name a few.</description>
+      <description>I always have been intrigued by horns. Actually by passive devices in general, tunned mass dampers, RLC circuits to name a few.</description>
     </item>
     
     <item>
-      <title>CD organizer</title>
+      <title>CD Organizer</title>
       <link>https://eddieliberato.github.io/blog/2018-08-18-cd-organizer/</link>
       <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
       
