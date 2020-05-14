@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="3d printed parametric dovetail sawing guide for woodworking designed in cadquery">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.69.2" />
+  <meta name="generator" content="Hugo 0.70.0" />
 
   <!-- plugins -->
   
@@ -120,18 +120,18 @@
         <img src="https://eddieliberato.github.io/images/post/embossed_dovetail_jig.png" class="img-fluid w-100 mb-4" alt="Dovetail Jig Revisited">
         
         <div class="content mb-5">
-          <p>I&rsquo;m revisiting my dovetail because when I was looking at Cadquery 2.0 documentation I saw the option to add text. I thought this model would benefit from having the ratio embossed on the top.</p>
+          <p>I&rsquo;m revisiting my dovetail jig because when I was looking at Cadquery 2.0 documentation I saw the option to add text. I thought this model would benefit from having the ratio embossed on the top.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
 
 <span style="color:#75715e"># A simple dovetail saw guide for woodworking </span>
 
-size <span style="color:#f92672">=</span> <span style="color:#ae81ff">40.0</span>                     <span style="color:#75715e">#mm, size of the blank </span>
-ratio <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>                       <span style="color:#75715e">#dovetail ratio e.g. 1:6.</span>
-tab_top <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>                  <span style="color:#75715e">#mm, thickness of the top tab</span>
-tab_back <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>                 <span style="color:#75715e">#mm, thickness of the back tab</span>
-magnet_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.2</span>           <span style="color:#75715e">#mm</span>
-magnet_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">8.5</span>          <span style="color:#75715e">#mm </span>
-magnet_spacing_between <span style="color:#f92672">=</span> <span style="color:#ae81ff">24.0</span>   <span style="color:#75715e">#mm</span>
+size <span style="color:#f92672">=</span> <span style="color:#ae81ff">40.0</span>                     <span style="color:#75715e"># mm, size of the blank </span>
+ratio <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>                       <span style="color:#75715e"># dovetail ratio e.g. 1:6.</span>
+tab_top <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>                  <span style="color:#75715e"># mm, thickness of the top tab</span>
+tab_back <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>                 <span style="color:#75715e"># mm, thickness of the back tab</span>
+magnet_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.2</span>           <span style="color:#75715e"># mm</span>
+magnet_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">8.5</span>          <span style="color:#75715e"># mm </span>
+magnet_spacing_between <span style="color:#f92672">=</span> <span style="color:#ae81ff">24.0</span>   <span style="color:#75715e"># mm</span>
 
 embossing <span style="color:#f92672">=</span> True
 

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="3d printed parametric spiral lampshade designed in cadquery">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.69.2" />
+  <meta name="generator" content="Hugo 0.70.0" />
 
   <!-- plugins -->
   
@@ -113,7 +113,7 @@
           <span>By Edi Liberato</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>12 May 2020</span>
+          <span>11 May 2020</span>
           
         </div>
         
@@ -131,14 +131,14 @@ show_object(lampshade)
 </code></pre></div><p><img src="../../images/post/twisted_lampshade.png" alt="twisted lampshade"></p>
 <p>Frankly, this was already very good but I wanted something else. After some bricolage of lofts on the top faces I got to something that I was happy with and printed it.</p>
 <p><img src="../../images/post/akarsh_lampshade.jpg" alt="akarsh lampshade"></p>
-<p>It ended up at my living room though. After printing I had the impression this design was better suited for living rooms than bedrooms. It was a bit big, I wanted something smaller.  Also I was not so happy with the bottom side having the same dimensions as the top side. Some people that I have asked opinion liked it, but I didn&rsquo;t. I got back to drawing board and this was the final result. (The picture below is a &ldquo;replica&rdquo; <code>:smile:</code> that I made for myself)</p>
+<p>It ended up at my living room though. After printing I had the impression this design was better suited for living rooms than bedrooms. It was a bit big, I wanted something smaller.  Also I was not so happy with the bottom side having the same dimensions as the top side. Some people that I have asked opinion liked it, but I didn&rsquo;t. I got back to drawing board and this was the final result. (The picture below is a replica that I made for myself)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
 
-length <span style="color:#f92672">=</span> <span style="color:#ae81ff">150.0</span>            <span style="color:#75715e">#mm</span>
-final_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">150.0</span>      <span style="color:#75715e">#mm</span>
-height_increment <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>   <span style="color:#75715e">#mm, Z axis increment per step</span>
-step_rotation <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>        <span style="color:#75715e">#degrees, rotation of the XY plane per step</span>
-growth_factor <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.1</span>       <span style="color:#75715e">#maybe decrease factor ? ¯\_(ツ)_/¯</span>
+length <span style="color:#f92672">=</span> <span style="color:#ae81ff">150.0</span>            <span style="color:#75715e"># mm</span>
+max_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">150.0</span>        <span style="color:#75715e"># mm</span>
+height_increment <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>   <span style="color:#75715e"># mm, Z axis increment per step</span>
+step_rotation <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>        <span style="color:#75715e"># degrees, rotation of the XY plane per step</span>
+growth_factor <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.1</span>       <span style="color:#75715e"># maybe decrease factor ? ¯\_(ツ)_/¯</span>
 
 spiral_lampshade <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>rect(length<span style="color:#f92672">/</span><span style="color:#ae81ff">1.618</span>, length) <span style="color:#f92672">.</span>\
     workplane(offset<span style="color:#f92672">=</span>height_increment)<span style="color:#f92672">.</span>rect(length<span style="color:#f92672">/</span><span style="color:#ae81ff">1.618</span>, length) <span style="color:#f92672">.</span>\
@@ -147,7 +147,7 @@ spiral_lampshade <span style="color:#f92672">=</span> cq<span style="color:#f926
 next_len <span style="color:#f92672">=</span> float (<span style="color:#ae81ff">0</span>)
 height <span style="color:#f92672">=</span> float (<span style="color:#ae81ff">0</span>)
 
-<span style="color:#66d9ef">while</span> height <span style="color:#f92672">&lt;</span> final_height:
+<span style="color:#66d9ef">while</span> height <span style="color:#f92672">&lt;=</span> max_height<span style="color:#f92672">-</span>height_increment:
     next_len <span style="color:#f92672">=</span> length<span style="color:#f92672">/</span>growth_factor
     spiral_lampshade <span style="color:#f92672">=</span> spiral_lampshade<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>rect(length<span style="color:#f92672">/</span><span style="color:#ae81ff">1.618</span>, length)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>transformed(offset<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, height_increment), rotate<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, step_rotation))<span style="color:#f92672">.</span>rect(next_len<span style="color:#f92672">/</span><span style="color:#ae81ff">1.618</span>, next_len)<span style="color:#f92672">.</span>loft(combine<span style="color:#f92672">=</span>True)
     length <span style="color:#f92672">=</span> next_len
