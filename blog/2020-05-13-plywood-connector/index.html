@@ -130,19 +130,19 @@
 
 <span style="color:#75715e"># shared parameters</span>
 thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.0</span>             <span style="color:#75715e"># mm</span>
-width <span style="color:#f92672">=</span> <span style="color:#ae81ff">20.0</span>                 <span style="color:#75715e"># mm</span>
+width <span style="color:#f92672">=</span> <span style="color:#ae81ff">16.0</span>                 <span style="color:#75715e"># mm</span>
 screw_clearance <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.8</span>        <span style="color:#75715e"># mm, diameter of the screw + some clearance</span>
 
 <span style="color:#75715e"># outer jaw parameters</span>
-oface_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">38.0</span>          <span style="color:#75715e"># mm, outer face length</span>
-oleg_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">42.0</span>           <span style="color:#75715e"># mm, outer leg length</span>
+oface_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">38.0</span>          <span style="color:#75715e"># mm outer face length</span>
+oleg_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">42.0</span>           <span style="color:#75715e"># mm outer leg length</span>
 support_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.0</span>         <span style="color:#75715e"># mm, I&#39;m calling support this small bump where the plywood butt will rest against</span>
                              <span style="color:#75715e"># minimum plywood thickness it will hold = sqrt(2)*support_height BTW</span>
 counterBore_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">11.2</span>  <span style="color:#75715e"># mm</span>
 screwHead_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.0</span>       <span style="color:#75715e"># mm</span>
 
 <span style="color:#75715e"># inner jaw parameters </span>
-<span style="color:#75715e"># This inner leg lenght value is just a suggestion. The inner jaw leg will be flush with the outer jaw leg</span>
+<span style="color:#75715e"># This inner leg lenght is just a recomendation, it will be flush with the outer jaw leg</span>
 ileg_length <span style="color:#f92672">=</span> oleg_length<span style="color:#f92672">-</span>(thickness<span style="color:#f92672">+</span>support_height)<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>) <span style="color:#75715e"># mm</span>
 
 <span style="color:#75715e">#inner jaw hardware parameters</span>
@@ -154,23 +154,14 @@ ojaw <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span
     line(thickness<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
     line((cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span>tan(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>), <span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length<span style="color:#f92672">+</span>thickness)<span style="color:#f92672">.</span>
     line(support_height, support_height)<span style="color:#f92672">.</span>
-    line(oface_length<span style="color:#f92672">-</span>(thickness<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>support_height<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
-    line(support_height, <span style="color:#f92672">-</span>support_height)<span style="color:#f92672">.</span>
-    line((cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span>tan(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>), cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">.</span>
-    line(thickness<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
-    line(<span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length, <span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length)<span style="color:#f92672">.</span>
-    close()<span style="color:#f92672">.</span>extrude(width)<span style="color:#f92672">.</span>
+    lineTo(<span style="color:#ae81ff">0</span>, thickness<span style="color:#f92672">+</span>support_height)<span style="color:#f92672">.</span>mirrorY()<span style="color:#f92672">.</span>extrude(width)<span style="color:#f92672">.</span>
     faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>cboreHole(screw_clearance, counterBore_diameter, screwHead_height))
 
 ijaw <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>line(<span style="color:#f92672">-</span>(oface_length<span style="color:#f92672">-</span>(thickness<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>support_height<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
     line(<span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length, cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length)<span style="color:#f92672">.</span>
     line(thickness, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
     line((cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span>tan(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>), <span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length<span style="color:#f92672">+</span>thickness)<span style="color:#f92672">.</span>
-    line(oface_length<span style="color:#f92672">-</span>(thickness<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>support_height<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
-    line((cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span>tan(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>), cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">.</span>
-    line(thickness, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
-    line(<span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length, <span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length)<span style="color:#f92672">.</span>
-    close()<span style="color:#f92672">.</span>extrude(width)<span style="color:#f92672">.</span>
+    lineTo(<span style="color:#ae81ff">0</span>, thickness)<span style="color:#f92672">.</span>mirrorY()<span style="color:#f92672">.</span>extrude(width)<span style="color:#f92672">.</span>
     faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(screw_clearance)<span style="color:#f92672">.</span>
     faces(<span style="color:#e6db74">&#34;&gt;Y[-2]&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>polygon(<span style="color:#ae81ff">6</span>, nut_widthAcrossCorners)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>nut_thickness)<span style="color:#f92672">.</span>
     translate((<span style="color:#ae81ff">0</span>,thickness<span style="color:#f92672">+</span>support_height,<span style="color:#ae81ff">0</span>)))
