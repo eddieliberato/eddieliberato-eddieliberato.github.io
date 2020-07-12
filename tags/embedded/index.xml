@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Embedded on Edi Liberato</title>
+    <link>https://eddieliberato.github.io/tags/embedded/</link>
+    <description>Recent content in Embedded on Edi Liberato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://eddieliberato.github.io/tags/embedded/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debugging STM32f103C8T6 Bluepill (Ubuntu 20.04)</title>
+      <link>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</guid>
+      <description>This post is about how I got STM32cubeIDE up and running on Ubuntu 20.</description>
+    </item>
+    
+  </channel>
+</rss>

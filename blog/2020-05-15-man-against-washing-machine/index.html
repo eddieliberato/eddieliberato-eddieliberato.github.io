@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="3d printed parametric trapezoidal thread designed in cadquery, screw">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.70.0" />
+  <meta name="generator" content="Hugo 0.73.0" />
 
   <!-- plugins -->
   
@@ -140,10 +140,10 @@ pts <span style="color:#f92672">=</span> []
 path <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>spline(pts)<span style="color:#f92672">.</span>wire()
 thread <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XZ&#34;</span>)<span style="color:#f92672">.</span>move(minor_diameter<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>line(<span style="color:#ae81ff">3.2</span>, <span style="color:#ae81ff">0.5</span>)<span style="color:#f92672">.</span>line(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1.0</span>)<span style="color:#f92672">.</span>line(<span style="color:#f92672">-</span><span style="color:#ae81ff">3.2</span>, <span style="color:#ae81ff">0.5</span>)<span style="color:#f92672">.</span>close()<span style="color:#f92672">.</span>sweep(path, isFrenet<span style="color:#f92672">=</span>True)
 
-foot <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>circle(<span style="color:#ae81ff">18.5</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">26.0</span>) <span style="color:#f92672">.</span>\
-    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>circle(<span style="color:#ae81ff">25.0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">5</span>) <span style="color:#f92672">.</span>\
-    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>polygon(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">44</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">14.0</span>) <span style="color:#f92672">.</span>\
-    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(<span style="color:#ae81ff">14.0</span>, <span style="color:#ae81ff">42.0</span>)<span style="color:#f92672">.</span>translate((<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,pitch<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>))
+foot <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>circle(<span style="color:#ae81ff">18.5</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">26.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>circle(<span style="color:#ae81ff">25.0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">5.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>polygon(<span style="color:#ae81ff">8.0</span>, <span style="color:#ae81ff">44.0</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">14.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(<span style="color:#ae81ff">14.0</span>, <span style="color:#ae81ff">42.0</span>)<span style="color:#f92672">.</span>translate((<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,pitch<span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>))
 
 foot <span style="color:#f92672">=</span> foot<span style="color:#f92672">.</span>union(thread)
 
@@ -167,6 +167,9 @@ show_object(foot)
       <li><a
           href="/categories/computer-aided-design">Computer aided design</a>
       </li>
+      <li><a
+          href="/categories/microcontrollers">Microcontrollers</a>
+      </li>
     </ul>
   </div>
   
@@ -176,11 +179,21 @@ show_object(foot)
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
           href="/tags/3d-printing">3d printing</a></li>
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/c">C</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
           href="/tags/cad">Cad</a></li>
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
           href="/tags/cadquery">Cadquery</a></li>
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/electronics">Electronics</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/embedded">Embedded</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/programming">Programming</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
           href="/tags/python">Python</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/ubuntu">Ubuntu</a></li>
     </ul>
   </div>
 
@@ -219,6 +232,9 @@ show_object(foot)
         <ul class="list-unstyled">
           <li class="mb-3"><a class="text-dark"
               href="/categories/computer-aided-design">Computer aided design</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/microcontrollers">Microcontrollers</a>
           </li>
         </ul>
       </div>

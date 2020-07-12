@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="3d printed parametric plywood connector designed in cadquery, DIY furniture">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.70.0" />
+  <meta name="generator" content="Hugo 0.73.0" />
 
   <!-- plugins -->
   
@@ -126,7 +126,7 @@
 <p>I first learned about this by the name of <a href="https://www.playwood.it/" title="playwood website">playwood</a>. I found it when I was looking for a small bookshelf DIY project. There are some reasons why I didn&rsquo;t buy directly from this guys. First, they are not super expensive but you need quite a few in order to make something useful, then, with post and import taxes it start to become expensive. Second, I have 3d printers and I like to make stuff.</p>
 <p>As always, I kept the design as minimalist as possible. My version takes a socket head cap screw on one side and a hex nut on the other side. I&rsquo;ve used M6 screws because it was what I had at hand at the time but I&rsquo;m pretty sure smaller screws are also Ok for this application.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
-<span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> cos, tan, sqrt, pi
+<span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> cos, sqrt, pi
 
 <span style="color:#75715e"># shared parameters</span>
 thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.0</span>             <span style="color:#75715e"># mm</span>
@@ -152,7 +152,7 @@ nut_widthAcrossCorners <span style="color:#f92672">=</span> <span style="color:#
 ojaw <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>line(<span style="color:#f92672">-</span>oface_length<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
     line(<span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length, cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length)<span style="color:#f92672">.</span>
     line(thickness<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
-    line((cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span>tan(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>), <span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length<span style="color:#f92672">+</span>thickness)<span style="color:#f92672">.</span>
+    line((cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length<span style="color:#f92672">-</span>thickness), <span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length<span style="color:#f92672">+</span>thickness)<span style="color:#f92672">.</span>
     line(support_height, support_height)<span style="color:#f92672">.</span>
     lineTo(<span style="color:#ae81ff">0</span>, thickness<span style="color:#f92672">+</span>support_height)<span style="color:#f92672">.</span>mirrorY()<span style="color:#f92672">.</span>extrude(width)<span style="color:#f92672">.</span>
     faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>cboreHole(screw_clearance, counterBore_diameter, screwHead_height))
@@ -160,7 +160,7 @@ ojaw <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span
 ijaw <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>line(<span style="color:#f92672">-</span>(oface_length<span style="color:#f92672">-</span>(thickness<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>support_height<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
     line(<span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length, cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length)<span style="color:#f92672">.</span>
     line(thickness, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
-    line((cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span>tan(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>), <span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length<span style="color:#f92672">+</span>thickness)<span style="color:#f92672">.</span>
+    line((cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length<span style="color:#f92672">-</span>thickness), <span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length<span style="color:#f92672">+</span>thickness)<span style="color:#f92672">.</span>
     lineTo(<span style="color:#ae81ff">0</span>, thickness)<span style="color:#f92672">.</span>mirrorY()<span style="color:#f92672">.</span>extrude(width)<span style="color:#f92672">.</span>
     faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(screw_clearance)<span style="color:#f92672">.</span>
     faces(<span style="color:#e6db74">&#34;&gt;Y[-2]&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>polygon(<span style="color:#ae81ff">6</span>, nut_widthAcrossCorners)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>nut_thickness)<span style="color:#f92672">.</span>
@@ -189,6 +189,9 @@ show_object(ijaw)
       <li><a
           href="/categories/computer-aided-design">Computer aided design</a>
       </li>
+      <li><a
+          href="/categories/microcontrollers">Microcontrollers</a>
+      </li>
     </ul>
   </div>
   
@@ -198,11 +201,21 @@ show_object(ijaw)
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
           href="/tags/3d-printing">3d printing</a></li>
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/c">C</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
           href="/tags/cad">Cad</a></li>
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
           href="/tags/cadquery">Cadquery</a></li>
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/electronics">Electronics</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/embedded">Embedded</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/programming">Programming</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
           href="/tags/python">Python</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/ubuntu">Ubuntu</a></li>
     </ul>
   </div>
 
@@ -241,6 +254,9 @@ show_object(ijaw)
         <ul class="list-unstyled">
           <li class="mb-3"><a class="text-dark"
               href="/categories/computer-aided-design">Computer aided design</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/microcontrollers">Microcontrollers</a>
           </li>
         </ul>
       </div>
