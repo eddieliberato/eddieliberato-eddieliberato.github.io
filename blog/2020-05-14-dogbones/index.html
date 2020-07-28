@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="3d printed parametric Tensile Test Specimens or dogbones designed in cadquery">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.74.2" />
+  <meta name="generator" content="Hugo 0.74.3" />
 
   <!-- plugins -->
   
@@ -124,7 +124,6 @@
 <p>Type I, II, III, and V have the same shape but different dimensions. Type I is usually seem injection molded, type V cut using punch dies. Type IV, actually the one I was after, is intended for non-rigid plastics. Thickness of 3.2 mm is recommended for injection molded specimens.</p>
 <p><img src="../../images/post/tensileTestSpecimensTable.png" alt="ASTMD638table"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
-<span style="color:#f92672">from</span> cadquery <span style="color:#f92672">import</span> selectors
 
 <span style="color:#75715e"># ASTM D638 typeI dogbone</span>
 
@@ -143,7 +142,6 @@ dogbone_typeI <span style="color:#f92672">=</span> cq<span style="color:#f92672"
 
 show_object(dogbone_typeI)
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
-<span style="color:#f92672">from</span> cadquery <span style="color:#f92672">import</span> selectors
 
 <span style="color:#75715e"># ASTM D638 typeIV dogbone</span>
 

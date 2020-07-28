@@ -6,10 +6,19 @@
     <description>Recent content in cadquery on Edi Liberato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://eddieliberato.github.io/tags/cadquery/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Minimalist Raspberry Pi Stand </title>
+      <link>https://eddieliberato.github.io/blog/2020-06-26-minimalist-stand-for-raspberry-pi/</link>
+      <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/blog/2020-06-26-minimalist-stand-for-raspberry-pi/</guid>
+      <description>Last month I had the pleasure to visit Ireland and spend some quality time with a special person while exploring this enchanting land.</description>
+    </item>
     
     <item>
       <title>Man Against (Washing) Machine</title>
