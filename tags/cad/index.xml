@@ -6,10 +6,19 @@
     <description>Recent content in CAD on Edi Liberato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://eddieliberato.github.io/tags/cad/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Parametric Stepper Motor Bracket</title>
+      <link>https://eddieliberato.github.io/blog/2020-08-01-stepper-motor-bracket/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/blog/2020-08-01-stepper-motor-bracket/</guid>
+      <description>This design may be simple but it is useful, I can attest.</description>
+    </item>
     
     <item>
       <title>Minimalist Raspberry Pi Stand </title>
