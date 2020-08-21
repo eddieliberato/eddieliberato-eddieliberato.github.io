@@ -123,6 +123,7 @@
           <p>No need to say much about the classical ASTM D638 tensile test specimens AKA dogbones.</p>
 <p>Type I, II, III, and V have the same shape but different dimensions. Type I is usually seem injection molded, type V cut using punch dies. Type IV, actually the one I was after, is intended for non-rigid plastics. Thickness of 3.2 mm is recommended for injection molded specimens.</p>
 <p><img src="../../images/post/tensileTestSpecimensTable.png" alt="ASTMD638table"></p>
+<p><a href="http://www.astm.org/cgi-bin/resolver.cgi?D638">ASTM D638</a>, Standard Test Method for Tensile Properties of Plastics, ASTM International, West Conshohocken, PA, 2014, <a href="http://www.astm.org">www.astm.org</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
 
 <span style="color:#75715e"># ASTM D638 typeI dogbone</span>
@@ -161,8 +162,7 @@ dogbone_typeIV <span style="color:#f92672">=</span> cq<span style="color:#f92672
     edges(<span style="color:#e6db74">&#34;|Z&#34;</span>)<span style="color:#f92672">.</span>edges(<span style="color:#e6db74">&#34;not &lt;X or &gt;X&#34;</span>)<span style="color:#f92672">.</span>fillet(RO)
 
 show_object(dogbone_typeIV)
-</code></pre></div><p>Edi</p>
-
+</code></pre></div>
         </div>
 
         
