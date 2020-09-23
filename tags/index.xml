@@ -6,15 +6,11 @@
     <description>Recent content in Tags on Edi Liberato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://eddieliberato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 21 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CAD</title>
       <link>https://eddieliberato.github.io/tags/cad/</link>
-      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/tags/cad/</guid>
       <description></description>
@@ -23,7 +19,7 @@
     <item>
       <title>Libfive</title>
       <link>https://eddieliberato.github.io/tags/libfive/</link>
-      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/tags/libfive/</guid>
       <description></description>
@@ -32,7 +28,7 @@
     <item>
       <title>Lisp</title>
       <link>https://eddieliberato.github.io/tags/lisp/</link>
-      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/tags/lisp/</guid>
       <description></description>
@@ -41,7 +37,7 @@
     <item>
       <title>Scheme</title>
       <link>https://eddieliberato.github.io/tags/scheme/</link>
-      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/tags/scheme/</guid>
       <description></description>
