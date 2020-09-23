@@ -17,6 +17,24 @@
     </item>
     
     <item>
+      <title>Direct Stiffness Method: Frames</title>
+      <link>https://eddieliberato.github.io/blog/2020-09-20-fea-frame/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/blog/2020-09-20-fea-frame/</guid>
+      <description>A brief tale about how this started: My young self trying to design a bamboo bicycle frame.</description>
+    </item>
+    
+    <item>
+      <title>Direct Stiffness Method: Trusses</title>
+      <link>https://eddieliberato.github.io/blog/2020-09-20-fea-truss/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/blog/2020-09-20-fea-truss/</guid>
+      <description>This post is about some finite element method code that I wrote in 2016.</description>
+    </item>
+    
+    <item>
       <title>Gömböc</title>
       <link>https://eddieliberato.github.io/blog/2020-08-12-gomboc/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>

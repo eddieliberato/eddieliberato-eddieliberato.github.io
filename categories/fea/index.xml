@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Edi Liberato</title>
-    <link>https://eddieliberato.github.io/tags/programming/</link>
-    <description>Recent content in Programming on Edi Liberato</description>
+    <title>FEA on Edi Liberato</title>
+    <link>https://eddieliberato.github.io/categories/fea/</link>
+    <description>Recent content in FEA on Edi Liberato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/categories/fea/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Direct Stiffness Method: Frames</title>
       <link>https://eddieliberato.github.io/blog/2020-09-20-fea-frame/</link>
@@ -23,15 +23,6 @@
       
       <guid>https://eddieliberato.github.io/blog/2020-09-20-fea-truss/</guid>
       <description>This post is about some finite element method code that I wrote in 2016.</description>
-    </item>
-    
-    <item>
-      <title>Debugging STM32f103C8T6 Bluepill (Ubuntu 20.04)</title>
-      <link>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</link>
-      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</guid>
-      <description>This post is about how I got STM32cubeIDE up and running on Ubuntu 20.</description>
     </item>
     
   </channel>
