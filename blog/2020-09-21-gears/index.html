@@ -130,7 +130,7 @@
 <p>A <a href="https://en.wikipedia.org/wiki/Function_representation">F-rep</a> model can be created using <a href="https://en.wikipedia.org/wiki/Implicit_surface">implicit</a> equations in <a href="https://libfive.com/">libfive</a>. So I thought to myself it would be nice to have an implicit equation of an involute to start with. The problem is that the involute curve is usually represented as a parametric equation.</p>
 <p>The interesting &ldquo;discovery&rdquo; was that it is indeed possible to have an implicit equation of an involute, the derivation of the equation is easy but not obvious. Even more interesting to me is that I found the solution in a <strong>book from 1865</strong>.</p>
 <blockquote>
-<p><a href="https://books.google.co.uk/books?id=oKANAAAAQAAJ&amp;pg=PA227#v=onepage&amp;q&amp;f=false">Price, B (1865)</a>. A Treatise on Infinitesimal Calculus, Volume II: Integral Calculus, Calculus of Variations, and Differential Equations. 2nd ed.</p>
+<p><a href="https://books.google.co.uk/books?id=oKANAAAAQAAJ&amp;pg=PA227#v=onepage&amp;q&amp;f=false">Price, B (1865)</a>. A Treatise on Infinitesimal Calculus, Volume II: Integral Calculus, Calculus of Variations, and Differential Equations. 2nd ed. Oxford at the Clarendon Press.</p>
 </blockquote>
 <p>Let&rsquo;s take a look at the full script to generate the gear you can see in the opening image of the post and after that I&rsquo;ll break down the important parts.</p>
 <hr>
@@ -143,7 +143,7 @@
 <p>I personally don&rsquo;t like so much short, one or two characters, variables names. Again, I&rsquo;m coding this way because I feel it&rsquo;s a bit more readable in the sense it follows the notation of mechanics. I recommend the <a href="https://www.tec-science.com/mechanical-power-transmission/involute-gear/calculation-of-involute-gears/">tec-science</a> website as a more detailed source of info on gear calculations. I tried to follow more or less the naming of variables that they use.</p>
 </li>
 <li>
-<p>Mechanics need to care about geometry, materials, manufacturing tools &amp; methods and so on. Here I will just scratch the surface about geometry. I&rsquo;m not adding profile shift.</p>
+<p>I&rsquo;m not adding profile shift.</p>
 </li>
 <li>
 <p>I&rsquo;m not claiming cool looking gears are better than traditional gears.</p>
@@ -216,7 +216,7 @@ liberato-gear
 (<span style="color:#a6e22e">set-quality!</span> <span style="color:#ae81ff">11</span>)
 (<span style="color:#a6e22e">set-resolution!</span> <span style="color:#ae81ff">20</span>)
 (<span style="color:#a6e22e">set-bounds!</span> [<span style="color:#ae81ff">-20</span> <span style="color:#ae81ff">-20</span> <span style="color:#ae81ff">-6</span>] [<span style="color:#ae81ff">20</span> <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">6</span>])
-</code></pre></div><p>As you can see the complicated part is to generate a tooth profile. After you achieve that, you just go to town.</p>
+</code></pre></div><p>As you can see the complicated part is to generate a tooth profile. After you achieve that, you go to town.</p>
 <p>The trick to create the involute profile resides in defining a shape using the implicit involute equation. In libfive equations can create shapes within the bounds set in the end of the script.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#a6e22e">define-shape</span> (<span style="color:#a6e22e">involute</span> x y z)
   (+ (* x (cos (* (/ <span style="color:#ae81ff">1</span> rb) (sqrt (+ (* x x) (* y y) (<span style="color:#a6e22e">-</span>(* rb rb))))))) 
