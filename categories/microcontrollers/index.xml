@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Microcontrollers on Edi Liberato</title>
+    <title>Microcontrollers on Edi Liberato blog</title>
     <link>https://eddieliberato.github.io/categories/microcontrollers/</link>
-    <description>Recent content in Microcontrollers on Edi Liberato</description>
+    <description>Recent content in Microcontrollers on Edi Liberato blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/categories/microcontrollers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://eddieliberato.github.io/categories/microcontrollers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Debugging STM32f103C8T6 Bluepill (Ubuntu 20.04)</title>
       <link>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</link>
