@@ -233,8 +233,8 @@ liberato-gear
 </code></pre></div><p>As you can see the complicated part is to generate a tooth profile. After you achieve that, you go to town.</p>
 <p>The trick to create the involute profile resides in defining a shape using the implicit involute equation. In libfive equations can create shapes within the bounds set in the end of the script.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#a6e22e">define-shape</span> (<span style="color:#a6e22e">involute</span> x y z)
-  (+ (* x (cos (* (/ <span style="color:#ae81ff">1</span> rb) (sqrt (+ (* x x) (* y y) (<span style="color:#a6e22e">-</span>(* rb rb))))))) 
-     (* y (sin (* (/ <span style="color:#ae81ff">1</span> rb) (sqrt (+ (* x x) (* y y) (<span style="color:#a6e22e">-</span>(* rb rb)))))))
+  (+ (* x (cos (* (/ <span style="color:#ae81ff">1</span> rb) (sqrt (+ (* x x) (* y y) (- (* rb rb))))))) 
+     (* y (sin (* (/ <span style="color:#ae81ff">1</span> rb) (sqrt (+ (* x x) (* y y) (- (* rb rb)))))))
   (- rb)))
 </code></pre></div><p>Once we have the involute shape, the idea is to trim away everything that&rsquo;s not relevant to define one side of the tooth. After that the shape is rotated back so it sits along the x axis, making it easier to reflect the half shape and end up with a involute gear tooth.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#66d9ef">define </span>right-contour
