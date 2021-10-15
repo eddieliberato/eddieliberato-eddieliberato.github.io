@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Edi Liberato blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Jetson nano case parametric 3d printed screw">
+  <meta name="author" content="Edi Liberato">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://eddieliberato.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://eddieliberato.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://eddieliberato.github.io/images/favicon.png " type="image/x-icon">
+
+  
+  
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-158639121-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head>
+<body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://eddieliberato.github.io"><img class="img-fluid"
+          src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato blog"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/user/eddiekvh"><i class="ti-youtube"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/eddieliberato"><i class="ti-github"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/ediliberato/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://eddieliberato.github.io"><img class="img-fluid"
+            src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato blog"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eddieliberato.github.io/about">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://eddieliberato.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/computer-aided-design"
+          class="text-primary">Computer aided design</a>
+        
+        <h2>Jetson nano case and a simple screw</h2>
+        <div class="mb-3 post-meta">
+          <span>By Edi Liberato</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>10 October 2021</span>
+          
+        </div>
+        
+        <img src="https://eddieliberato.github.io/images/post/jetson_nano_with_cover_exploded_view.gif" class="img-fluid w-100 mb-4" alt="Jetson nano case and a simple screw">
+        
+        <div class="content mb-5">
+          <p>My journey on upgrading an second hand 3d printer and my first project with it.</p>
+<p>Opening gif animation was made with <a href="https://github.com/fougue/mayo">mayo</a> btw.</p>
+<h3 id="chapter-1---intro">CHAPTER 1 - Intro</h3>
+<p>Sometime ago I acquired a jetson nano 2gb SBC (<em>Single board Computer</em>) and after using it a bit I felt I needed to <strong>overclock it</strong>. The problem is that it runs hot even at default clock speeds, so I needed a fan. But the fan needs to be mounted somewhere right? Yes there is some holes on the big heatsink that comes with the board but the silicone screws that come with the <a href="https://www.reichelt.com/ch/de/noctua-nf-a4x20-pwm-luefter-40-mm-no-nf-a4x20pwm5v-p294029.html">noctua fan</a> don&rsquo;t fit. Maybe a 3d printed case with fan mounts will do it, I thought to myself.</p>
+<p>Unfortunately, none of the 3d printed cases I found on the web could sit on standing up position as I wanted, So I decided to make my own.</p>
+<p>Tiny problem: As I&rsquo;m back to 🇨🇭 and I left everything in 🇧🇷 I had to buy a new 3d printer. I checked the market prices and the only reasonable thing to fit my budget was an ender 3. I decided to check the second hand stuff websites and I found something promising, a fully enclosed 3d printer from a defunct company for 50 bucks less than a brand new ender 3. I bid on it and a couple of weeks later I had it. The printer is a Witbox 2 and was made by a Spanish company called bq.</p>
+<p>From an engineers standpoint it&rsquo;s a confusing printers. Some design decisions are nice and interesting and others are just terrible. I can summarize my opinions about it like this.</p>
+<ul>
+<li>
+<p>The good: The way wiring is done inside of the chamber is kind of neat. There&rsquo;s a pcb attached to printer head that acts sorta of a breakout board. The wires coming from the  heat cartridge, thermostat, fan and leveling probe are then directed to a flat cable. It&rsquo;s much more compact and elegant then the traditional drag chains. Also on z axis it has two genuine Hiwin linear guides.</p>
+</li>
+<li>
+<p>The bad: No heated bed.</p>
+</li>
+<li>
+<p>The ugly: It&rsquo;s a very shaky printer. People making this printer, probably skipped all mechanical vibrations classes, they did absolutely nothing to damp vibrations. The frame is made out of bent sheet metal with no cushions anywhere. Also it has DRV8825 stepper drivers but astrosyn damper. Bad combo.</p>
+</li>
+</ul>
+<h3 id="chapter-2---making-the-printer-more-usable">CHAPTER 2 - Making the printer more usable</h3>
+<p>The printer as I received had three annoyances:</p>
+<ol>
+<li>The noise / vibrations</li>
+<li>Glass surface (but no heated bed)</li>
+<li>A door lock without a key</li>
+</ol>
+<p>I don&rsquo;t think glass is a bad surface as long as you have a heated bed. Unfortunately I don&rsquo;t. My solution to this problem was buying a PEI flex sheet. Unfortunately I couldn&rsquo;t find something with the right dimensions I needed. I ended up just buying something a bit bigger and cutting it to size myself. I used a heavy duty paper guillotine to cut, which I don&rsquo;t recommend and I won&rsquo;t do it again this way. It worked but I took a heavy toll on the blade. I had to resharpen it after.</p>
+<p><img src="../../images/post/guilhotine.png" alt="guilhotine"></p>
+<p>Now to the vibrations. The immediate solution that comes to mind is to swap the stepper drivers for modern Trinamic ones. So I disassembled the printer to check the electronics and ..</p>
+<blockquote>
+<p>BUMMER</p>
+</blockquote>
+<p><img src="../../images/post/bq_pcb.png" alt="bq_witbox_pcb"></p>
+<p>As you can see above they made a custom board (anything special or original) which is ok, but the stepper drivers are surface mounted. I&rsquo;ll have to roll with this board for the moment. The only thing I can do for the time being is update the firmware.</p>
+<p>Even though this bq company is dead, it is still possible to find a <a href="https://github.com/bq/Marlin/">necro github repo</a> 👻. The firmware there is 3 years newer than the one that was on the machine, so why not to update?</p>
+<p>When compiling, as I expected, <a href="https://en.wikipedia.org/wiki/Dependency_hell">dependency hell</a>. No problem though, as they provide <a href="https://github.com/bq/Marlin/releases">pre compiled hex files</a>, there is a trick. On the arduino IDE, if you click on the right buttons you can actually see the command to send the files to the microcontroller. Here on my machine it looked something like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/home/jupt3r/arduino-1.8.15/hardware/tools/avr/bin/avrdude -C/home/jupt3r/arduino-1.8.15/hardware/tools/avr/etc/avrdude.conf -v -patmega2560 -cwiring -P/dev/ttyUSB0 -b115200 -D -Uflash:w:/home/jupt3r/Marlin_witbox_2-508.hex
+</code></pre></div><p>Firmware updated. Sweet</p>
+<p>May I ask now, who locks a 3d printer ?</p>
+<p>I don&rsquo;t know why but the 3d printer comes from the factory with a lock and key. I decided to just swap it with a simple knob. It would be a nice test print, So I designed a knob with a threads that fit the nut from the keylock that came with the machine.</p>
+<p>Here follows the cadquery code for the design.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> cadquery <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">helix</span>(r0,r_eps,p,h,d<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,frac<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-1</span>):
+   
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>(t):
+       
+        <span style="color:#66d9ef">if</span> t<span style="color:#f92672">&gt;</span>frac <span style="color:#f92672">and</span> t<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>frac:
+            z <span style="color:#f92672">=</span> h<span style="color:#f92672">*</span>t <span style="color:#f92672">+</span> d
+            r <span style="color:#f92672">=</span> r0<span style="color:#f92672">+</span>r_eps
+        <span style="color:#66d9ef">elif</span> t<span style="color:#f92672">&lt;=</span>frac:
+            z <span style="color:#f92672">=</span> h<span style="color:#f92672">*</span>t <span style="color:#f92672">+</span> d<span style="color:#f92672">*</span>sin(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span>t<span style="color:#f92672">/</span>frac)
+            r <span style="color:#f92672">=</span> r0 <span style="color:#f92672">+</span> r_eps<span style="color:#f92672">*</span>sin(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span>t<span style="color:#f92672">/</span>frac)
+        <span style="color:#66d9ef">else</span>:
+            z <span style="color:#f92672">=</span> h<span style="color:#f92672">*</span>t <span style="color:#f92672">-</span> d<span style="color:#f92672">*</span>sin(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi <span style="color:#f92672">-</span> pi<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>t)<span style="color:#f92672">/</span>frac)
+            r <span style="color:#f92672">=</span> r0 <span style="color:#f92672">-</span> r_eps<span style="color:#f92672">*</span>sin(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi <span style="color:#f92672">-</span> pi<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>t)<span style="color:#f92672">/</span>frac)
+           
+        x <span style="color:#f92672">=</span> r<span style="color:#f92672">*</span>sin(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">/</span>(p<span style="color:#f92672">/</span>h)<span style="color:#f92672">*</span>t)
+        y <span style="color:#f92672">=</span> r<span style="color:#f92672">*</span>cos(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">/</span>(p<span style="color:#f92672">/</span>h)<span style="color:#f92672">*</span>t)
+       
+        <span style="color:#66d9ef">return</span> x,y,z
+   
+    <span style="color:#66d9ef">return</span> func
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">thread</span>(radius, pitch, height, d, radius_eps, aspect<span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>):
+   
+    e1_bottom <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)
+        <span style="color:#f92672">.</span>parametricCurve(helix(radius,<span style="color:#ae81ff">0</span>,pitch,height,<span style="color:#f92672">-</span>d))<span style="color:#f92672">.</span>val())
+        
+    e1_top <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)
+        <span style="color:#f92672">.</span>parametricCurve(helix(radius,<span style="color:#ae81ff">0</span>,pitch,height,d))<span style="color:#f92672">.</span>val())
+   
+    e2_bottom <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)
+        <span style="color:#f92672">.</span>parametricCurve(helix(radius,radius_eps,pitch,height,<span style="color:#f92672">-</span>d<span style="color:#f92672">/</span>aspect))<span style="color:#f92672">.</span>val())
+        
+    e2_top <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)
+        <span style="color:#f92672">.</span>parametricCurve(helix(radius,radius_eps,pitch,height,d<span style="color:#f92672">/</span>aspect))<span style="color:#f92672">.</span>val())
+   
+    f1 <span style="color:#f92672">=</span> Face<span style="color:#f92672">.</span>makeRuledSurface(e1_bottom, e1_top)
+    f2 <span style="color:#f92672">=</span> Face<span style="color:#f92672">.</span>makeRuledSurface(e2_bottom, e2_top)
+    f3 <span style="color:#f92672">=</span> Face<span style="color:#f92672">.</span>makeRuledSurface(e1_bottom, e2_bottom)
+    f4 <span style="color:#f92672">=</span> Face<span style="color:#f92672">.</span>makeRuledSurface(e1_top, e2_top)
+   
+    sh <span style="color:#f92672">=</span> Shell<span style="color:#f92672">.</span>makeShell([f1,f2,f3,f4])
+    rv <span style="color:#f92672">=</span> Solid<span style="color:#f92672">.</span>makeSolid(sh)
+   
+    <span style="color:#66d9ef">return</span> rv
+
+radius <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.0</span>
+pitch <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.8</span>
+height <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+d <span style="color:#f92672">=</span> pitch<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>
+radius_eps <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>
+eps<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-3</span>
+
+core <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>,origin<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span>d))<span style="color:#f92672">.</span>circle(radius<span style="color:#f92672">+</span>eps)<span style="color:#f92672">.</span>extrude(height<span style="color:#f92672">+</span><span style="color:#ae81ff">1.75</span><span style="color:#f92672">*</span>d)
+th1 <span style="color:#f92672">=</span> thread(radius,pitch,height,d,radius_eps)
+
+handle <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">20.0</span>, <span style="color:#ae81ff">20.0</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">2.5</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">22.0</span>, <span style="color:#ae81ff">22.0</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">3.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">22.0</span>, <span style="color:#ae81ff">6.0</span>) <span style="color:#f92672">.</span>\
+    workplane(offset<span style="color:#f92672">=</span><span style="color:#ae81ff">16.0</span>)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">14.0</span>, <span style="color:#ae81ff">2.0</span>)<span style="color:#f92672">.</span>loft(combine<span style="color:#f92672">=</span>True) <span style="color:#f92672">.</span>\
+    edges(<span style="color:#e6db74">&#34;|Z&#34;</span>)<span style="color:#f92672">.</span>chamfer(<span style="color:#ae81ff">4.0</span>)<span style="color:#f92672">.</span>translate((<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5.3</span>))
+
+res <span style="color:#f92672">=</span> core<span style="color:#f92672">.</span>union(th1)<span style="color:#f92672">.</span>union(handle)
+show_object(res)
+</code></pre></div><p><img src="../../images/post/knob_with_screw.png" alt="screw_knob_3d">
+<img src="../../images/post/threaded_knob.png" alt="threaded_knob_mounted"></p>
+<p>Look at the threads entry (and exit), Awesome isn&rsquo;t it ?</p>
+<p>Of course this machine coudn&rsquo;t print the threads very well, but it was enough to hold the nut savaged from the old keylock, as showed in the picture.</p>
+<p>Here follows a picture of the printer with the new knob and the PEI flex sheet installed.</p>
+<p><img src="../../images/post/witbox2.png" alt="witbox2"></p>
+<h3 id="chapter-3---the-jetson-nano-case">Chapter 3 - the jetson nano case</h3>
+<p>I know I have a machinist mindset, so I&rsquo;m always making tools to make tools that make tools. But I have to say, It is nice to go and work on a real final product sometimes. There is a special satisfaction in using something that you created.</p>
+<p>The project here is a jetson nano case with fan support. The case should stand in a way that the heat from the heat sink takes advantage of the natural convection. Also it should look good, because it will be on my desk.</p>
+<p>I used again cadquery to model the case and cover. It was easy to dial in the dimensions this way. The idea here was to use the self tapping screws and the silicone mounts that came with the fan, so I didn&rsquo;t need to buy any extra hardware.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq 
+
+<span style="color:#75715e"># board cover</span>
+board_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">102.0</span>
+board_width <span style="color:#f92672">=</span> <span style="color:#ae81ff">81.0</span>
+height <span style="color:#f92672">=</span> <span style="color:#ae81ff">13.0</span>
+shell_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.9</span>
+mount_holes_offset_x <span style="color:#f92672">=</span><span style="color:#ae81ff">4.8</span>
+mount_holes_offset_y <span style="color:#f92672">=</span><span style="color:#ae81ff">18.0</span>
+
+usbc_offset <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.8</span>
+usbc_width <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.0</span>
+usbc_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.0</span>
+
+hdmi_offset <span style="color:#f92672">=</span> <span style="color:#ae81ff">16.0</span>
+hdmi_width <span style="color:#f92672">=</span> <span style="color:#ae81ff">16.5</span>
+hdmi_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.0</span>
+
+singleusb_offset <span style="color:#f92672">=</span> <span style="color:#ae81ff">35.0</span>
+singleusb_width <span style="color:#f92672">=</span> <span style="color:#ae81ff">16.0</span>
+singleusb_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.0</span>
+
+doubleusb_offset <span style="color:#f92672">=</span> <span style="color:#ae81ff">53.0</span>
+doubleusb_width <span style="color:#f92672">=</span> <span style="color:#ae81ff">16.0</span>
+doubleusb_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">18.0</span>
+
+ether_offset <span style="color:#f92672">=</span> <span style="color:#ae81ff">68.0</span>
+ether_width <span style="color:#f92672">=</span> <span style="color:#ae81ff">18.0</span>
+ether_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">18.0</span>
+
+usbb_offset <span style="color:#f92672">=</span> <span style="color:#ae81ff">88.0</span>
+usbb_width <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.0</span>
+usbb_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.0</span>
+
+cover <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(board_length, board_width, height, centered<span style="color:#f92672">=</span>False) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>shell(shell_thickness) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">18.0</span>, <span style="color:#ae81ff">40.0</span>)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">61.0</span>, <span style="color:#ae81ff">48.0</span>, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>cutThruAll() <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">65.0</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">14.0</span>, board_width, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>cutThruAll() <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z[-2]&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(mount_holes_offset_x, <span style="color:#f92672">-</span>mount_holes_offset_y)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">86.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">58.0</span>, centered<span style="color:#f92672">=</span>False, forConstruction<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>vertices()<span style="color:#f92672">.</span>circle(<span style="color:#ae81ff">2.0</span>)<span style="color:#f92672">.</span>extrude(height<span style="color:#f92672">-</span><span style="color:#ae81ff">3.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z[-2]&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(mount_holes_offset_x, <span style="color:#f92672">-</span>mount_holes_offset_y)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">86.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">58.0</span>, centered<span style="color:#f92672">=</span>False, forConstruction<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>vertices()<span style="color:#f92672">.</span>circle(<span style="color:#ae81ff">1.25</span>)<span style="color:#f92672">.</span>extrude(height) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Y[-2]&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(<span style="color:#f92672">-</span>board_length,<span style="color:#f92672">-</span>height, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">10.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(usbc_offset, <span style="color:#f92672">-</span><span style="color:#ae81ff">10.0</span>)<span style="color:#f92672">.</span>rect(usbc_width, <span style="color:#ae81ff">10.0</span><span style="color:#f92672">+</span>shell_thickness, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>usbc_height) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(hdmi_offset, <span style="color:#f92672">-</span><span style="color:#ae81ff">10.0</span>)<span style="color:#f92672">.</span>rect(hdmi_width ,<span style="color:#ae81ff">10.0</span><span style="color:#f92672">+</span>shell_thickness, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>hdmi_height) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(singleusb_offset, <span style="color:#f92672">-</span><span style="color:#ae81ff">10.0</span>)<span style="color:#f92672">.</span>rect(singleusb_width ,<span style="color:#ae81ff">10.0</span><span style="color:#f92672">+</span>shell_thickness, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>singleusb_height) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(doubleusb_offset, <span style="color:#f92672">-</span><span style="color:#ae81ff">18.2</span>)<span style="color:#f92672">.</span>rect(doubleusb_width ,<span style="color:#ae81ff">24.0</span>, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>doubleusb_height) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(ether_offset, <span style="color:#f92672">-</span><span style="color:#ae81ff">22.5</span>)<span style="color:#f92672">.</span>rect(ether_width ,<span style="color:#ae81ff">24.0</span>, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>ether_height) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(usbb_offset, <span style="color:#f92672">-</span><span style="color:#ae81ff">10.0</span>)<span style="color:#f92672">.</span>rect(usbb_width ,<span style="color:#ae81ff">10.0</span><span style="color:#f92672">+</span>shell_thickness, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>usbb_height) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span>)<span style="color:#f92672">.</span>rect(board_length, <span style="color:#f92672">-</span><span style="color:#ae81ff">10.0</span>, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span><span style="color:#ae81ff">3.0</span>)
+
+cover <span style="color:#f92672">=</span> cover<span style="color:#f92672">.</span>translate((<span style="color:#ae81ff">3</span>, shell_thickness, <span style="color:#ae81ff">3</span>))
+
+<span style="color:#75715e"># case</span>
+case_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">105</span>
+case_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">52</span>
+case_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.5</span>
+top_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.0</span>
+holes_offset_x <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>
+holes_offset_y <span style="color:#f92672">=</span> <span style="color:#ae81ff">18.0</span>
+
+case_back <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(case_length<span style="color:#f92672">+</span>case_thickness, board_width<span style="color:#f92672">+</span>shell_thickness<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, shell_thickness, centered<span style="color:#f92672">=</span>False) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(case_thickness<span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">40.0</span>, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>extrude(<span style="color:#f92672">-</span>case_height<span style="color:#f92672">-</span>case_thickness) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(case_length<span style="color:#f92672">+</span>case_thickness<span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>rect(case_thickness<span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>, <span style="color:#f92672">-</span>board_width<span style="color:#f92672">-</span>shell_thickness<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>extrude(<span style="color:#f92672">-</span>case_height<span style="color:#f92672">-</span>case_thickness) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">10.0</span>, <span style="color:#ae81ff">40.0</span>, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>extrude(<span style="color:#f92672">-</span><span style="color:#ae81ff">10.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(case_length<span style="color:#f92672">+</span>case_thickness<span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>rect(<span style="color:#f92672">-</span><span style="color:#ae81ff">10.0</span>, <span style="color:#f92672">+</span>board_width<span style="color:#f92672">+</span>shell_thickness<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, centered<span style="color:#f92672">=</span>False)<span style="color:#f92672">.</span>extrude(<span style="color:#f92672">-</span><span style="color:#ae81ff">10.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>pushPoints([(<span style="color:#ae81ff">5.0</span>, <span style="color:#ae81ff">20.0</span> ), (<span style="color:#ae81ff">100.0</span><span style="color:#f92672">+</span>case_thickness, <span style="color:#ae81ff">10.0</span>), (<span style="color:#ae81ff">100.0</span><span style="color:#f92672">+</span>case_thickness, <span style="color:#ae81ff">71.0</span>)])<span style="color:#f92672">.</span>hole(<span style="color:#ae81ff">4.6</span>, <span style="color:#ae81ff">10.0</span>)
+
+case_top <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(case_length<span style="color:#f92672">+</span>case_thickness, board_width<span style="color:#f92672">+</span>shell_thickness<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, top_thickness, centered<span style="color:#f92672">=</span>False) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>pushPoints([(<span style="color:#ae81ff">5.0</span>, <span style="color:#ae81ff">20.0</span> ), (<span style="color:#ae81ff">100.0</span><span style="color:#f92672">+</span>case_thickness, <span style="color:#ae81ff">10.0</span>), (<span style="color:#ae81ff">100.0</span><span style="color:#f92672">+</span>case_thickness, <span style="color:#ae81ff">71.0</span>)])<span style="color:#f92672">.</span>cskHole(<span style="color:#ae81ff">5.8</span>, <span style="color:#ae81ff">8.0</span>, <span style="color:#ae81ff">82.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">40</span>)<span style="color:#f92672">.</span>lineTo(<span style="color:#ae81ff">34.0</span>, board_width<span style="color:#f92672">+</span>shell_thickness<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>lineTo(<span style="color:#ae81ff">0</span>, board_width<span style="color:#f92672">+</span>shell_thickness<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>close()<span style="color:#f92672">.</span>cutThruAll() <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;CenterOfBoundBox&#34;</span>)<span style="color:#f92672">.</span>move(holes_offset_x, holes_offset_y)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">32.0</span>, <span style="color:#ae81ff">32.0</span>, forConstruction<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>vertices()<span style="color:#f92672">.</span>hole(<span style="color:#ae81ff">5.6</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;CenterOfBoundBox&#34;</span>)<span style="color:#f92672">.</span>move(holes_offset_x, holes_offset_y)<span style="color:#f92672">.</span>hole(<span style="color:#ae81ff">38.5</span>)
+
+case_top <span style="color:#f92672">=</span> case_top<span style="color:#f92672">.</span>translate((<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">54.0</span>))
+
+</code></pre></div><p><img src="../../images/post/jetson_nano_cover.png" alt="jetson_nano_cover_cad">
+<img src="../../images/post/jetson_nano_2.png" alt="jetson_nano_cover_2">
+<img src="../../images/post/jetson_nano_1.png" alt="jetson_nano_cover_1"></p>
+<p>There it is the case in its full glory. I liked the way it turned out. Even if at some point I decide to use the fan somewhere else, I can still use the cover, as it is split in two parts (check the opening gif). I designed it this way because if I ever need to use any GPIO I can easily remove that side of the cover. The fan header is also nice and accessible this way.</p>
+<p>I have to mention that mounted this way, with the silicone mounts from noctua, this setup is absolutely silent. I really can&rsquo;t hear the fan under 60% PWM, not even very close to it.</p>
+<p>That&rsquo;s about it for today, 🤘🏽</p>
+<p>Thanks for reading.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      
+      
+      
+
+
+<div class="widget">
+  
+  <ul class="list-inline">
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/3d-printing">3d printing</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/c">C</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/cad">Cad</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/cadquery">Cadquery</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/electronics">Electronics</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/embedded">Embedded</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/libfive">Libfive</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/lisp">Lisp</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/programming">Programming</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/python">Python</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/scheme">Scheme</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/ubuntu">Ubuntu</a></li>
+  </ul>
+</div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+
+          
+          <li class="mb-3"><a class="text-dark" href="mailto:eddie.liberatoe@gmail.com"><i
+              class="ti-email mr-3 text-primary"></i>eddie.liberatoe@gmail.com</a>
+          
+
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>São Paulo, Brazil</li>
+          
+
+          
+
+          </li>
+        </ul>
+      </div>
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/computer-aided-design">Computer aided design</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/fea">Fea</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/microcontrollers">Microcontrollers</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/about">About</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://eddieliberato.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://eddieliberato.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/search/mark.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://eddieliberato.github.io/js/script.min.js"></script>
+
+
+
+
+</body>
+</html>
