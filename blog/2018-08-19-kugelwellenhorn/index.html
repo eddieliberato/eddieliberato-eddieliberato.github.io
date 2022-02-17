@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="parametric horn for 3d print designed in cadquery">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <!-- plugins -->
   
@@ -140,9 +140,9 @@
         <div class="content mb-5">
           <p>I always have been intrigued by horns. Actually by passive devices in general, tunned mass dampers, RLC circuits to name a few. Researching more about horns I found two designs that I&rsquo;d like to explore more. One is the Kugelwellenhorn and the other is the Le Cleah&rsquo;c horn. More info about the former can be found <a href="http://www.rintelen.ch/download/JMMLC_horns_lecture_etf10.pdf" title="lecleach">here</a>, in a lecture apparently gaven by Le Cleach&rsquo;c himself when he was still alive.</p>
 <p>About Kugellwellen horn, the design that I decided to approach first, all the info you need you can probably find in the site of <a href="http://kolbrek.hoyttalerdesign.no/index.php/horns/horn-theory" title="kolbrek horn theory">Bjorn Kolbrek</a>. Mr. Kolbrek seens to be an expert on subject, and I enjoyed a lot reading his articles. The math on his reports was a bit beyond my comprehension and I didn&rsquo;t want to dive so deep into the subject. My goal was only to design and materialize the horn. Turns out that this is not hard at all, Just take a look at the script below and you&rsquo;ll see that with about 30 lines of code is done. Amazing!. Well, again hats off to cadquery developers that make it possible.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 <span style="color:#f92672">import</span> math
-<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
 
 c <span style="color:#f92672">=</span> <span style="color:#ae81ff">344000</span>    <span style="color:#75715e"># mm/s speed of sound through air</span>
 fc <span style="color:#f92672">=</span> <span style="color:#ae81ff">480</span>      <span style="color:#75715e"># Hz cuttof frequency</span>
@@ -178,7 +178,7 @@ show_object(horn, options<span style="color:#f92672">=</span>{<span style="color
 <h5 id="update-23042020">UPDATE (23/04/2020)</h5>
 <p>Looking the script above that I wrote almost two years ago it&rsquo;s easy to understand why it crashes in CQ 2.0. It&rsquo;s a bit of a mess with this calling of matplotlib library. I must say it was convinient to look at the profile of the horn and to create the 3d model at the same time, but it&rsquo;s ugly code.</p>
 <p>I was looking at the script to generate cycloid gears from <a href="https://github.com/adam-urbanczyk">Adam Urbanczyk</a>, one of the developers of cadquery, and what an elegant code! This inspired me not only to remove this plotting part of the script, but also to modify it a bit in order to make it more elegant.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 <span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> pi, sqrt, exp
  
 td <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>      <span style="color:#75715e"># mm, throat diameter</span>

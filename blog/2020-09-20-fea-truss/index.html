@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="2D and 3D truss finite element analysis FEA FEM in python">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <!-- plugins -->
   
@@ -124,7 +124,7 @@
       <div class="col-lg-8 mx-auto">
         
         <a href="/categories/fea"
-          class="text-primary">F e a</a>
+          class="text-primary">Fea</a>
         
         <h2>Direct Stiffness Method in Python: Trusses</h2>
         <div class="mb-3 post-meta">
@@ -150,12 +150,12 @@
 </blockquote>
 </blockquote>
 <p><img src="../../images/post/2d_truss.svg" alt="truss_2d"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">##############################################################</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">##############################################################</span>
 <span style="color:#75715e"># Fem script to compute plane truss displacements and stresses </span>
 <span style="color:#75715e"># written by Eddie Liberato 16/11/16</span>
 <span style="color:#75715e">##############################################################</span>
 
-<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 
 <span style="color:#75715e"># constants</span>
 E<span style="color:#f92672">=</span><span style="color:#ae81ff">10e06</span>
@@ -214,10 +214,10 @@ react<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>d
 	sigma[e]<span style="color:#f92672">=</span>(E<span style="color:#f92672">/</span>elem_length)<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>dot(np<span style="color:#f92672">.</span>array([<span style="color:#f92672">-</span>c,<span style="color:#f92672">-</span>s,c,s]), displacement[np<span style="color:#f92672">.</span>ix_(elem_dof)])
 
 <span style="color:#75715e"># emitting results to screen</span>
-<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;displacements:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> {displacement}&#39;</span>)
-<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;stress:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> {sigma}&#39;</span>)
+print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;displacements:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>displacement<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;stress:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>sigma<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div><p>The output:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python truss2d.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python truss2d.py
 displacements:
  <span style="color:#f92672">[[</span>0.        <span style="color:#f92672">]</span>
  <span style="color:#f92672">[</span>0.        <span style="color:#f92672">]</span>
@@ -237,12 +237,12 @@ stress:
 </blockquote>
 </blockquote>
 <p><img src="../../images/post/3d_truss.svg" alt="truss_3d"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">###############################################################</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">###############################################################</span>
 <span style="color:#75715e"># Fem script to compute space truss displacements and stresses </span>
 <span style="color:#75715e"># written by Eddie Liberato 16/11/16</span>
 <span style="color:#75715e">###############################################################</span>
 
-<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 
 <span style="color:#75715e"># constants</span>
 E<span style="color:#f92672">=</span><span style="color:#ae81ff">210e09</span>
@@ -310,11 +310,11 @@ react<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>d
 	sigma[e]<span style="color:#f92672">=</span>(E<span style="color:#f92672">/</span>elem_length)<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>dot(np<span style="color:#f92672">.</span>array([<span style="color:#f92672">-</span>cx,<span style="color:#f92672">-</span>cy,<span style="color:#f92672">-</span>cz,cx,cy,cz]), displacement[np<span style="color:#f92672">.</span>ix_(elem_dof)])
 
 <span style="color:#75715e"># emitting results to screen</span>
-<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;reactions:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> {react.reshape(node_count,3)}&#39;</span>)
-<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;displacements:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> {displacement}&#39;</span>)
-<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;stress:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> {sigma}&#39;</span>)
+print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;reactions:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>react<span style="color:#f92672">.</span>reshape(node_count,<span style="color:#ae81ff">3</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;displacements:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>displacement<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;stress:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>sigma<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div><p>The output:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python truss3d.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python truss3d.py
 reactions:
  <span style="color:#f92672">[[</span> 2.000e+04 -1.137e-13 -9.095e-13<span style="color:#f92672">]</span>
  <span style="color:#f92672">[</span>-1.895e+04  4.737e+03  6.316e+03<span style="color:#f92672">]</span>

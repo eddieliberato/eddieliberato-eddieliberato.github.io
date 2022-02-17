@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="3d printed parametric Tensile Test Specimens or dogbones designed in cadquery">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <!-- plugins -->
   
@@ -142,7 +142,7 @@
 <p>Type I, II, III, and V have the same shape but different dimensions. Type I is usually seem injection molded, type V cut using punch dies. Type IV, actually the one I was after, is intended for non-rigid plastics. Thickness of 3.2 mm is recommended for injection molded specimens.</p>
 <p><img src="../../images/post/tensileTestSpecimensTable.png" alt="ASTMD638table"></p>
 <p><a href="http://www.astm.org/cgi-bin/resolver.cgi?D638">ASTM D638</a>, Standard Test Method for Tensile Properties of Plastics, ASTM International, West Conshohocken, PA, 2014, <a href="http://www.astm.org">www.astm.org</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 
 <span style="color:#75715e"># ASTM D638 typeI dogbone</span>
 
@@ -156,11 +156,11 @@ thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.2</
 dogbone_typeI <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(LO, WO, thickness) <span style="color:#f92672">.</span>\
     faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, thickness)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>(WO<span style="color:#f92672">-</span>W)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">.</span>\
     faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, thickness)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>(WO<span style="color:#f92672">-</span>W)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">.</span>\
-    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>R<span style="color:#f92672">+</span>W, forConstruction<span style="color:#f92672">=</span>True) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>R<span style="color:#f92672">+</span>W, forConstruction<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#f92672">.</span>\
     vertices()<span style="color:#f92672">.</span>hole(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>R)
 
 show_object(dogbone_typeI)
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 
 <span style="color:#75715e"># ASTM D638 typeIV dogbone</span>
 
@@ -175,7 +175,7 @@ thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.2</
 dogbone_typeIV <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(LO, WO, thickness) <span style="color:#f92672">.</span>\
     faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, thickness)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>(WO<span style="color:#f92672">-</span>W)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">.</span>\
     faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, thickness)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>(WO<span style="color:#f92672">-</span>W)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">.</span>\
-    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>R<span style="color:#f92672">+</span>W, forConstruction<span style="color:#f92672">=</span>True) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>R<span style="color:#f92672">+</span>W, forConstruction<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#f92672">.</span>\
     vertices()<span style="color:#f92672">.</span>hole(R<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">.</span>\
     edges(<span style="color:#e6db74">&#34;|Z&#34;</span>)<span style="color:#f92672">.</span>edges(<span style="color:#e6db74">&#34;not &lt;X or &gt;X&#34;</span>)<span style="color:#f92672">.</span>fillet(RO)
 

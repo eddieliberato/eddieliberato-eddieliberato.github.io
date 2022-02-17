@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Parametric 3d model of a turners cube designed in cadquery">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <!-- plugins -->
   
@@ -141,12 +141,12 @@
           <p>Back in Brazil, during my machinist apprenticeship, one of the lathe tasks of the manual machining course was to make a turners cube. Basically you need to turn a cube in the lathe and make some holes, that if carefully bored to specific dimensions, you end up with usually two captive cubes inside one another. At the time I was only a young teenager and the captive cube was a very attractive challenge to me. I naively thought that only round parts could be made at the lathe, so I was impressed with the cube with other cubes inside coming out of the machine. Sadly nowadays I don&rsquo;t know anymore where mine is. Hopefully at my mom&rsquo;s place.</p>
 <p>You can have as many cubes as you want inside. Back then,  the ones who actually made the cube usually went for three, so I did and I still think that three is the right number if you&rsquo;re doing it on the manual lathe. Two is too easy. Four is annoying because it is a lot of repetition of the same operations. Three is a good number because you proved your point in showing the instructor what you&rsquo;re capable of, and is not as annoying to make as the four cubes version.</p>
 <p>Leaving 2003 behind and back to 2018, I was thinking that the repetitive nature of the object makes it a nice model for cadqquery. So here is the script that I came up with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 <span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> sqrt
 
 captive_cube_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>    <span style="color:#75715e"># mm</span>
 n_of_cubes <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>            <span style="color:#75715e"># besides the innermost captive cube</span>
-small_holes <span style="color:#f92672">=</span> True        <span style="color:#75715e"># False = innermost captive cube without holes</span>
+small_holes <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>        <span style="color:#75715e"># False = innermost captive cube without holes</span>
 
 cube_size <span style="color:#f92672">=</span> captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>n_of_cubes  <span style="color:#75715e"># total size of the cube</span>
 sh_size <span style="color:#f92672">=</span> captive_cube_size<span style="color:#f92672">/</span>sqrt(<span style="color:#ae81ff">2</span>)          <span style="color:#75715e"># diameter of the hole on the smallest cube</span>

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="CD organizer model for 3D print. Designed in cadquery using python list comprehension to create a beatiful parametric model">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <!-- plugins -->
   
@@ -140,7 +140,7 @@
         <div class="content mb-5">
           <p>I had some old CDs lying around the house and I decided to organized them in a single place. I thought of 3d printing something to help, but after a brief search around the internet I couldn&rsquo;t find anything that I liked. The ones I could find were big and clunky, leading to long printing times. The &ldquo;simple&rdquo; one (that wasn&rsquo;t simple at all) that I found had the slots a bit undersized and I couldn&rsquo;t fit the CDs. I could have rescaled the model but that print took me around 3 hours and I started to wonder if I should repeat it.</p>
 <p>I decided to come up with my own design.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 
 slots <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>               <span style="color:#75715e"># number slots (number of CDs in this case)</span>
 slot_width <span style="color:#f92672">=</span> <span style="color:#ae81ff">11.0</span>       <span style="color:#75715e"># mm, slot size (slightly bigger than a CD case width) </span>

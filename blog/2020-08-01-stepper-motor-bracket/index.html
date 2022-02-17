@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Parametric cadquery designed stepper motor bracket 3d printed">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <!-- plugins -->
   
@@ -140,7 +140,7 @@
         <div class="content mb-5">
           <p>This design may be simple but it is useful, I can attest.</p>
 <p>The price estimations that I received for this object, made out of welded steel, were in the 100-130 EUROS range, 10 days delivery time. As the application intended for it had a moderately light load I decided to just model and 3d print it. Took me half an hour of 3d modeling and 4 hours for the 3d printing process. I printed it out of ABS on a professional grade printer from the university.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#f92672">as</span> cq
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 
 width <span style="color:#f92672">=</span> <span style="color:#ae81ff">66.0</span>                   <span style="color:#75715e"># mm</span>
 fplate_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">60.0</span>           <span style="color:#75715e"># mm</span>
@@ -161,14 +161,14 @@ bplate_cbore_diameter <span style="color:#f92672">=</span> <span style="color:#a
 bplate_cbore_depth <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.0</span>       <span style="color:#75715e"># mm</span>
 gusset_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.0</span>         <span style="color:#75715e"># mm</span>
 
-gusset <span style="color:#f92672">=</span> True
+gusset <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
 
 stepper_bracket <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(width, fplate_thickness, fplate_height<span style="color:#f92672">+</span>bplate_thickness) <span style="color:#f92672">.</span>\
-    faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, bplate_thickness<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>rect(fplate_between_holes, fplate_between_holes, forConstruction<span style="color:#f92672">=</span>True) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, bplate_thickness<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>rect(fplate_between_holes, fplate_between_holes, forConstruction<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#f92672">.</span>\
     vertices()<span style="color:#f92672">.</span>cboreHole(fplate_screw_clearance, fplate_cbore_diameter, fplate_cbore_depth) <span style="color:#f92672">.</span>\
     faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, bplate_thickness<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>cboreHole(main_bore_diameter, main_cbore_diameter, main_cbore_depth) <span style="color:#f92672">.</span>\
     faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>fplate_height<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>rect(width, bplate_thickness)<span style="color:#f92672">.</span>extrude(bplate_length) <span style="color:#f92672">.</span>\
-    faces(<span style="color:#e6db74">&#34;&lt;Z[1]&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, bplate_holes_offset)<span style="color:#f92672">.</span>rect(bplate_between_holes, bplate_between_holes, forConstruction<span style="color:#f92672">=</span>True) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z[1]&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, bplate_holes_offset)<span style="color:#f92672">.</span>rect(bplate_between_holes, bplate_between_holes, forConstruction<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#f92672">.</span>\
     vertices()<span style="color:#f92672">.</span>cboreHole(bplate_screw_clearance, bplate_cbore_diameter, bplate_cbore_depth)
 
 <span style="color:#66d9ef">if</span> gusset:

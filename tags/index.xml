@@ -6,26 +6,13 @@
     <description>Recent content in Tags on Edi Liberato blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://eddieliberato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3D printing</title>
       <link>https://eddieliberato.github.io/tags/3d-printing/</link>
       <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/tags/3d-printing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>C</title>
-      <link>https://eddieliberato.github.io/tags/c/</link>
-      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/tags/c/</guid>
       <description></description>
     </item>
     
@@ -98,6 +85,15 @@
       <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>https://eddieliberato.github.io/tags/c/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/tags/c/</guid>
       <description></description>
     </item>
     

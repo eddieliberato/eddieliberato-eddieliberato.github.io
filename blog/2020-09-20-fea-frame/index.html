@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="2D and 3D frame finite element analysis FEA FEM in python">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <!-- plugins -->
   
@@ -124,7 +124,7 @@
       <div class="col-lg-8 mx-auto">
         
         <a href="/categories/fea"
-          class="text-primary">F e a</a>
+          class="text-primary">Fea</a>
         
         <h2>Direct Stiffness Method in Python: Frames</h2>
         <div class="mb-3 post-meta">
@@ -148,12 +148,12 @@
 </blockquote>
 </blockquote>
 <p><img src="../../images/post/2d_frame.svg" alt="frame_2d"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">###############################################################</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">###############################################################</span>
 <span style="color:#75715e"># Fem script to compute plane frame forces and moments</span>
 <span style="color:#75715e"># written by Eddie Liberato 16/11/16</span>
 <span style="color:#75715e">###############################################################</span>
 
-<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 
 <span style="color:#75715e"># constants</span>
 E<span style="color:#f92672">=</span><span style="color:#ae81ff">30e06</span>         <span style="color:#75715e"># psi</span>
@@ -201,10 +201,10 @@ suppress_dof<span style="color:#f92672">=</span>np<span style="color:#f92672">.<
 active_dof<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>setdiff1d(np<span style="color:#f92672">.</span>arange(struct_dof), suppress_dof)
 displacement_aux<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>solve(stiffness[np<span style="color:#f92672">.</span>ix_(active_dof,active_dof)], force[np<span style="color:#f92672">.</span>ix_(active_dof)])
 displacement[np<span style="color:#f92672">.</span>ix_(active_dof)]<span style="color:#f92672">=</span>displacement_aux
-<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;displacements:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> {displacement}&#39;</span>)
+print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;displacements:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>displacement<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
 
 <span style="color:#66d9ef">for</span> e <span style="color:#f92672">in</span> range(elem_count):
-	<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;forces on element {e+1}&#39;</span>)
+	print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;forces on element </span><span style="color:#e6db74">{</span>e<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
 	index<span style="color:#f92672">=</span>elem_con[e]
 	elem_dof<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array([index[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>, index[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, index[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>,
                        index[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>, index[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, index[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>])
@@ -223,9 +223,9 @@ displacement[np<span style="color:#f92672">.</span>ix_(active_dof)]<span style="
                      [<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">12</span><span style="color:#f92672">*</span>c2,<span style="color:#f92672">-</span><span style="color:#ae81ff">6</span><span style="color:#f92672">*</span>c2<span style="color:#f92672">*</span>el,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">12</span><span style="color:#f92672">*</span>c2,<span style="color:#f92672">-</span><span style="color:#ae81ff">6</span><span style="color:#f92672">*</span>c2<span style="color:#f92672">*</span>el],
                      [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span><span style="color:#f92672">*</span>c2<span style="color:#f92672">*</span>el,<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>c2<span style="color:#f92672">*</span>el<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">6</span><span style="color:#f92672">*</span>c2<span style="color:#f92672">*</span>el,<span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>c2<span style="color:#f92672">*</span>el<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>]])
 	elem_forces<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>dot(klocal,Td)
-	<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;{elem_forces}&#39;</span>)
+	print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>elem_forces<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div><p>The output:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python frame2d.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python frame2d.py
 displacements:
  <span style="color:#f92672">[[</span> 0.        <span style="color:#f92672">]</span>
  <span style="color:#f92672">[</span> 0.        <span style="color:#f92672">]</span>
@@ -269,12 +269,12 @@ forces on element <span style="color:#ae81ff">3</span>
 </blockquote>
 </blockquote>
 <p><img src="../../images/post/3d_frame.svg" alt="frame_3d"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">###############################################################</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">###############################################################</span>
 <span style="color:#75715e"># Fem script to compute space frame forces and moments</span>
 <span style="color:#75715e"># written by Eddie Liberato 16/11/16</span>
 <span style="color:#75715e">###############################################################</span>
 
-<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 
 <span style="color:#75715e"># constants</span>
 E<span style="color:#f92672">=</span><span style="color:#ae81ff">30e03</span>     <span style="color:#75715e"># psi</span>
@@ -386,10 +386,10 @@ suppress_dof<span style="color:#f92672">=</span>np<span style="color:#f92672">.<
 active_dof<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>setdiff1d(np<span style="color:#f92672">.</span>arange(struct_dof), suppress_dof)
 displacement_aux<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>solve(stiffness[np<span style="color:#f92672">.</span>ix_(active_dof,active_dof)], force[np<span style="color:#f92672">.</span>ix_(active_dof)])
 displacement[np<span style="color:#f92672">.</span>ix_(active_dof)]<span style="color:#f92672">=</span>displacement_aux
-<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;displacements:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> {displacement}&#39;</span>)
+print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;displacements:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>displacement<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
 
 <span style="color:#66d9ef">for</span> e <span style="color:#f92672">in</span> range(elem_count):
-	<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;forces on element {e+1}&#39;</span>)
+	print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;forces on element </span><span style="color:#e6db74">{</span>e<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
 	index<span style="color:#f92672">=</span>elem_con[e]
 	elem_dof<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array([index[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">6</span>, index[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">6</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, index[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">6</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>,
                        index[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">6</span><span style="color:#f92672">+</span><span style="color:#ae81ff">3</span>, index[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">6</span><span style="color:#f92672">+</span><span style="color:#ae81ff">4</span>, index[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">6</span><span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>,
@@ -463,9 +463,9 @@ displacement[np<span style="color:#f92672">.</span>ix_(active_dof)]<span style="
 		[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">6</span><span style="color:#f92672">*</span>E<span style="color:#f92672">*</span>Iy<span style="color:#f92672">/</span>el<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>E<span style="color:#f92672">*</span>Iy<span style="color:#f92672">/</span>el,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span><span style="color:#f92672">*</span>E<span style="color:#f92672">*</span>Iy<span style="color:#f92672">/</span>el<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>E<span style="color:#f92672">*</span>Iy<span style="color:#f92672">/</span>el,<span style="color:#ae81ff">0</span>],
 		[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span><span style="color:#f92672">*</span>E<span style="color:#f92672">*</span>Iz<span style="color:#f92672">/</span>el<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>E<span style="color:#f92672">*</span>Iz<span style="color:#f92672">/</span>el,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">6</span><span style="color:#f92672">*</span>E<span style="color:#f92672">*</span>Iz<span style="color:#f92672">/</span>el<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>E<span style="color:#f92672">*</span>Iz<span style="color:#f92672">/</span>el]])
 	elem_forces<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>dot(klocal,Td)
-	<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;{elem_forces}&#39;</span>)
+	print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>elem_forces<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div><p>The output:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python frame3d.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python frame3d.py
 displacements:
  <span style="color:#f92672">[[</span> 7.098e-05<span style="color:#f92672">]</span>
  <span style="color:#f92672">[</span>-1.400e-02<span style="color:#f92672">]</span>
