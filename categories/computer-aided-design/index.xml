@@ -31,8 +31,7 @@
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/blog/2020-08-12-gomboc/</guid>
-      <description>One line of code and you have it!
-Weird? Cool? Wizardry?</description>
+      <description>One line of code and you have it!</description>
     </item>
     
     <item>
@@ -42,15 +41,6 @@ Weird? Cool? Wizardry?</description>
       
       <guid>https://eddieliberato.github.io/blog/2020-08-01-stepper-motor-bracket/</guid>
       <description>This design may be simple but it is useful, I can attest.</description>
-    </item>
-    
-    <item>
-      <title>Minimalist Raspberry Pi Stand </title>
-      <link>https://eddieliberato.github.io/blog/2020-06-26-minimalist-stand-for-raspberry-pi/</link>
-      <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2020-06-26-minimalist-stand-for-raspberry-pi/</guid>
-      <description>Last month I had the pleasure to visit Ireland and spend some quality time with a special person while exploring that enchanting land.</description>
     </item>
     
     <item>
@@ -91,10 +81,10 @@ Weird? Cool? Wizardry?</description>
     
     <item>
       <title>Dovetail Jig Revisited</title>
-      <link>https://eddieliberato.github.io/blog/2020-05-08-dovetail-jg-revisited/</link>
+      <link>https://eddieliberato.github.io/blog/2020-05-08-dovetail-jig-revisited/</link>
       <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://eddieliberato.github.io/blog/2020-05-08-dovetail-jg-revisited/</guid>
+      <guid>https://eddieliberato.github.io/blog/2020-05-08-dovetail-jig-revisited/</guid>
       <description>I&amp;rsquo;m revisiting my dovetail jig because when I was looking at Cadquery 2.</description>
     </item>
     
@@ -122,7 +112,7 @@ Weird? Cool? Wizardry?</description>
       <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/blog/2018-08-19-kugelwellenhorn/</guid>
-      <description>I always have been intrigued by horns. Actually by passive devices in general, tunned mass dampers, RLC circuits to name a few.</description>
+      <description>I always have been intrigued by horns.</description>
     </item>
     
     <item>
@@ -149,7 +139,7 @@ Weird? Cool? Wizardry?</description>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/blog/2018-06-26-cadquery-chess-set/</guid>
-      <description>This is my debute 3d printing project. A chess set designed in cadquery.</description>
+      <description>This is my debute 3d printing project.</description>
     </item>
     
   </channel>
