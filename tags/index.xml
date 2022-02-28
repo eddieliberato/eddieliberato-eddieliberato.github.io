@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Edi Liberato blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://eddieliberato.github.io/tags/programming/</link>
+      <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://eddieliberato.github.io/tags/python/</link>
+      <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>3D printing</title>
       <link>https://eddieliberato.github.io/tags/3d-printing/</link>
@@ -62,33 +80,6 @@
     </item>
     
     <item>
-      <title>Programming</title>
-      <link>https://eddieliberato.github.io/tags/programming/</link>
-      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://eddieliberato.github.io/tags/python/</link>
-      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://eddieliberato.github.io/tags/ubuntu/</link>
-      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>C</title>
       <link>https://eddieliberato.github.io/tags/c/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
@@ -112,6 +103,15 @@
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/tags/embedded/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://eddieliberato.github.io/tags/ubuntu/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
