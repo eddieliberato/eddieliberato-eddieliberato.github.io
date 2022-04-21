@@ -2,16 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://eddieliberato.github.io/tags/3d-printing/</loc>
+    <lastmod>2022-03-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://eddieliberato.github.io/blog/</loc>
-    <lastmod>2022-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2022-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eddieliberato.github.io/tags/cad/</loc>
+    <lastmod>2022-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eddieliberato.github.io/tags/cadquery/</loc>
+    <lastmod>2022-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://eddieliberato.github.io/categories/</loc>
-    <lastmod>2022-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2022-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://eddieliberato.github.io/blog/2022-02-28-direct-stiffness-method/</loc>
-    <lastmod>2022-02-28T00:00:00+00:00</lastmod>
+    <loc>https://eddieliberato.github.io/categories/computer-aided-design/</loc>
+    <lastmod>2022-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://eddieliberato.github.io/</loc>
+    <lastmod>2022-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eddieliberato.github.io/blog/2022-03-10-screw-and-jetson-nano/</loc>
+    <lastmod>2022-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eddieliberato.github.io/tags/</loc>
+    <lastmod>2022-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eddieliberato.github.io/blog/2022-02-28-direct-stiffness-method/</loc>
     <lastmod>2022-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://eddieliberato.github.io/categories/fea/</loc>
@@ -22,24 +40,6 @@
   </url><url>
     <loc>https://eddieliberato.github.io/tags/python/</loc>
     <lastmod>2022-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://eddieliberato.github.io/tags/</loc>
-    <lastmod>2022-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://eddieliberato.github.io/tags/3d-printing/</loc>
-    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://eddieliberato.github.io/tags/cad/</loc>
-    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://eddieliberato.github.io/tags/cadquery/</loc>
-    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://eddieliberato.github.io/categories/computer-aided-design/</loc>
-    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://eddieliberato.github.io/blog/2021-10-10-screw-and-jetson-nano/</loc>
-    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://eddieliberato.github.io/blog/2020-09-21-gears/</loc>
     <lastmod>2020-09-21T00:00:00+00:00</lastmod>

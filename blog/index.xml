@@ -6,7 +6,16 @@
     <description>Recent content in Blogs on Edi Liberato blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jetson nano case and a simple screw</title>
+      <link>https://eddieliberato.github.io/blog/2022-03-10-screw-and-jetson-nano/</link>
+      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/blog/2022-03-10-screw-and-jetson-nano/</guid>
+      <description>My journey on upgrading an second hand 3d printer and my first project with it.</description>
+    </item>
+    
     <item>
       <title>Direct Stiffness Method in Python: Trusses and Frames</title>
       <link>https://eddieliberato.github.io/blog/2022-02-28-direct-stiffness-method/</link>
@@ -14,15 +23,6 @@
       
       <guid>https://eddieliberato.github.io/blog/2022-02-28-direct-stiffness-method/</guid>
       <description>This post is about some finite element method code that I wrote back in 2014.</description>
-    </item>
-    
-    <item>
-      <title>Jetson nano case and a simple screw</title>
-      <link>https://eddieliberato.github.io/blog/2021-10-10-screw-and-jetson-nano/</link>
-      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2021-10-10-screw-and-jetson-nano/</guid>
-      <description>My journey on upgrading an second hand 3d printer and my first project with it.</description>
     </item>
     
     <item>

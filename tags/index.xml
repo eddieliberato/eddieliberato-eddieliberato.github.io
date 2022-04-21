@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Edi Liberato blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3D printing</title>
+      <link>https://eddieliberato.github.io/tags/3d-printing/</link>
+      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/tags/3d-printing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CAD</title>
+      <link>https://eddieliberato.github.io/tags/cad/</link>
+      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/tags/cad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cadquery</title>
+      <link>https://eddieliberato.github.io/tags/cadquery/</link>
+      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/tags/cadquery/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Programming</title>
       <link>https://eddieliberato.github.io/tags/programming/</link>
@@ -22,33 +49,6 @@
       <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>3D printing</title>
-      <link>https://eddieliberato.github.io/tags/3d-printing/</link>
-      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/tags/3d-printing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CAD</title>
-      <link>https://eddieliberato.github.io/tags/cad/</link>
-      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/tags/cad/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cadquery</title>
-      <link>https://eddieliberato.github.io/tags/cadquery/</link>
-      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/tags/cadquery/</guid>
       <description></description>
     </item>
     
