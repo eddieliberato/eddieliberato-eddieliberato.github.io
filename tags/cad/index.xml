@@ -6,7 +6,16 @@
     <description>Recent content in CAD on Edi Liberato blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/cad/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/cad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A collection of Cadquery parametric models (2018-2020)</title>
+      <link>https://eddieliberato.github.io/blog/2022-06-26-cadquery-models-collection/</link>
+      <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://eddieliberato.github.io/blog/2022-06-26-cadquery-models-collection/</guid>
+      <description>The title says it all, but I will elaborate a bit more.</description>
+    </item>
+    
     <item>
       <title>Jetson nano case and a simple screw</title>
       <link>https://eddieliberato.github.io/blog/2022-03-10-screw-and-jetson-nano/</link>
@@ -35,102 +44,12 @@
     </item>
     
     <item>
-      <title>Parametric Stepper Motor Bracket</title>
-      <link>https://eddieliberato.github.io/blog/2020-08-01-stepper-motor-bracket/</link>
-      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2020-08-01-stepper-motor-bracket/</guid>
-      <description>This design may be simple but it is useful, I can attest.</description>
-    </item>
-    
-    <item>
-      <title>Man Against (Washing) Machine</title>
-      <link>https://eddieliberato.github.io/blog/2020-05-15-man-against-washing-machine/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2020-05-15-man-against-washing-machine/</guid>
-      <description>One of my personal favorite uses of 3d printers at home is to fix broken stuff.</description>
-    </item>
-    
-    <item>
       <title>ASTM D638 Tensile Test Specimens</title>
       <link>https://eddieliberato.github.io/blog/2020-05-14-dogbones/</link>
       <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/blog/2020-05-14-dogbones/</guid>
       <description>No need to say much about the classical ASTM D638 tensile test specimens AKA dogbones.</description>
-    </item>
-    
-    <item>
-      <title>Plywood Connectors</title>
-      <link>https://eddieliberato.github.io/blog/2020-05-13-plywood-connector/</link>
-      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2020-05-13-plywood-connector/</guid>
-      <description>I made this about two years ago and even though I liked the outcome pretty much I decided not to post anything about it at the time.</description>
-    </item>
-    
-    <item>
-      <title>Parametric Spiral Lampshade</title>
-      <link>https://eddieliberato.github.io/blog/2020-05-12-parametric-lampshade/</link>
-      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2020-05-12-parametric-lampshade/</guid>
-      <description>I had the idea to make a 3d printed bedside lamp as a b-day present for my friend Akarsh.</description>
-    </item>
-    
-    <item>
-      <title>Dovetail Jig Revisited</title>
-      <link>https://eddieliberato.github.io/blog/2020-05-08-dovetail-jig-revisited/</link>
-      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2020-05-08-dovetail-jig-revisited/</guid>
-      <description>I&amp;rsquo;m revisiting my dovetail jig because when I was looking at Cadquery 2.</description>
-    </item>
-    
-    <item>
-      <title>Sawing Guides</title>
-      <link>https://eddieliberato.github.io/blog/2020-05-08-sawing-guides/</link>
-      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2020-05-08-sawing-guides/</guid>
-      <description>The idea here is the same as my dovetail jig but now one is inteded to aid making square cuts on wood with hand saws and the other 45 degrees cut for joinery.</description>
-    </item>
-    
-    <item>
-      <title>Dovetail Guide</title>
-      <link>https://eddieliberato.github.io/blog/2019-04-01-dovetail-guide/</link>
-      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2019-04-01-dovetail-guide/</guid>
-      <description>This is my take on dovetail guides, I designed this to be 3d printed and parametric.</description>
-    </item>
-    
-    <item>
-      <title>Kugelwellenhorn</title>
-      <link>https://eddieliberato.github.io/blog/2018-08-19-kugelwellenhorn/</link>
-      <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2018-08-19-kugelwellenhorn/</guid>
-      <description>I always have been intrigued by horns.</description>
-    </item>
-    
-    <item>
-      <title>CD Organizer</title>
-      <link>https://eddieliberato.github.io/blog/2018-08-18-cd-organizer/</link>
-      <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2018-08-18-cd-organizer/</guid>
-      <description>I had some old CDs lying around the house and I decided to organized them in a single place.</description>
-    </item>
-    
-    <item>
-      <title>Cadquery Turners Cube</title>
-      <link>https://eddieliberato.github.io/blog/2018-07-04-cadquery-turners-cube/</link>
-      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2018-07-04-cadquery-turners-cube/</guid>
-      <description>Back in Brazil, during my machinist apprenticeship, one of the lathe tasks of the manual machining course was to make a turners cube.</description>
     </item>
     
     <item>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Edi Liberato blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="A collection of cadquery models for beginners">
+  <meta name="author" content="Edi Liberato">
+  <meta name="generator" content="Hugo 0.92.2" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://eddieliberato.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://eddieliberato.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://eddieliberato.github.io/images/favicon.png " type="image/x-icon">
+
+  
+  
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-158639121-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head>
+<body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://eddieliberato.github.io"><img class="img-fluid"
+          src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato blog"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/user/eddiekvh"><i class="ti-youtube"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/eddieliberato"><i class="ti-github"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/ediliberato/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://eddieliberato.github.io"><img class="img-fluid"
+            src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato blog"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eddieliberato.github.io/about">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://eddieliberato.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/computer-aided-design"
+          class="text-primary">Computer aided design</a>
+        
+        <h2>A collection of Cadquery parametric models (2018-2020)</h2>
+        <div class="mb-3 post-meta">
+          <span>By Edi Liberato</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>26 June 2022</span>
+          
+        </div>
+        
+        <img src="https://eddieliberato.github.io/images/post/cadquery-montage-new.png" class="img-fluid w-100 mb-4" alt="A collection of Cadquery parametric models (2018-2020)">
+        
+        <div class="content mb-5">
+          <p>The title says it all, but I will elaborate a bit more.</p>
+<p>When I started this blog I had the intention of writing about parametric 3d design using open source software. Years have gone by, and I am now deciding to have a more open approach and write about everything that I feel like. To make things a bit more organized I am putting all the blog entries from 2018 to 2020 in this single one. The table of contents below should help in jumping quickly to whatever you find interesting.</p>
+<p>If you are wondering why I left the <a href="https://eddieliberato.github.io/blog/2020-05-14-dogbones/">dogbones</a> as a separate blog post, here is the answer: This is by far the page with the most hits on my blog. Americans seem to like it, and for that reason I decided to leave it untouched. Thinking about it I can see it as a great model to show the benefits of parametric design. Only a few lines of code and TA-DA, you&rsquo;ve got your model and you can easily modify the dimensions as you wish. Simple and efficient, CAD guru stuff.</p>
+<p>I also left the chess set post as a historical landmark, after all it was the first blog post on this platform (github pages), by coincidence, exactly 4 years ago.</p>
+<p>Final thing I want to mention: Looking at the analytics of the website, no one seems to care about the kugelwellen horn. I personally find this kind of design, that uses physics equations to model things, of great value on the skill-set of an engineer.</p>
+<div>
+    <h4>Table of Contents</h4>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#turners-cube-04072018">Turners Cube (04/07/2018)</a></li>
+    <li><a href="#cd-organizer-18082018">CD Organizer (18/08/2018)</a></li>
+    <li><a href="#kugellwellenhorn-19082018">Kugellwellenhorn (19/08/2018)</a></li>
+    <li><a href="#dovetail-guide-01042019">Dovetail Guide (01/04/2019)</a></li>
+    <li><a href="#sawing-guides-08052020">Sawing Guides (08/05/2020)</a></li>
+    <li><a href="#parametric-spiral-lampshade-11052020">Parametric Spiral Lampshade (11/05/2020)</a></li>
+    <li><a href="#plywood-connectors-13052020">Plywood Connectors (13/05/2020)</a></li>
+    <li><a href="#man-against-washing-machine-15052020">Man Against Washing Machine (15/05/2020)</a></li>
+    <li><a href="#parametric-stepper-motor-bracket-01082020">Parametric Stepper Motor Bracket (01/08/2020)</a></li>
+  </ul>
+</nav>
+</div>
+
+<h3 id="turners-cube-04072018">Turners Cube (04/07/2018)</h3>
+<p><img src="../../images/post/tuners_cube_2.png" alt="turners_cube"></p>
+<p>Back in Brazil, during my machinist apprenticeship, one of the lathe tasks of the manual machining course was to make a turners cube. Basically you need to turn a cube in the lathe and make some holes, that if carefully bored to specific dimensions, you end up with usually two captive cubes inside one another. At the time I was only a young teenager and the captive cube was a very attractive challenge to me. I naively thought that only round parts could be made at the lathe, so I was impressed with the cube with other cubes inside coming out of the machine. Sadly nowadays I don&rsquo;t know anymore where mine is. Hopefully at my mom&rsquo;s place.</p>
+<p>You can have as many cubes as you want inside. Back then,  the ones who actually made the cube usually went for three, so I did and I still think that three is the right number if you&rsquo;re doing it on the manual lathe. Two is too easy. Four is annoying because there is a lot of repetition of the same operations. Three is a good number because you proved your point in showing the instructor what you&rsquo;re capable of, and is not as annoying to make as the four cubes version.</p>
+<p>Leaving 2003 behind and back to 2018, I was thinking that the repetitive nature of the object makes it a nice model for cadqquery. So here is the script that I came up with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+<span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> sqrt
+
+captive_cube_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>    <span style="color:#75715e"># mm</span>
+n_of_cubes <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>            <span style="color:#75715e"># besides the innermost captive cube</span>
+small_holes <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>        <span style="color:#75715e"># False = innermost captive cube without holes</span>
+
+cube_size <span style="color:#f92672">=</span> captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>n_of_cubes  <span style="color:#75715e"># total size of the cube</span>
+sh_size <span style="color:#f92672">=</span> captive_cube_size<span style="color:#f92672">/</span>sqrt(<span style="color:#ae81ff">2</span>)          <span style="color:#75715e"># diameter of the hole on the smallest cube</span>
+
+cube <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(cube_size, cube_size, cube_size)
+<span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(n_of_cubes):
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(captive_cube_size<span style="color:#f92672">*</span>(sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)), (cube_size<span style="color:#f92672">-</span>captive_cube_size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>x)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+
+<span style="color:#66d9ef">if</span> small_holes:
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(sh_size)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(sh_size)
+    cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(sh_size)
+
+show_object(cube)
+</code></pre></div><p>I based my script in the innermost captive cube and in the square root of 2, which is a number associated with circles and squares. That makes the cube look good and proportional. The drawback is that the final size grows quadratically with the number of cubes resulting in a big thing if you go for a lot of cubes.</p>
+<h3 id="cd-organizer-18082018">CD Organizer (18/08/2018)</h3>
+<p><img src="../../images/post/cd-org2.png" alt="cd-org2"></p>
+<p>I had some old CDs lying around the house and I decided to organize them in a single place. I thought of 3d printing something to help, but after a brief search around the internet I couldn&rsquo;t find anything that I liked. The ones I could find were big and clunky, leading to long printing times. The &ldquo;simple&rdquo; one (that wasn&rsquo;t simple at all) that I found had the slots a bit undersized and I couldn&rsquo;t fit the CDs. I could have re-scaled the model but that print took me around 3 hours and I started to wonder if I should repeat it.</p>
+<p>I decided to come up with my own design.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+
+slots <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>               <span style="color:#75715e"># number slots (number of CDs in this case)</span>
+slot_width <span style="color:#f92672">=</span> <span style="color:#ae81ff">11.0</span>       <span style="color:#75715e"># mm, slot size (slightly bigger than a CD case width) </span>
+slot_depth <span style="color:#f92672">=</span> <span style="color:#ae81ff">20.0</span>       <span style="color:#75715e"># mm</span>
+slot_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">140.0</span>     <span style="color:#75715e"># mm</span>
+thickness_wall <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.8</span>    <span style="color:#75715e"># mm</span>
+thickness_bottom <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.0</span>  <span style="color:#75715e"># mm</span>
+
+spacing <span style="color:#f92672">=</span> slot_width <span style="color:#f92672">+</span> thickness_wall
+
+cdorg <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(slot_length<span style="color:#f92672">+</span>thickness_wall, spacing<span style="color:#f92672">*</span>slots<span style="color:#f92672">+</span>thickness_wall, slot_depth<span style="color:#f92672">+</span>thickness_bottom) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>center(thickness_wall,<span style="color:#f92672">-</span>(spacing<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>(slots<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)))<span style="color:#f92672">.</span>pushPoints([(<span style="color:#ae81ff">0</span>, y <span style="color:#f92672">*</span> spacing) <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, slots)])<span style="color:#f92672">.</span>rect(slot_length<span style="color:#f92672">+</span>thickness_wall, slot_width)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>slot_depth)<span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>rect(slot_length<span style="color:#f92672">/</span><span style="color:#ae81ff">1.6</span>, spacing<span style="color:#f92672">*</span>slots<span style="color:#f92672">+</span>thickness_wall)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>slot_depth)
+
+show_object(cdorg)
+</code></pre></div><p>The print took only 14 minutes because I could take advantage of the 0.8mm nozzle and print the walls in a single pass of the hotend. The design turned out to be not super visually appealing but the function was on point. It keeps the CDs more accessible than just piling them up and it makes everything more stable against tipping over.</p>
+<p>More important than the physical object itself was that I learned something. I find this method of using the for loop (python&rsquo;s list comprehension) inside the pushPoints method very elegant and I plan to reuse this code for lathe tools and drill bits organizers among others.</p>
+<p><img src="../../images/post/cd_organizer2.jpg" alt="cd_organizer"></p>
+<h3 id="kugellwellenhorn-19082018">Kugellwellenhorn (19/08/2018)</h3>
+<p><img src="../../images/post/horn_new.png" alt="horn-cad"></p>
+<p>I have always been intrigued by horns. Actually by passive devices in general; tuned mass dampers, RLC circuits to name a few. Researching more about horns I found two designs that I&rsquo;d like to explore more. One is the Kugelwellenhorn and the other is the Le Cleah&rsquo;c horn. More info about the former can be found <a href="http://www.rintelen.ch/download/JMMLC_horns_lecture_etf10.pdf" title="lecleach">here</a>, in a lecture apparently gaven by Le Cleach&rsquo;c himself when he was still alive.</p>
+<p>About Kugellwellen horn, the design that I decided to approach first, all the info you need you can probably find on the site of <a href="http://kolbrek.hoyttalerdesign.no/index.php/horns/horn-theory" title="kolbrek horn theory">Bjorn Kolbrek</a>. Kolbrek seems to be an expert on the subject, and I enjoyed reading his articles. The math on his reports was a bit beyond my comprehension and I didn&rsquo;t want to dive so deep into the subject. My goal was only to design and materialize the horn. Turns out that this is not hard at all, Just take a look at the script below and you&rsquo;ll see that all you need is about 30 lines of code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+<span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> pi, sqrt, exp
+ 
+td <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>      <span style="color:#75715e"># mm, throat diameter</span>
+steps <span style="color:#f92672">=</span> <span style="color:#ae81ff">450</span>  <span style="color:#75715e"># related to the length of the horn</span>
+fc <span style="color:#f92672">=</span> <span style="color:#ae81ff">480</span>     <span style="color:#75715e"># Hz, cuttof frequency</span>
+
+c <span style="color:#f92672">=</span> <span style="color:#ae81ff">344000</span>   <span style="color:#75715e"># mm/s, speed of sound through air</span>
+
+m <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">*</span>fc<span style="color:#f92672">/</span>c
+y0 <span style="color:#f92672">=</span> td<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+r0 <span style="color:#f92672">=</span> c<span style="color:#f92672">/</span>(pi<span style="color:#f92672">*</span>fc)
+h0 <span style="color:#f92672">=</span> r0 <span style="color:#f92672">-</span> sqrt(r0<span style="color:#f92672">*</span>r0<span style="color:#f92672">-</span>y0<span style="color:#f92672">*</span>y0)
+s0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">*</span>r0<span style="color:#f92672">*</span>h0
+edg_points <span style="color:#f92672">=</span> []
+
+<span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(steps):
+    h <span style="color:#f92672">=</span> h0<span style="color:#f92672">*</span>exp(m<span style="color:#f92672">*</span>x)
+    s <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">*</span>r0<span style="color:#f92672">*</span>h
+    y <span style="color:#f92672">=</span> sqrt((s<span style="color:#f92672">/</span>pi)<span style="color:#f92672">-</span>h<span style="color:#f92672">*</span>h)
+    xh <span style="color:#f92672">=</span> x<span style="color:#f92672">-</span>h<span style="color:#f92672">+</span>h0
+    edg_points<span style="color:#f92672">.</span>append([y, xh])
+
+edg_points[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> [y0, <span style="color:#ae81ff">0</span>]
+
+horn <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>move(y0, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>spline(edg_points)<span style="color:#f92672">.</span>wire()<span style="color:#f92672">.</span>revolve()
+
+show_object(horn)
+</code></pre></div><p><img src="../../images/post/horn1.jpg" alt="3d printed horn"></p>
+<p>Lecleach suggests that it&rsquo;s important to shape the horn past 180 degrees but as you can see it can be tricky to 3d print the involute part of the horn. Would be interesting to come up with some 3D printing hack to print the involute. Maybe one day I will come back to this topic to try something in this direction. (<strong>Message from the future:</strong> It never happened, I never got back to this.)</p>
+<h3 id="dovetail-guide-01042019">Dovetail Guide (01/04/2019)</h3>
+<p><img src="../../images/post/dovetail_guide_with_mark.png" alt="dovetail-jig-embossed"></p>
+<p>This is my take on dovetail guides, I designed this to be 3d printed and parametric. Using parametric design makes it very easy to tune the dovetail ratio and to fit different magnets that one may have at hand. Higher ratios (e.g 1:8) are good for hardwoods and lower ratios (e.g. 1:5) are better suited for softwoods.</p>
+<p>Several models can be found on the internet and I would like to buy one but with all the import taxes it becomes expensive. Also I don&rsquo;t know what ratio I want exactly, so it makes sense to print my own to experiment with.</p>
+<p>I was particularly inspired by <a href="http://www.davidbarronfurniture.co.uk/" title="David Barron website">David Barron</a> and as seen in his videos, the simple jig works with magnets that hold the saw in place, making the dovetail cutting process easier.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+
+<span style="color:#75715e"># A simple dovetail saw guide for woodworking </span>
+
+size <span style="color:#f92672">=</span> <span style="color:#ae81ff">40.0</span>                     <span style="color:#75715e">#mm, size of the blank </span>
+ratio <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>                       <span style="color:#75715e">#dovetail ratio e.g. 1:6.</span>
+tab_top <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>                  <span style="color:#75715e">#mm, thickness of the top tab</span>
+tab_back <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>                 <span style="color:#75715e">#mm, thickness of the back tab</span>
+magnet_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.2</span>           <span style="color:#75715e">#mm</span>
+magnet_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">8.5</span>          <span style="color:#75715e">#mm </span>
+magnet_spacing_between <span style="color:#f92672">=</span> <span style="color:#ae81ff">24.0</span>   <span style="color:#75715e">#mm</span>
+
+embossing <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+
+dovetail_guide <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;top&#34;</span>)<span style="color:#f92672">.</span>rect(size, size)<span style="color:#f92672">.</span>workplane(offset<span style="color:#f92672">=</span>size)<span style="color:#f92672">.</span>rect(size<span style="color:#f92672">-</span>(size<span style="color:#f92672">/</span>float (ratio))<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, size)<span style="color:#f92672">.</span>loft(combine<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>transformed(offset<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>tab_top, <span style="color:#ae81ff">0</span>))<span style="color:#f92672">.</span>rect(size, size)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>size<span style="color:#f92672">+</span>tab_back) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>pushPoints([(<span style="color:#f92672">-</span>magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>,size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>), (magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>,size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)])<span style="color:#f92672">.</span>hole(magnet_diameter, magnet_thickness) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>pushPoints([(size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_back<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span>magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>), (size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_back<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)])<span style="color:#f92672">.</span>hole(magnet_diameter, magnet_thickness)
+
+<span style="color:#66d9ef">if</span> embossing:
+    dovetail_guide <span style="color:#f92672">=</span> dovetail_guide<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>text(<span style="color:#e6db74">&#34;1:&#34;</span><span style="color:#f92672">+</span>str(ratio), <span style="color:#ae81ff">8</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, cut<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, combine<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, clean<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, font<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Arial&#39;</span>, kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;regular&#39;</span>, halign<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, valign<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>)
+
+show_object(dovetail_guide)
+</code></pre></div><h3 id="sawing-guides-08052020">Sawing Guides (08/05/2020)</h3>
+<p><img src="../../images/post/sawing_guides_new.png" alt="sawing-guides"></p>
+<p>The idea here is the same as my dovetail jig but now one is intended to aid making square cuts on wood with hand saws and the other 45 degrees cut for joinery.</p>
+<p>I put the option of having a recess on these two jigs for clearance between the saw and the jig itself. I realized that depending on how you execute the cut the saw may bite the jig. It doesn&rsquo;t alter the performance of the jig, but it leaves scratch marks. Cutting a recess on the dovetail jig makes it unbalanced but these two not, at least in my opinion.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+
+<span style="color:#75715e"># A simple woodworking jig for guiding a saw at right angles.</span>
+
+size <span style="color:#f92672">=</span> <span style="color:#ae81ff">50.0</span>                     <span style="color:#75715e"># mm, size of the blank</span>
+width <span style="color:#f92672">=</span> <span style="color:#ae81ff">35.0</span>                    <span style="color:#75715e"># mm</span>
+tab_top <span style="color:#f92672">=</span> <span style="color:#ae81ff">18.0</span>                  <span style="color:#75715e"># mm, thickness of the top tab</span>
+tab_back <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.0</span>                 <span style="color:#75715e"># mm, thickness of the back tab</span>
+magnet_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.2</span>           <span style="color:#75715e"># mm</span>
+magnet_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">8.5</span>          <span style="color:#75715e"># mm </span>
+magnet_spacing_between <span style="color:#f92672">=</span> <span style="color:#ae81ff">30.0</span>   <span style="color:#75715e"># mm</span>
+
+clearance <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+clearance_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.0</span>             <span style="color:#75715e"># mm</span>
+
+right_angle_guide <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;top&#34;</span>)<span style="color:#f92672">.</span>box(width, size, size)<span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>pushPoints([(<span style="color:#f92672">-</span>magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>), (magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)])<span style="color:#f92672">.</span>hole(magnet_diameter, magnet_thickness) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>, offset<span style="color:#f92672">=-</span>tab_back)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>rect(size, size<span style="color:#f92672">-</span>tab_top)<span style="color:#f92672">.</span>cutBlind(<span style="color:#e6db74">&#34;next&#34;</span>)
+
+<span style="color:#66d9ef">if</span> clearance:
+    right_angle_guide <span style="color:#f92672">=</span> right_angle_guide<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>tab_top)<span style="color:#f92672">.</span>rect(size, size)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>clearance_size)
+
+show_object(right_angle_guide)
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+
+<span style="color:#75715e"># A simple 45 degrees hand saw guide for woodworking </span>
+
+size <span style="color:#f92672">=</span> <span style="color:#ae81ff">40.0</span>                      <span style="color:#75715e"># mm, height and lenght and of the guide. The width is double this value</span>
+tab_top <span style="color:#f92672">=</span> <span style="color:#ae81ff">18.0</span>                   <span style="color:#75715e"># mm, thickness of the top tab</span>
+tab_back <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.0</span>                  <span style="color:#75715e"># mm, thickness of the back tab</span>
+magnet_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.2</span>            <span style="color:#75715e"># mm</span>
+magnet_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">8.5</span>           <span style="color:#75715e"># mm </span>
+magnet_spacing_between <span style="color:#f92672">=</span> <span style="color:#ae81ff">30.0</span>    <span style="color:#75715e"># mm</span>
+
+clearance <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+clearance_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.0</span>             <span style="color:#75715e"># mm</span>
+
+guide <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>lineTo(size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>lineTo(size, size)<span style="color:#f92672">.</span>close()<span style="color:#f92672">.</span>extrude(size) <span style="color:#f92672">.</span>\
+	faces(<span style="color:#e6db74">&#34;&gt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>pushPoints([(<span style="color:#f92672">-</span>magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>), (magnet_spacing_between<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, size<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)])<span style="color:#f92672">.</span>hole(magnet_diameter, magnet_thickness) <span style="color:#f92672">.</span>\
+	faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>, invert<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, offset<span style="color:#f92672">=</span>tab_back)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, tab_top<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>rect(size<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>, size<span style="color:#f92672">-</span>tab_top)<span style="color:#f92672">.</span>cutBlind(size)
+
+<span style="color:#66d9ef">if</span> clearance:
+    guide <span style="color:#f92672">=</span> guide<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#39;&gt;(1,1,0)&#39;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>tab_top)<span style="color:#f92672">.</span>rect(size<span style="color:#f92672">*</span><span style="color:#ae81ff">1.6</span>, size)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>clearance_size)
+
+show_object(guide)
+</code></pre></div><p>Recently I got myself a Gyokucho 615 and I could test it with the jig. No need to say it works like a charm. The cut was square and the texture of the end grain after the cut was very smooth. What a saw, btw! I managed to make a few frames with this setup.</p>
+<p><img src="../../images/post/frames.jpg" alt="frames"></p>
+<h3 id="parametric-spiral-lampshade-11052020">Parametric Spiral Lampshade (11/05/2020)</h3>
+<p><img src="../../images/post/spiral_lampshade_new.png" alt="spiral-lampshade"></p>
+<p>My intention here was to make a 3D printed bedside lamp. I got really close to what I wanted with this cadquery one liner.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+
+lampshade <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">150.0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.618</span>, <span style="color:#ae81ff">150.0</span>)<span style="color:#f92672">.</span>twistExtrude(<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">90</span>)
+
+show_object(lampshade)
+</code></pre></div><p><img src="../../images/post/twisted_lampshade.png" alt="twisted lampshade"></p>
+<p>Even though I like simple, minimalistic things, this was just too simple. I thought it would look cooler if it had a gradual decrease of its size. Here’s the code I came up with for that:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+
+length <span style="color:#f92672">=</span> <span style="color:#ae81ff">150.0</span>            <span style="color:#75715e"># mm</span>
+max_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">150.0</span>        <span style="color:#75715e"># mm</span>
+height_increment <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.0</span>   <span style="color:#75715e"># mm, Z axis increment per step</span>
+rotation_step <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>        <span style="color:#75715e"># degrees, rotation of the XY plane per step</span>
+growth_factor <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.1</span>       <span style="color:#75715e"># maybe decrease factor ? ¯\_(ツ)_/¯</span>
+
+spiral_lampshade <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>rect(length<span style="color:#f92672">/</span><span style="color:#ae81ff">1.618</span>, length) <span style="color:#f92672">.</span>\
+    workplane(offset<span style="color:#f92672">=</span>height_increment)<span style="color:#f92672">.</span>rect(length<span style="color:#f92672">/</span><span style="color:#ae81ff">1.618</span>, length) <span style="color:#f92672">.</span>\
+    loft(combine<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+
+next_len <span style="color:#f92672">=</span> float (<span style="color:#ae81ff">0</span>)
+height <span style="color:#f92672">=</span> float (<span style="color:#ae81ff">0</span>)
+rotation <span style="color:#f92672">=</span> rotation_step
+
+<span style="color:#66d9ef">while</span> height <span style="color:#f92672">&lt;=</span> max_height<span style="color:#f92672">-</span>height_increment:
+    next_len <span style="color:#f92672">=</span> length<span style="color:#f92672">/</span>growth_factor
+    spiral_lampshade <span style="color:#f92672">=</span> spiral_lampshade<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>rect(length<span style="color:#f92672">/</span><span style="color:#ae81ff">1.618</span>, length)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>transformed(offset<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, height_increment), rotate<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, rotation))<span style="color:#f92672">.</span>rect(next_len<span style="color:#f92672">/</span><span style="color:#ae81ff">1.618</span>, next_len)<span style="color:#f92672">.</span>loft(combine<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+    length <span style="color:#f92672">=</span> next_len
+    rotation <span style="color:#f92672">+=</span> rotation_step
+    height <span style="color:#f92672">=</span> height<span style="color:#f92672">+</span>height_increment
+
+show_object(spiral_lampshade)
+</code></pre></div><p><img src="../../images/post/spiral_lampshade.jpg" alt="spiral lampshade"></p>
+<h3 id="plywood-connectors-13052020">Plywood Connectors (13/05/2020)</h3>
+<p><img src="../../images/post/ply-connectors.png" alt="ply-connector"></p>
+<p>I made this about two years ago and even though I liked the outcome pretty much I decided not to post anything about it at the time.</p>
+<p>I didn&rsquo;t want to harm in any way the company that makes the original but at this point it doesn&rsquo;t make any sense to hold back, googling &ldquo;plywood connectors&rdquo; or &ldquo;wood connectors DIY furniture&rdquo; you will find a vast amount of Chinese knockoffs.</p>
+<p>At the time of writing I found <a href="https://cults3d.com/en/3d-model/home/parametric-furniture-joints-with-grasshopper-download-free-parameter-by-othmane-march-22-2020" title="cults 3d model">this</a> on the internet. Another interesting thing I found was this <a href="https://www.plyproducts.com/" title="plyproducts website">aluminium version</a> where they claim to be in business since 2013.</p>
+<p>I first learned about this by the name of <a href="https://www.playwood.it/" title="playwood website">playwood</a>. I found it when I was looking for a small bookshelf DIY project. There are some reasons why I didn&rsquo;t buy directly from these guys. First, they are not super expensive but you need quite a few in order to make something useful, then, with post and import taxes it starts to become expensive. Second, I have 3d printers and I like to make stuff.</p>
+<p>As always, I kept the design as minimalist as possible. My version takes a socket head cap screw on one side and a hex nut on the other side. I&rsquo;ve used M6 screws because it was what I had at hand at the time but I&rsquo;m pretty sure smaller screws are also OK for this application.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+<span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> cos, sqrt, pi
+
+<span style="color:#75715e"># shared parameters</span>
+thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.0</span>             <span style="color:#75715e"># mm</span>
+width <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.0</span>                 <span style="color:#75715e"># mm</span>
+screw_clearance <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.8</span>        <span style="color:#75715e"># mm, diameter of the screw + some clearance</span>
+
+<span style="color:#75715e"># outer jaw parameters</span>
+oface_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">38.0</span>          <span style="color:#75715e"># mm outer face length</span>
+oleg_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">42.0</span>           <span style="color:#75715e"># mm outer leg length</span>
+support_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.0</span>         <span style="color:#75715e"># mm, I&#39;m calling support this small bump where the plywood butt will rest against</span>
+                             <span style="color:#75715e"># minimum plywood thickness it will hold = sqrt(2)*support_height BTW</span>
+counterBore_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">11.2</span>  <span style="color:#75715e"># mm</span>
+screwHead_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.0</span>       <span style="color:#75715e"># mm</span>
+
+<span style="color:#75715e"># inner jaw parameters </span>
+<span style="color:#75715e"># This inner leg lenght is just a recomendation, it will be flush with the outer jaw leg</span>
+ileg_length <span style="color:#f92672">=</span> oleg_length<span style="color:#f92672">-</span>(thickness<span style="color:#f92672">+</span>support_height)<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>) <span style="color:#75715e"># mm</span>
+
+<span style="color:#75715e">#inner jaw hardware parameters</span>
+nut_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.0</span>            <span style="color:#75715e"># mm</span>
+nut_widthAcrossCorners <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.0</span>  <span style="color:#75715e"># mm</span>
+
+ojaw <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>line(<span style="color:#f92672">-</span>oface_length<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
+    line(<span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length, cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length)<span style="color:#f92672">.</span>
+    line(thickness<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
+    line((cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length<span style="color:#f92672">-</span>thickness), <span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>oleg_length<span style="color:#f92672">+</span>thickness)<span style="color:#f92672">.</span>
+    line(support_height, support_height)<span style="color:#f92672">.</span>
+    lineTo(<span style="color:#ae81ff">0</span>, thickness<span style="color:#f92672">+</span>support_height)<span style="color:#f92672">.</span>mirrorY()<span style="color:#f92672">.</span>extrude(width, both<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)<span style="color:#f92672">.</span>
+    faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>cboreHole(screw_clearance, counterBore_diameter, screwHead_height))
+
+ijaw <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>line(<span style="color:#f92672">-</span>(oface_length<span style="color:#f92672">-</span>(thickness<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">-</span>thickness)<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>support_height<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
+    line(<span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length, cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length)<span style="color:#f92672">.</span>
+    line(thickness, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>
+    line((cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length<span style="color:#f92672">-</span>thickness), <span style="color:#f92672">-</span>cos(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">*</span>ileg_length<span style="color:#f92672">+</span>thickness)<span style="color:#f92672">.</span>
+    lineTo(<span style="color:#ae81ff">0</span>, thickness)<span style="color:#f92672">.</span>mirrorY()<span style="color:#f92672">.</span>extrude(width, both<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)<span style="color:#f92672">.</span>
+    faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(screw_clearance)<span style="color:#f92672">.</span>
+    faces(<span style="color:#e6db74">&#34;&gt;Y[-2]&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>polygon(<span style="color:#ae81ff">6</span>, nut_widthAcrossCorners)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>nut_thickness)<span style="color:#f92672">.</span>
+    translate((<span style="color:#ae81ff">0</span>,thickness<span style="color:#f92672">+</span>support_height,<span style="color:#ae81ff">0</span>)))
+
+show_object(ojaw)
+show_object(ijaw)
+</code></pre></div><p><img src="../../images/post/plywood_connector2.jpg" alt="plywood connector2"></p>
+<h3 id="man-against-washing-machine-15052020">Man Against Washing Machine (15/05/2020)</h3>
+<p><img src="../../images/post/washing_machine_foot_2.png" alt="washing_machine_foot"></p>
+<p>One of my personal favorite uses of 3d printers at home is to fix broken stuff. This object is not special but I&rsquo;m posting it here because it involves modeling parametric threads.</p>
+<p>Modeling parametric threads can be demanding. On top of that if you have to model a thread, it is probably some funky special thread. Overall I&rsquo;m happy with how this trapezoidal thread came out, but I&rsquo;m not sure whether this is the best way to design threads in Cadquery. (<strong>Message from the future:</strong> Check my 3d printed door knob on this<a href="https://eddieliberato.github.io/blog/2022-03-10-screw-and-jetson-nano/#making-the-printer-usable">post</a>. It is a better way to design threads, with a smooth entry and exit of the threads)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq 
+<span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> sin, cos, pi
+
+lenght <span style="color:#f92672">=</span> <span style="color:#ae81ff">32</span>
+minor_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">18.0</span>
+pitch <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.9</span>
+
+pts <span style="color:#f92672">=</span> []
+
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(lenght):
+    x <span style="color:#f92672">=</span> minor_diameter<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>cos(t)
+    y <span style="color:#f92672">=</span> minor_diameter<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>sin(t)
+    z <span style="color:#f92672">=</span> pitch<span style="color:#f92672">/</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi)<span style="color:#f92672">*</span>t           <span style="color:#75715e"># helix lenght</span>
+    pts<span style="color:#f92672">.</span>append([x,y,z])
+
+path <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>spline(pts)<span style="color:#f92672">.</span>wire()
+thread <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XZ&#34;</span>)<span style="color:#f92672">.</span>move(minor_diameter<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>line(<span style="color:#ae81ff">3.2</span>, <span style="color:#ae81ff">0.5</span>)<span style="color:#f92672">.</span>line(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1.0</span>)<span style="color:#f92672">.</span>line(<span style="color:#f92672">-</span><span style="color:#ae81ff">3.2</span>, <span style="color:#ae81ff">0.5</span>)<span style="color:#f92672">.</span>close()<span style="color:#f92672">.</span>sweep(path, isFrenet<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+
+foot <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>circle(<span style="color:#ae81ff">18.5</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">26.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>circle(<span style="color:#ae81ff">25.0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">5.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>polygon(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">44.0</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">14.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(<span style="color:#ae81ff">14.0</span>, <span style="color:#ae81ff">42.0</span>)<span style="color:#f92672">.</span>translate((<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,pitch<span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>))
+
+foot <span style="color:#f92672">=</span> foot<span style="color:#f92672">.</span>union(thread)
+
+show_object(foot)
+</code></pre></div><p>This object is a washing machine adjustment pad that went missing (don&rsquo;t ask me how). At least there were 3 left so I could replicate the missing one. The tolerance on the mating thread was big, because even printing without support on my cheap 3d printer, it worked in the first attempt! No second iteration was needed :)</p>
+<p><img src="../../images/post/washing_machine_foot.jpg" alt="washingMachineFoot"></p>
+<h3 id="parametric-stepper-motor-bracket-01082020">Parametric Stepper Motor Bracket (01/08/2020)</h3>
+<p><img src="../../images/post/stepper_bracket.png" alt="stepper-bracket"></p>
+<p>The price estimations that I received for this object to have it made out of welded steel (by professional welders), were in the 100-130 EUROS range, 10 days delivery time. As the application intended for it had a light load I decided to just model and 3d print it. Took me half an hour of 3d modeling and 4 hours for the 3d printing process. I printed it out of ABS on a professional grade printer from the university.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+
+width <span style="color:#f92672">=</span> <span style="color:#ae81ff">66.0</span>                   <span style="color:#75715e"># mm</span>
+fplate_height <span style="color:#f92672">=</span> <span style="color:#ae81ff">60.0</span>           <span style="color:#75715e"># mm</span>
+fplate_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.0</span>        <span style="color:#75715e"># mm</span>
+fplate_between_holes <span style="color:#f92672">=</span> <span style="color:#ae81ff">47.1</span>    <span style="color:#75715e"># mm, rectangular distance between stepper mounting holes (NEMA 23 = 47.1)</span>
+fplate_screw_clearance <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.0</span>   <span style="color:#75715e"># mm</span>
+fplate_cbore_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">7.5</span>    <span style="color:#75715e"># mm</span>
+fplate_cbore_depth <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.0</span>       <span style="color:#75715e"># mm</span>
+main_bore_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">28.2</span>      <span style="color:#75715e"># mm</span>
+main_cbore_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">40.0</span>     <span style="color:#75715e"># mm</span>
+main_cbore_depth <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.0</span>         <span style="color:#75715e"># mm</span>
+bplate_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">86.0</span>           <span style="color:#75715e"># mm</span>
+bplate_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.0</span>         <span style="color:#75715e"># mm</span>
+bplate_between_holes <span style="color:#f92672">=</span> <span style="color:#ae81ff">50.0</span>    <span style="color:#75715e"># mm, holes to mount it to the frame</span>
+bplate_holes_offset <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.0</span>      <span style="color:#75715e"># mm</span>
+bplate_screw_clearance <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.0</span>   <span style="color:#75715e"># mm</span>
+bplate_cbore_diameter <span style="color:#f92672">=</span> <span style="color:#ae81ff">7.5</span>    <span style="color:#75715e"># mm</span>
+bplate_cbore_depth <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.0</span>       <span style="color:#75715e"># mm</span>
+gusset_thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.0</span>         <span style="color:#75715e"># mm</span>
+
+gusset <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+
+stepper_bracket <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(width, fplate_thickness, fplate_height<span style="color:#f92672">+</span>bplate_thickness) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, bplate_thickness<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>rect(fplate_between_holes, fplate_between_holes, forConstruction<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#f92672">.</span>\
+    vertices()<span style="color:#f92672">.</span>cboreHole(fplate_screw_clearance, fplate_cbore_diameter, fplate_cbore_depth) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, bplate_thickness<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>cboreHole(main_bore_diameter, main_cbore_diameter, main_cbore_depth) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>fplate_height<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>rect(width, bplate_thickness)<span style="color:#f92672">.</span>extrude(bplate_length) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;Z[1]&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, bplate_holes_offset)<span style="color:#f92672">.</span>rect(bplate_between_holes, bplate_between_holes, forConstruction<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#f92672">.</span>\
+    vertices()<span style="color:#f92672">.</span>cboreHole(bplate_screw_clearance, bplate_cbore_diameter, bplate_cbore_depth)
+
+<span style="color:#66d9ef">if</span> gusset:
+    stepper_bracket <span style="color:#f92672">=</span> stepper_bracket<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>(fplate_height<span style="color:#f92672">+</span>bplate_thickness)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">.</span>\
+    line((bplate_length<span style="color:#f92672">+</span>fplate_thickness)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>line(<span style="color:#ae81ff">0</span>, fplate_height)<span style="color:#f92672">.</span>close()<span style="color:#f92672">.</span>extrude(<span style="color:#f92672">-</span>gusset_thickness) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&lt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>(fplate_height<span style="color:#f92672">+</span>bplate_thickness)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">.</span>\
+    line(<span style="color:#f92672">-</span>(bplate_length<span style="color:#f92672">+</span>fplate_thickness)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>line(<span style="color:#ae81ff">0</span>, fplate_height)<span style="color:#f92672">.</span>close()<span style="color:#f92672">.</span>extrude(<span style="color:#f92672">-</span>gusset_thickness)
+</code></pre></div><p><img src="../../images/post/stepper_motor_bracket2.png" alt="stepper_bracket"></p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      
+      
+      
+
+
+<div class="widget">
+  
+  <ul class="list-inline">
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/3d-printing">3d printing</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/c">C</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/cad">Cad</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/cadquery">Cadquery</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/electronics">Electronics</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/embedded">Embedded</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/libfive">Libfive</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/lisp">Lisp</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/programming">Programming</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/python">Python</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/scheme">Scheme</a></li>
+    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+                                    href="/tags/ubuntu">Ubuntu</a></li>
+  </ul>
+</div>
+
+
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+
+          
+          <li class="mb-3"><a class="text-dark" href="mailto:eddie.liberatoe@gmail.com"><i
+              class="ti-email mr-3 text-primary"></i>eddie.liberatoe@gmail.com</a>
+          
+
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Zürich, Switzerland</li>
+          
+
+          
+
+          </li>
+        </ul>
+      </div>
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/computer-aided-design">Computer aided design</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/fea">Fea</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/microcontrollers">Microcontrollers</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://eddieliberato.github.io/about">About</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://eddieliberato.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://eddieliberato.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/search/mark.js"></script>
+
+<script src="https://eddieliberato.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://eddieliberato.github.io/js/script.min.js"></script>
+
+
+
+
+</body>
+</html>
