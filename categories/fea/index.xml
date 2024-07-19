@@ -4,17 +4,16 @@
     <title>FEA on Edi Liberato blog</title>
     <link>https://eddieliberato.github.io/categories/fea/</link>
     <description>Recent content in FEA on Edi Liberato blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/categories/fea/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://eddieliberato.github.io/categories/fea/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Direct Stiffness Method in Python: Trusses and Frames</title>
       <link>https://eddieliberato.github.io/blog/2022-02-28-direct-stiffness-method/</link>
       <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/blog/2022-02-28-direct-stiffness-method/</guid>
       <description>This post is about some finite element method code that I wrote back in 2014.</description>
     </item>
-    
   </channel>
 </rss>

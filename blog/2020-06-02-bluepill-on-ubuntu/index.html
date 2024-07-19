@@ -7,17 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Installing STM32cubeIDE on Ubuntu 20.04 and debugging STM32f103C8T6 or CKS32F103C8T6 Bluepill">
   <meta name="author" content="Edi Liberato">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.129.0">
 
   <!-- plugins -->
   
-  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/bootstrap/bootstrap.min.css ">
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/bootstrap/bootstrap.min.css">
   
-  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/slick/slick.css ">
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/slick/slick.css">
   
-  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/themify-icons/themify-icons.css ">
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/themify-icons/themify-icons.css">
   
-  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/venobox/venobox.css ">
+  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/venobox/venobox.css">
   
 
   <!-- Main Stylesheet -->
@@ -25,29 +25,8 @@
   <link rel="stylesheet" href="https://eddieliberato.github.io/scss/style.min.css" media="screen">
 
   <!--Favicon-->
-  <link rel="shortcut icon" href="https://eddieliberato.github.io/images/favicon.png " type="image/x-icon">
-  <link rel="icon" href="https://eddieliberato.github.io/images/favicon.png " type="image/x-icon">
-
-  
-  
-
-  <!-- google analitycs -->
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-158639121-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-
+  <link rel="shortcut icon" href="https://eddieliberato.github.io/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="https://eddieliberato.github.io/images/favicon.png" type="image/x-icon">
 </head>
 <body>
 <!-- preloader start -->
@@ -60,7 +39,7 @@
   <div class="container">
     
     <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
-      <a class="navbar-brand mobile-view" href="https://eddieliberato.github.io"><img class="img-fluid"
+      <a class="navbar-brand mobile-view" href="https://eddieliberato.github.io/"><img class="img-fluid"
           src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato blog"></a>
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
         <i class="ti-menu"></i>
@@ -85,7 +64,7 @@
           </ul>
         </div>
 
-        <a class="navbar-brand mx-auto desktop-view" href="https://eddieliberato.github.io"><img class="img-fluid"
+        <a class="navbar-brand mx-auto desktop-view" href="https://eddieliberato.github.io/"><img class="img-fluid"
             src="https://eddieliberato.github.io/images/logo.png" alt="Edi Liberato blog"></a>
 
         <ul class="navbar-nav">
@@ -103,7 +82,7 @@
         <div class="search pl-lg-4">
           <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
           <div class="search-wrapper">
-            <form action="https://eddieliberato.github.io/search" class="h-100">
+            <form action="https://eddieliberato.github.io//search" class="h-100">
               <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
             </form>
             <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
@@ -155,19 +134,19 @@
 <p>Turns out that you need to install GDB debugger yourself because it&rsquo;s not included by default in the STM32cubeIDE. The problem is that it isn&rsquo;t possible to find the package anymore in the apt package manager. The solution is to install it manually as described <a href="https://askubuntu.com/questions/1243252/how-to-install-arm-none-eabi-gdb-on-ubuntu-20-04-lts-focal-fossa">here</a> by an user called Aleksander Khoroshko.</p>
 <p>You need to download the tools directly from the <a href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads">ARM website</a>. At the time of writing this was the <a href="https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2?revision=05382cca-1721-44e1-ae19-1e7c3dc96118&amp;la=en&amp;hash=D7C9D18FCA2DD9F894FD9F3C3DC9228498FA281A">latest release.</a></p>
 <p>The specific commands for the installation on my system (Ubuntu Focal, using the latest release of the ARM tools at the time of writing)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt remove gcc-arm-none-eabi
-
-sudo tar xjf gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2 -C /usr/share/
-
-sudo ln -s /usr/share/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gcc /usr/bin/arm-none-eabi-gcc
-sudo ln -s /usr/share/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-g++ /usr/bin/arm-none-eabi-g++
-sudo ln -s /usr/share/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gdb /usr/bin/arm-none-eabi-gdb
-sudo ln -s /usr/share/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-size /usr/bin/arm-none-eabi-size
-
-sudo apt install libncurses-dev
-sudo ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/x86_64-linux-gnu/libncurses.so.5
-sudo ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/x86_64-linux-gnu/libtinfo.so.5
-</code></pre></div><p>SOLVED! Well, not really. At least not for me, yet. It seems to solve the problem of the GDB dependencies but it fails to communicate with the debugger bringing the following error message.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt remove gcc-arm-none-eabi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo tar xjf gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2 -C /usr/share/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo ln -s /usr/share/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gcc /usr/bin/arm-none-eabi-gcc
+</span></span><span style="display:flex;"><span>sudo ln -s /usr/share/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-g++ /usr/bin/arm-none-eabi-g++
+</span></span><span style="display:flex;"><span>sudo ln -s /usr/share/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gdb /usr/bin/arm-none-eabi-gdb
+</span></span><span style="display:flex;"><span>sudo ln -s /usr/share/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-size /usr/bin/arm-none-eabi-size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo apt install libncurses-dev
+</span></span><span style="display:flex;"><span>sudo ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/x86_64-linux-gnu/libncurses.so.5
+</span></span><span style="display:flex;"><span>sudo ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/x86_64-linux-gnu/libtinfo.so.5
+</span></span></code></pre></div><p>SOLVED! Well, not really. At least not for me, yet. It seems to solve the problem of the GDB dependencies but it fails to communicate with the debugger bringing the following error message.</p>
 <blockquote>
 <p>Open On-Chip Debugger 0.10.0+dev-01193-g5ce997d (2020-02-20-10:54)
 Licensed under GNU GPL v2
@@ -190,24 +169,23 @@ Error: expected 1 of 1: 0x1ba01477</p>
 <p>The key to understand this error is in the end of the error message. A close examination on the label on the chip of my board reviews that I don&rsquo;t have a STM32f103C8T6 but a clone, namely, CS32f103C8T6 from China Key Systems. Not that I was surprised, considering I paid less than 2 US$ for it.</p>
 <p>This board holds the SW-DP TAP ID 0x2ba01477 instead of the original 0x1ba01477. To fix this you need to change the .cfg file accordingly.</p>
 <p>Here&rsquo;s how I proceeded. First I had to find the file in the system and for this I used the locate command. Before I had to update the database considering I just installed the new software.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo updatedb
-locate stm32f1x.cfg
-</code></pre></div><p>Beautifully returned the following location</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo updatedb
+</span></span><span style="display:flex;"><span>locate stm32f1x.cfg
+</span></span></code></pre></div><p>Beautifully returned the following location</p>
 <blockquote>
 <p>/opt /st /stm32cubeide_1 .3 .0 /plugins /com .st .stm32cube .ide .mcu .debug .openocd 1.3.0.202002181050 /resources /openocd /st_scripts /target /stm32f1x.cfg</p>
 </blockquote>
 <p>from there I just had to open this file and change</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">set_CPUTAPID 0x1ba01477
-</code></pre></div><p>to</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">set_CPUTAPID 0x2ba01477
-</code></pre></div><p>Blue Skies from there! Everything works as supposed. The only problem now is that I actually decided to not use this software anymore.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>set_CPUTAPID 0x1ba01477
+</span></span></code></pre></div><p>to</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>set_CPUTAPID 0x2ba01477
+</span></span></code></pre></div><p>Blue Skies from there! Everything works as supposed. The only problem now is that I actually decided to not use this software anymore.</p>
 <p>I&rsquo;m setting this environment for a simple hobby project, so it&rsquo;s not that I&rsquo;m forced to code in C. While googling about this board I actually discovered that it&rsquo;s possible to run FORTH on it. I thought that was an amazing opportunity to play with it and learn more. I always liked FORTH very much and it was the first programming language I interacted with. To tell the truth it wasn&rsquo;t FORTH but a language based on it, RPL on the HP50g, but anyway,  I always liked it.</p>
 <p>I decided to give it a try on the bluepill and so far I never regretted it. I recommend to everyone that owns a bluepill board to at least try it once.</p>
 <p>Cheers,</p>
 <p>Edi</p>
 
         </div>
-
         
         
       </div>

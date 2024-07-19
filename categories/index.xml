@@ -4,35 +4,30 @@
     <title>Categories on Edi Liberato blog</title>
     <link>https://eddieliberato.github.io/categories/</link>
     <description>Recent content in Categories on Edi Liberato blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://eddieliberato.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Computer Aided Design</title>
       <link>https://eddieliberato.github.io/categories/computer-aided-design/</link>
       <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/categories/computer-aided-design/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>FEA</title>
       <link>https://eddieliberato.github.io/categories/fea/</link>
       <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/categories/fea/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Microcontrollers</title>
       <link>https://eddieliberato.github.io/categories/microcontrollers/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/categories/microcontrollers/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

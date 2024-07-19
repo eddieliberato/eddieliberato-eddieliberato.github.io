@@ -4,80 +4,65 @@
     <title>Edi Liberato blog</title>
     <link>https://eddieliberato.github.io/</link>
     <description>Recent content on Edi Liberato blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://eddieliberato.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A collection of Cadquery parametric models (2018-2020)</title>
       <link>https://eddieliberato.github.io/blog/2022-06-26-cadquery-models-collection/</link>
       <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/blog/2022-06-26-cadquery-models-collection/</guid>
       <description>The title says it all, but I will elaborate a bit more.</description>
     </item>
-    
     <item>
       <title>Jetson nano case and a simple screw</title>
       <link>https://eddieliberato.github.io/blog/2022-03-10-screw-and-jetson-nano/</link>
       <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/blog/2022-03-10-screw-and-jetson-nano/</guid>
       <description>My journey on upgrading an second hand 3d printer and my first project with it.</description>
     </item>
-    
     <item>
       <title>Direct Stiffness Method in Python: Trusses and Frames</title>
       <link>https://eddieliberato.github.io/blog/2022-02-28-direct-stiffness-method/</link>
       <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/blog/2022-02-28-direct-stiffness-method/</guid>
       <description>This post is about some finite element method code that I wrote back in 2014.</description>
     </item>
-    
     <item>
       <title>f-rep Gears</title>
       <link>https://eddieliberato.github.io/blog/2020-09-21-gears/</link>
       <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/blog/2020-09-21-gears/</guid>
       <description>I&amp;rsquo;ve been writing for blogs since 2009 and I always wanted to write about gears.</description>
     </item>
-    
     <item>
       <title>Gömböc</title>
       <link>https://eddieliberato.github.io/blog/2020-08-12-gomboc/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/blog/2020-08-12-gomboc/</guid>
-      <description>One line of code and you have it!</description>
+      <description>One line of code and you have it!&#xA;Weird? Cool? Wizardry?</description>
     </item>
-    
     <item>
       <title>Debugging STM32f103C8T6 Bluepill (Ubuntu 20.04)</title>
       <link>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</guid>
       <description>This post is about how I got STM32cubeIDE up and running on Ubuntu 20.</description>
     </item>
-    
     <item>
       <title>ASTM D638 Tensile Test Specimens</title>
       <link>https://eddieliberato.github.io/blog/2020-05-14-dogbones/</link>
       <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/blog/2020-05-14-dogbones/</guid>
       <description>No need to say much about the classical ASTM D638 tensile test specimens AKA dogbones.</description>
     </item>
-    
     <item>
       <title>Cadquery Chess Set</title>
       <link>https://eddieliberato.github.io/blog/2018-06-26-cadquery-chess-set/</link>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://eddieliberato.github.io/blog/2018-06-26-cadquery-chess-set/</guid>
-      <description>This is my debute 3d printing project.</description>
+      <description>This is my debute 3d printing project. A chess set designed in cadquery.</description>
     </item>
-    
   </channel>
 </rss>
