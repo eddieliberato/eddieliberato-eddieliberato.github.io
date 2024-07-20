@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Edi Liberato blog</title>
+    <title>python on Edi Liberato blog</title>
     <link>https://eddieliberato.github.io/tags/python/</link>
-    <description>Recent content in Python on Edi Liberato blog</description>
-    <generator>Hugo</generator>
+    <description>Recent content in python on Edi Liberato blog</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://eddieliberato.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Direct Stiffness Method in Python: Trusses and Frames</title>
       <link>https://eddieliberato.github.io/blog/2022-02-28-direct-stiffness-method/</link>
       <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/blog/2022-02-28-direct-stiffness-method/</guid>
       <description>This post is about some finite element method code that I wrote back in 2014.</description>
     </item>
+    
     <item>
       <title>ASTM D638 Tensile Test Specimens</title>
       <link>https://eddieliberato.github.io/blog/2020-05-14-dogbones/</link>
       <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/blog/2020-05-14-dogbones/</guid>
       <description>No need to say much about the classical ASTM D638 tensile test specimens AKA dogbones.</description>
     </item>
+    
     <item>
       <title>Cadquery Chess Set</title>
       <link>https://eddieliberato.github.io/blog/2018-06-26-cadquery-chess-set/</link>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/blog/2018-06-26-cadquery-chess-set/</guid>
       <description>This is my debute 3d printing project. A chess set designed in cadquery.</description>
     </item>
+    
   </channel>
 </rss>

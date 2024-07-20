@@ -4,93 +4,116 @@
     <title>Tags on Edi Liberato blog</title>
     <link>https://eddieliberato.github.io/tags/</link>
     <description>Recent content in Tags on Edi Liberato blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://eddieliberato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eddieliberato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>3d Printing</title>
+      <title>3D printing</title>
       <link>https://eddieliberato.github.io/tags/3d-printing/</link>
       <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/3d-printing/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Cad</title>
+      <title>CAD</title>
       <link>https://eddieliberato.github.io/tags/cad/</link>
       <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/cad/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Cadquery</title>
+      <title>cadquery</title>
       <link>https://eddieliberato.github.io/tags/cadquery/</link>
       <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/cadquery/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Programming</title>
       <link>https://eddieliberato.github.io/tags/programming/</link>
       <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/programming/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Python</title>
+      <title>python</title>
       <link>https://eddieliberato.github.io/tags/python/</link>
       <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/python/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Libfive</title>
       <link>https://eddieliberato.github.io/tags/libfive/</link>
       <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/libfive/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Lisp</title>
       <link>https://eddieliberato.github.io/tags/lisp/</link>
       <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/lisp/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Scheme</title>
       <link>https://eddieliberato.github.io/tags/scheme/</link>
       <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/scheme/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>C</title>
       <link>https://eddieliberato.github.io/tags/c/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/c/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Electronics</title>
       <link>https://eddieliberato.github.io/tags/electronics/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/electronics/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Embedded</title>
       <link>https://eddieliberato.github.io/tags/embedded/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/embedded/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Ubuntu</title>
       <link>https://eddieliberato.github.io/tags/ubuntu/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://eddieliberato.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
+    
   </channel>
 </rss>
