@@ -13,11 +13,7 @@
   
   <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/bootstrap/bootstrap.min.css">
   
-  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/slick/slick.css">
-  
   <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/themify-icons/themify-icons.css">
-  
-  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/venobox/venobox.css">
   
 
   <!-- Main Stylesheet -->
@@ -150,94 +146,94 @@
 </li>
 </ul>
 <hr>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="p">(</span><span class="k">define </span><span class="nv">module</span> <span class="mi">1</span><span class="p">)</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">*z*</span> <span class="mi">20</span><span class="p">)</span> <span class="c1">; number of teeth</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">pa</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">pi</span> <span class="mi">12</span><span class="p">))</span> <span class="c1">; pressure angle in radians </span>
-<span class="p">(</span><span class="k">define </span><span class="nv">thickness</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">; gear thickness, mm</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#66d9ef">define </span>module <span style="color:#ae81ff">1</span>)
+(<span style="color:#66d9ef">define </span>*z* <span style="color:#ae81ff">20</span>) <span style="color:#75715e">; number of teeth</span>
+(<span style="color:#66d9ef">define </span>pa (/ pi <span style="color:#ae81ff">12</span>)) <span style="color:#75715e">; pressure angle in radians </span>
+(<span style="color:#66d9ef">define </span>thickness <span style="color:#ae81ff">10</span>) <span style="color:#75715e">; gear thickness, mm</span>
 
-<span class="p">(</span><span class="k">define </span><span class="nv">d0</span> <span class="p">(</span><span class="nb">* </span><span class="nv">module</span> <span class="nv">*z*</span><span class="p">))</span> <span class="c1">; reference pitch circle diameter</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">db</span> <span class="p">(</span><span class="nb">* </span><span class="nv">d0</span> <span class="p">(</span><span class="nb">cos </span><span class="nv">pa</span><span class="p">)))</span> <span class="c1">; base circle diameter</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">da</span> <span class="p">(</span><span class="nb">* </span><span class="nv">module</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">*z*</span> <span class="mi">2</span><span class="p">)))</span> <span class="c1">; addendum circle diameter</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">rb</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">db</span> <span class="mi">2</span><span class="p">))</span> <span class="c1">; base circle radius</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">ra</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">da</span> <span class="mi">2</span><span class="p">))</span> <span class="c1">; addendum circle radius</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">alpha2</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">pi</span> <span class="nv">*z*</span><span class="p">))</span> <span class="c1">; tooth angular distance in radians</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">eb2</span> <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">/ </span><span class="nv">module</span> <span class="mi">4</span><span class="p">)</span> <span class="nv">pi</span> <span class="p">(</span><span class="nb">cos </span><span class="nv">pa</span><span class="p">)))</span> <span class="c1">; tooth width spacing</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">clea</span> <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">/ </span><span class="mi">5</span> <span class="mi">32</span><span class="p">)</span> <span class="nv">module</span><span class="p">))</span> <span class="c1">; dedendum clearance</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">dd</span> <span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nb">* </span><span class="nv">module</span> <span class="p">(</span><span class="nb">- </span><span class="nv">*z*</span> <span class="mi">2</span><span class="p">))</span> <span class="p">(</span><span class="nb">* </span><span class="mi">2</span> <span class="nv">clea</span><span class="p">)))</span> <span class="c1">; root diameter</span>
+(<span style="color:#66d9ef">define </span>d0 (* module *z*)) <span style="color:#75715e">; reference pitch circle diameter</span>
+(<span style="color:#66d9ef">define </span>db (* d0 (cos pa))) <span style="color:#75715e">; base circle diameter</span>
+(<span style="color:#66d9ef">define </span>da (* module (+ *z* <span style="color:#ae81ff">2</span>))) <span style="color:#75715e">; addendum circle diameter</span>
+(<span style="color:#66d9ef">define </span>rb (/ db <span style="color:#ae81ff">2</span>)) <span style="color:#75715e">; base circle radius</span>
+(<span style="color:#66d9ef">define </span>ra (/ da <span style="color:#ae81ff">2</span>)) <span style="color:#75715e">; addendum circle radius</span>
+(<span style="color:#66d9ef">define </span>alpha2 (/ pi *z*)) <span style="color:#75715e">; tooth angular distance in radians</span>
+(<span style="color:#66d9ef">define </span>eb2 (* (/ module <span style="color:#ae81ff">4</span>) pi (cos pa))) <span style="color:#75715e">; tooth width spacing</span>
+(<span style="color:#66d9ef">define </span>clea (* (/ <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">32</span>) module)) <span style="color:#75715e">; dedendum clearance</span>
+(<span style="color:#66d9ef">define </span>dd (- (* module (- *z* <span style="color:#ae81ff">2</span>)) (* <span style="color:#ae81ff">2</span> clea))) <span style="color:#75715e">; root diameter</span>
 
-<span class="p">(</span><span class="nf">define-shape</span> <span class="p">(</span><span class="nf">involute</span> <span class="nv">x</span> <span class="nv">y</span> <span class="nv">z</span><span class="p">)</span>
-  <span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="p">(</span><span class="nb">cos </span><span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">/ </span><span class="mi">1</span> <span class="nv">rb</span><span class="p">)</span> <span class="p">(</span><span class="nb">sqrt </span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">y</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nb">* </span><span class="nv">rb</span> <span class="nv">rb</span><span class="p">)))))))</span> 
-     <span class="p">(</span><span class="nb">* </span><span class="nv">y</span> <span class="p">(</span><span class="nb">sin </span><span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">/ </span><span class="mi">1</span> <span class="nv">rb</span><span class="p">)</span> <span class="p">(</span><span class="nb">sqrt </span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">y</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nb">* </span><span class="nv">rb</span> <span class="nv">rb</span><span class="p">)))))))</span>
-  <span class="p">(</span><span class="nb">- </span><span class="nv">rb</span><span class="p">)))</span>
+(<span style="color:#a6e22e">define-shape</span> (<span style="color:#a6e22e">involute</span> x y z)
+  (+ (* x (cos (* (/ <span style="color:#ae81ff">1</span> rb) (sqrt (+ (* x x) (* y y) (- (* rb rb))))))) 
+     (* y (sin (* (/ <span style="color:#ae81ff">1</span> rb) (sqrt (+ (* x x) (* y y) (- (* rb rb)))))))
+  (- rb)))
 
-<span class="p">(</span><span class="k">define </span><span class="nv">right-contour</span>
-  <span class="p">(</span><span class="nf">rotate-z</span>
-    <span class="p">(</span><span class="nf">difference</span>
-      <span class="p">(</span><span class="nf">inverse</span> <span class="nv">involute</span><span class="p">)</span>
-      <span class="p">(</span><span class="nf">-</span><span class="p">(</span><span class="nf">lambda-shape</span> <span class="p">(</span><span class="nf">x</span> <span class="nv">y</span> <span class="nv">z</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="nv">rb</span> <span class="nv">x</span><span class="p">)))</span>
-      <span class="p">(</span><span class="nf">rotate-z</span>
-        <span class="p">(</span><span class="nf">lambda-shape</span> <span class="p">(</span><span class="nf">x</span> <span class="nv">y</span> <span class="nv">z</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="nv">y</span><span class="p">))</span>
-      <span class="p">(</span><span class="nb">/ </span><span class="nv">alpha2</span> <span class="mi">2</span><span class="p">)))</span>
-  <span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nb">/ </span><span class="nv">alpha2</span> <span class="mi">2</span><span class="p">))))</span>
+(<span style="color:#66d9ef">define </span>right-contour
+  (<span style="color:#a6e22e">rotate-z</span>
+    (<span style="color:#a6e22e">difference</span>
+      (<span style="color:#a6e22e">inverse</span> involute)
+      (<span style="color:#a6e22e">-</span>(<span style="color:#a6e22e">lambda-shape</span> (<span style="color:#a6e22e">x</span> y z) (- rb x)))
+      (<span style="color:#a6e22e">rotate-z</span>
+        (<span style="color:#a6e22e">lambda-shape</span> (<span style="color:#a6e22e">x</span> y z) (- y))
+      (/ alpha2 <span style="color:#ae81ff">2</span>)))
+  (- (/ alpha2 <span style="color:#ae81ff">2</span>))))
 
-<span class="p">(</span><span class="k">define </span><span class="nv">left-contour</span>
-  <span class="p">(</span><span class="nf">reflect-y</span> <span class="nv">right-contour</span><span class="p">))</span>
+(<span style="color:#66d9ef">define </span>left-contour
+  (<span style="color:#a6e22e">reflect-y</span> right-contour))
 
-<span class="p">(</span><span class="k">define </span><span class="nv">tooth</span>
-  <span class="p">(</span><span class="nf">union</span> <span class="nv">right-contour</span> <span class="nv">left-contour</span><span class="p">))</span>
+(<span style="color:#66d9ef">define </span>tooth
+  (<span style="color:#a6e22e">union</span> right-contour left-contour))
 
-<span class="p">(</span><span class="k">define </span><span class="nv">spur-gear</span>
-  <span class="p">(</span><span class="nf">difference</span>
-    <span class="p">(</span><span class="nf">union</span>
-      <span class="p">(</span><span class="nf">array-polar</span> <span class="nv">tooth</span> <span class="nv">*z*</span><span class="p">)</span>
-      <span class="p">(</span><span class="nf">circle</span> <span class="nv">rb</span><span class="p">)</span>
-      <span class="p">(</span><span class="nf">array-polar</span> <span class="p">(</span><span class="nf">circle</span> <span class="nv">eb2</span> <span class="p">[</span><span class="nv">rb</span> <span class="mi">0</span><span class="p">])</span> <span class="nv">*z*</span><span class="p">))</span>
-    <span class="p">(</span><span class="nf">inverse</span> <span class="p">(</span><span class="nf">circle</span> <span class="nv">ra</span><span class="p">))</span>
-    <span class="p">(</span><span class="nf">array-polar</span> 
-      <span class="p">(</span><span class="nf">rotate-z</span>
-        <span class="p">(</span><span class="nf">rounded-rectangle</span> <span class="p">[(</span><span class="nb">/ </span><span class="nv">dd</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="nv">eb2</span><span class="p">)]</span> <span class="p">[</span><span class="nv">ra</span> <span class="nv">eb2</span><span class="p">]</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">module</span> <span class="mi">2</span><span class="p">))</span>
-      <span class="nv">alpha2</span><span class="p">)</span>
-    <span class="nv">*z*</span><span class="p">)))</span>
+(<span style="color:#66d9ef">define </span>spur-gear
+  (<span style="color:#a6e22e">difference</span>
+    (<span style="color:#a6e22e">union</span>
+      (<span style="color:#a6e22e">array-polar</span> tooth *z*)
+      (<span style="color:#a6e22e">circle</span> rb)
+      (<span style="color:#a6e22e">array-polar</span> (<span style="color:#a6e22e">circle</span> eb2 [rb <span style="color:#ae81ff">0</span>]) *z*))
+    (<span style="color:#a6e22e">inverse</span> (<span style="color:#a6e22e">circle</span> ra))
+    (<span style="color:#a6e22e">array-polar</span> 
+      (<span style="color:#a6e22e">rotate-z</span>
+        (<span style="color:#a6e22e">rounded-rectangle</span> [(/ dd <span style="color:#ae81ff">2</span> ) (- eb2)] [ra eb2] (/ module <span style="color:#ae81ff">2</span>))
+      alpha2)
+    *z*)))
 
-<span class="p">(</span><span class="k">define </span><span class="nv">lower-side</span>
-  <span class="p">(</span><span class="nf">remap-shape</span> <span class="p">((</span><span class="nf">extrude</span> <span class="nv">spur-gear</span> <span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nb">/ </span><span class="nv">thickness</span> <span class="mi">2</span><span class="p">))</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">x</span> <span class="nv">y</span> <span class="nv">z</span><span class="p">)</span>
-    <span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">cos </span><span class="p">(</span><span class="nb">/ </span><span class="nv">z</span> <span class="mi">7</span><span class="p">))</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">sin </span><span class="p">(</span><span class="nb">/ </span><span class="nv">z</span> <span class="mi">5</span><span class="p">))</span> <span class="nv">y</span><span class="p">))</span>
-    <span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">cos </span><span class="p">(</span><span class="nb">/ </span><span class="nv">z</span> <span class="mi">7</span><span class="p">))</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">sin </span><span class="p">(</span><span class="nb">/ </span><span class="nv">z</span> <span class="mi">5</span><span class="p">))</span> <span class="nv">x</span><span class="p">))</span>
-    <span class="nv">z</span><span class="p">))</span>
+(<span style="color:#66d9ef">define </span>lower-side
+  (<span style="color:#a6e22e">remap-shape</span> ((<span style="color:#a6e22e">extrude</span> spur-gear (- (/ thickness <span style="color:#ae81ff">2</span>)) <span style="color:#ae81ff">0</span>) x y z)
+    (+ (* (cos (/ z <span style="color:#ae81ff">7</span>)) x) (* (sin (/ z <span style="color:#ae81ff">5</span>)) y))
+    (- (* (cos (/ z <span style="color:#ae81ff">7</span>)) y) (* (sin (/ z <span style="color:#ae81ff">5</span>)) x))
+    z))
 
-<span class="p">(</span><span class="k">define </span><span class="nv">liberato-gear</span>
-  <span class="p">(</span><span class="nf">union</span> 
-    <span class="nv">lower-side</span>
-    <span class="p">(</span><span class="nf">reflect-z</span>
-      <span class="nv">lower-side</span><span class="p">)))</span>
+(<span style="color:#66d9ef">define </span>liberato-gear
+  (<span style="color:#a6e22e">union</span> 
+    lower-side
+    (<span style="color:#a6e22e">reflect-z</span>
+      lower-side)))
 
-<span class="nv">liberato-gear</span>
+liberato-gear
  
-<span class="p">(</span><span class="nf">set-quality!</span> <span class="mi">11</span><span class="p">)</span>
-<span class="p">(</span><span class="nf">set-resolution!</span> <span class="mi">20</span><span class="p">)</span>
-<span class="p">(</span><span class="nf">set-bounds!</span> <span class="p">[</span><span class="mi">-20</span> <span class="mi">-20</span> <span class="mi">-6</span><span class="p">]</span> <span class="p">[</span><span class="mi">20</span> <span class="mi">20</span> <span class="mi">6</span><span class="p">])</span>
+(<span style="color:#a6e22e">set-quality!</span> <span style="color:#ae81ff">11</span>)
+(<span style="color:#a6e22e">set-resolution!</span> <span style="color:#ae81ff">20</span>)
+(<span style="color:#a6e22e">set-bounds!</span> [<span style="color:#ae81ff">-20</span> <span style="color:#ae81ff">-20</span> <span style="color:#ae81ff">-6</span>] [<span style="color:#ae81ff">20</span> <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">6</span>])
 </code></pre></div><p>As you can see the complicated part is to generate a tooth profile. After you achieve that, you go to town.</p>
 <p>The trick to create the involute profile resides in defining a shape using the implicit involute equation. In libfive equations can create shapes within the bounds set in the end of the script.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="p">(</span><span class="nf">define-shape</span> <span class="p">(</span><span class="nf">involute</span> <span class="nv">x</span> <span class="nv">y</span> <span class="nv">z</span><span class="p">)</span>
-  <span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="p">(</span><span class="nb">cos </span><span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">/ </span><span class="mi">1</span> <span class="nv">rb</span><span class="p">)</span> <span class="p">(</span><span class="nb">sqrt </span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">y</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nb">* </span><span class="nv">rb</span> <span class="nv">rb</span><span class="p">)))))))</span> 
-     <span class="p">(</span><span class="nb">* </span><span class="nv">y</span> <span class="p">(</span><span class="nb">sin </span><span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">/ </span><span class="mi">1</span> <span class="nv">rb</span><span class="p">)</span> <span class="p">(</span><span class="nb">sqrt </span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">y</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nb">* </span><span class="nv">rb</span> <span class="nv">rb</span><span class="p">)))))))</span>
-  <span class="p">(</span><span class="nb">- </span><span class="nv">rb</span><span class="p">)))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#a6e22e">define-shape</span> (<span style="color:#a6e22e">involute</span> x y z)
+  (+ (* x (cos (* (/ <span style="color:#ae81ff">1</span> rb) (sqrt (+ (* x x) (* y y) (- (* rb rb))))))) 
+     (* y (sin (* (/ <span style="color:#ae81ff">1</span> rb) (sqrt (+ (* x x) (* y y) (- (* rb rb)))))))
+  (- rb)))
 </code></pre></div><p>Once we have the involute shape, the idea is to trim away everything that&rsquo;s not relevant to define one side of the tooth. After that the shape is rotated back so it sits along the x axis, making it easier to reflect the half shape and end up with a involute gear tooth.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="p">(</span><span class="k">define </span><span class="nv">right-contour</span>
-  <span class="p">(</span><span class="nf">rotate-z</span>
-    <span class="p">(</span><span class="nf">difference</span>
-      <span class="p">(</span><span class="nf">inverse</span> <span class="nv">involute</span><span class="p">)</span>
-      <span class="p">(</span><span class="nf">-</span><span class="p">(</span><span class="nf">lambda-shape</span> <span class="p">(</span><span class="nf">x</span> <span class="nv">y</span> <span class="nv">z</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="nv">rb</span> <span class="nv">x</span><span class="p">)))</span>
-      <span class="p">(</span><span class="nf">rotate-z</span>
-        <span class="p">(</span><span class="nf">lambda-shape</span> <span class="p">(</span><span class="nf">x</span> <span class="nv">y</span> <span class="nv">z</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="nv">y</span><span class="p">))</span>
-      <span class="p">(</span><span class="nb">/ </span><span class="nv">alpha2</span> <span class="mi">2</span><span class="p">)))</span>
-  <span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nb">/ </span><span class="nv">alpha2</span> <span class="mi">2</span><span class="p">))))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#66d9ef">define </span>right-contour
+  (<span style="color:#a6e22e">rotate-z</span>
+    (<span style="color:#a6e22e">difference</span>
+      (<span style="color:#a6e22e">inverse</span> involute)
+      (<span style="color:#a6e22e">-</span>(<span style="color:#a6e22e">lambda-shape</span> (<span style="color:#a6e22e">x</span> y z) (- rb x)))
+      (<span style="color:#a6e22e">rotate-z</span>
+        (<span style="color:#a6e22e">lambda-shape</span> (<span style="color:#a6e22e">x</span> y z) (- y))
+      (/ alpha2 <span style="color:#ae81ff">2</span>)))
+  (- (/ alpha2 <span style="color:#ae81ff">2</span>))))
 
-<span class="p">(</span><span class="k">define </span><span class="nv">left-contour</span>
-  <span class="p">(</span><span class="nf">reflect-y</span> <span class="nv">right-contour</span><span class="p">))</span>
+(<span style="color:#66d9ef">define </span>left-contour
+  (<span style="color:#a6e22e">reflect-y</span> right-contour))
 
-<span class="p">(</span><span class="k">define </span><span class="nv">tooth</span>
-  <span class="p">(</span><span class="nf">union</span> <span class="nv">right-contour</span> <span class="nv">left-contour</span><span class="p">))</span>
+(<span style="color:#66d9ef">define </span>tooth
+  (<span style="color:#a6e22e">union</span> right-contour left-contour))
 </code></pre></div><p><img src="../../images/post/teeth_close.png" alt="teeth"></p>
 <p>Here is a close up on the profile generated, 20º degrees pressure angle (pi/9 in radians), approx 15.6 % (5/32) of module added to the dedendum as clearance. There&rsquo;s a module/2 sized fillet on the root, just to break the sharp corners.</p>
 <p>The last image is just to showcase some gears that are easily generated having the spur-gear modeled. To have the helical gear you simply apply the remap-shape method. For a herringbone gear you just reflect the helical gear and bob is your uncle. These models were rendered in blender.</p>
@@ -270,15 +266,9 @@
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
                                     href="/tags/3d-printing">3d printing</a></li>
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-                                    href="/tags/c">C</a></li>
-    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
                                     href="/tags/cad">Cad</a></li>
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
                                     href="/tags/cadquery">Cadquery</a></li>
-    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-                                    href="/tags/electronics">Electronics</a></li>
-    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-                                    href="/tags/embedded">Embedded</a></li>
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
                                     href="/tags/libfive">Libfive</a></li>
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
@@ -289,8 +279,6 @@
                                     href="/tags/python">Python</a></li>
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
                                     href="/tags/scheme">Scheme</a></li>
-    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-                                    href="/tags/ubuntu">Ubuntu</a></li>
   </ul>
 </div>
 
@@ -338,9 +326,6 @@
           <li class="mb-3"><a class="text-dark"
               href="/categories/fea">Fea</a>
           </li>
-          <li class="mb-3"><a class="text-dark"
-              href="/categories/microcontrollers">Microcontrollers</a>
-          </li>
         </ul>
       </div>
       <div class="col-lg-3 col-sm-6 mb-5">
@@ -367,10 +352,6 @@
 <script src="https://eddieliberato.github.io/plugins/jQuery/jquery.min.js"></script>
 
 <script src="https://eddieliberato.github.io/plugins/bootstrap/bootstrap.min.js"></script>
-
-<script src="https://eddieliberato.github.io/plugins/slick/slick.min.js"></script>
-
-<script src="https://eddieliberato.github.io/plugins/venobox/venobox.min.js"></script>
 
 <script src="https://eddieliberato.github.io/plugins/search/fuse.min.js"></script>
 

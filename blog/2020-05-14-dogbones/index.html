@@ -13,11 +13,7 @@
   
   <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/bootstrap/bootstrap.min.css">
   
-  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/slick/slick.css">
-  
   <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/themify-icons/themify-icons.css">
-  
-  <link rel="stylesheet" href="https://eddieliberato.github.io/plugins/venobox/venobox.css">
   
 
   <!-- Main Stylesheet -->
@@ -117,7 +113,7 @@
           
         </div>
         
-        <img src="https://eddieliberato.github.io/images/post/tensile_test_specimens.png" class="img-fluid w-100 mb-4" alt="ASTM D638 Tensile Test Specimens">
+        <img src="https://eddieliberato.github.io/images/post/dogbones/dogbones.svg" class="img-fluid w-100 mb-4" alt="ASTM D638 Tensile Test Specimens">
         
         <div class="content mb-5">
           <p>No need to say much about the classical ASTM D638 tensile test specimens AKA dogbones. Just a few remarks:</p>
@@ -128,49 +124,49 @@
 <li>Type IV is intended for non-rigid plastics.</li>
 <li>Thickness of 3.2 mm is recommended for injection molded specimens.</li>
 </ul>
-<p><img src="../../images/post/tensileTestSpecimensTable.png" alt="ASTMD638table"></p>
+<p><img src="../../images/post/dogbones/tensileTestSpecimensTable.png" alt="ASTMD638table"></p>
 <blockquote>
 <p><strong>Figure above reference:</strong><a href="http://www.astm.org/cgi-bin/resolver.cgi?D638">ASTM D638</a>, Standard Test Method for Tensile Properties of Plastics, ASTM International, West Conshohocken, PA, 2014, <a href="http://www.astm.org">www.astm.org</a></p>
 </blockquote>
 <p>Cadquery scripts:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">cadquery</span> <span class="k">as</span> <span class="nn">cq</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 
-<span class="c1"># ASTM D638 typeI dogbone</span>
+<span style="color:#75715e"># ASTM D638 typeI dogbone</span>
 
-<span class="n">W</span> <span class="o">=</span> <span class="mf">13.0</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mf">57.0</span>
-<span class="n">WO</span> <span class="o">=</span> <span class="mf">19.0</span>
-<span class="n">LO</span> <span class="o">=</span> <span class="mf">165.0</span>
-<span class="n">R</span> <span class="o">=</span> <span class="mf">76.0</span>
-<span class="n">thickness</span> <span class="o">=</span> <span class="mf">3.2</span>
+W <span style="color:#f92672">=</span> <span style="color:#ae81ff">13.0</span>
+L <span style="color:#f92672">=</span> <span style="color:#ae81ff">57.0</span>
+WO <span style="color:#f92672">=</span> <span style="color:#ae81ff">19.0</span>
+LO <span style="color:#f92672">=</span> <span style="color:#ae81ff">165.0</span>
+R <span style="color:#f92672">=</span> <span style="color:#ae81ff">76.0</span>
+thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.2</span>
 
-<span class="n">dogbone_typeI</span> <span class="o">=</span> <span class="p">(</span><span class="n">cq</span><span class="o">.</span><span class="n">Workplane</span><span class="p">(</span><span class="s2">&#34;front&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="n">LO</span><span class="p">,</span> <span class="n">WO</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">faces</span><span class="p">(</span><span class="s2">&#34;&gt;Y&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">workplane</span><span class="p">()</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span><span class="o">.</span><span class="n">cutBlind</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">WO</span><span class="o">-</span><span class="n">W</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">faces</span><span class="p">(</span><span class="s2">&#34;&lt;Y&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">workplane</span><span class="p">()</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span><span class="o">.</span><span class="n">cutBlind</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">WO</span><span class="o">-</span><span class="n">W</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">faces</span><span class="p">(</span><span class="s2">&#34;&gt;Z&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">workplane</span><span class="p">(</span><span class="n">centerOption</span><span class="o">=</span><span class="s1">&#39;CenterOfBoundBox&#39;</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">rect</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">R</span><span class="o">+</span><span class="n">W</span><span class="p">,</span> <span class="n">forConstruction</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">vertices</span><span class="p">()</span><span class="o">.</span><span class="n">hole</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">R</span><span class="p">))</span>
+dogbone_typeI <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(LO, WO, thickness)<span style="color:#f92672">.</span>
+    faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, thickness)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>(WO<span style="color:#f92672">-</span>W)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>
+    faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, thickness)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>(WO<span style="color:#f92672">-</span>W)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>
+    rect(L, <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>R<span style="color:#f92672">+</span>W, forConstruction<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)<span style="color:#f92672">.</span>vertices()<span style="color:#f92672">.</span>hole(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>R))
 
-<span class="n">show_object</span><span class="p">(</span><span class="n">dogbone_typeI</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">cadquery</span> <span class="k">as</span> <span class="nn">cq</span>
+show_object(dogbone_typeI)
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 
-<span class="c1"># ASTM D638 typeIV dogbone</span>
+<span style="color:#75715e"># ASTM D638 typeIV dogbone</span>
 
-<span class="n">W</span> <span class="o">=</span> <span class="mf">6.0</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mf">33.0</span>
-<span class="n">WO</span> <span class="o">=</span> <span class="mf">19.0</span>
-<span class="n">LO</span> <span class="o">=</span> <span class="mf">115.0</span>
-<span class="n">R</span> <span class="o">=</span> <span class="mf">14.0</span>
-<span class="n">RO</span> <span class="o">=</span> <span class="mf">25.0</span>
-<span class="n">thickness</span> <span class="o">=</span> <span class="mf">3.2</span>
+W <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.0</span>
+L <span style="color:#f92672">=</span> <span style="color:#ae81ff">33.0</span>
+WO <span style="color:#f92672">=</span> <span style="color:#ae81ff">19.0</span>
+LO <span style="color:#f92672">=</span> <span style="color:#ae81ff">115.0</span>
+R <span style="color:#f92672">=</span> <span style="color:#ae81ff">14.0</span>
+RO <span style="color:#f92672">=</span> <span style="color:#ae81ff">25.0</span>
+thickness <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.2</span>
 
-<span class="n">dogbone_typeIV</span> <span class="o">=</span> <span class="p">(</span><span class="n">cq</span><span class="o">.</span><span class="n">Workplane</span><span class="p">(</span><span class="s2">&#34;front&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="n">LO</span><span class="p">,</span> <span class="n">WO</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">faces</span><span class="p">(</span><span class="s2">&#34;&gt;Y&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">workplane</span><span class="p">()</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span><span class="o">.</span><span class="n">cutBlind</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">WO</span><span class="o">-</span><span class="n">W</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">faces</span><span class="p">(</span><span class="s2">&#34;&lt;Y&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">workplane</span><span class="p">()</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span><span class="o">.</span><span class="n">cutBlind</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">WO</span><span class="o">-</span><span class="n">W</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">faces</span><span class="p">(</span><span class="s2">&#34;&gt;Z&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">workplane</span><span class="p">(</span><span class="n">centerOption</span><span class="o">=</span><span class="s1">&#39;CenterOfBoundBox&#39;</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">rect</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">R</span><span class="o">+</span><span class="n">W</span><span class="p">,</span> <span class="n">forConstruction</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">vertices</span><span class="p">()</span><span class="o">.</span><span class="n">hole</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span>
-    <span class="n">edges</span><span class="p">(</span><span class="s2">&#34;|Z&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="s2">&#34;not &lt;X or &gt;X&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">fillet</span><span class="p">(</span><span class="n">RO</span><span class="p">))</span>
+dogbone_typeIV <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(LO, WO, thickness)<span style="color:#f92672">.</span>
+    faces(<span style="color:#e6db74">&#34;&gt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, thickness)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>(WO<span style="color:#f92672">-</span>W)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>
+    faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(L, thickness)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>(WO<span style="color:#f92672">-</span>W)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>
+    rect(L, <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>R<span style="color:#f92672">+</span>W, forConstruction<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)<span style="color:#f92672">.</span>vertices()<span style="color:#f92672">.</span>hole(R<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>
+    edges(<span style="color:#e6db74">&#34;|Z&#34;</span>)<span style="color:#f92672">.</span>edges(<span style="color:#e6db74">&#34;not &lt;X or &gt;X&#34;</span>)<span style="color:#f92672">.</span>fillet(RO))
 
-<span class="n">show_object</span><span class="p">(</span><span class="n">dogbone_typeIV</span><span class="p">)</span>
+show_object(dogbone_typeIV)
 </code></pre></div>
         </div>
         
@@ -196,15 +192,9 @@
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
                                     href="/tags/3d-printing">3d printing</a></li>
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-                                    href="/tags/c">C</a></li>
-    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
                                     href="/tags/cad">Cad</a></li>
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
                                     href="/tags/cadquery">Cadquery</a></li>
-    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-                                    href="/tags/electronics">Electronics</a></li>
-    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-                                    href="/tags/embedded">Embedded</a></li>
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
                                     href="/tags/libfive">Libfive</a></li>
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
@@ -215,8 +205,6 @@
                                     href="/tags/python">Python</a></li>
     <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
                                     href="/tags/scheme">Scheme</a></li>
-    <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-                                    href="/tags/ubuntu">Ubuntu</a></li>
   </ul>
 </div>
 
@@ -264,9 +252,6 @@
           <li class="mb-3"><a class="text-dark"
               href="/categories/fea">Fea</a>
           </li>
-          <li class="mb-3"><a class="text-dark"
-              href="/categories/microcontrollers">Microcontrollers</a>
-          </li>
         </ul>
       </div>
       <div class="col-lg-3 col-sm-6 mb-5">
@@ -293,10 +278,6 @@
 <script src="https://eddieliberato.github.io/plugins/jQuery/jquery.min.js"></script>
 
 <script src="https://eddieliberato.github.io/plugins/bootstrap/bootstrap.min.js"></script>
-
-<script src="https://eddieliberato.github.io/plugins/slick/slick.min.js"></script>
-
-<script src="https://eddieliberato.github.io/plugins/venobox/venobox.min.js"></script>
 
 <script src="https://eddieliberato.github.io/plugins/search/fuse.min.js"></script>
 

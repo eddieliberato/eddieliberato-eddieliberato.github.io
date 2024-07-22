@@ -16,14 +16,5 @@
       <description>This post is about some finite element method code that I wrote back in 2014.</description>
     </item>
     
-    <item>
-      <title>Debugging STM32f103C8T6 Bluepill (Ubuntu 20.04)</title>
-      <link>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</link>
-      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</guid>
-      <description>This post is about how I got STM32cubeIDE up and running on Ubuntu 20.</description>
-    </item>
-    
   </channel>
 </rss>

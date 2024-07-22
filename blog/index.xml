@@ -54,15 +54,6 @@ Weird? Cool? Wizardry?</description>
     </item>
     
     <item>
-      <title>Debugging STM32f103C8T6 Bluepill (Ubuntu 20.04)</title>
-      <link>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</link>
-      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eddieliberato.github.io/blog/2020-06-02-bluepill-on-ubuntu/</guid>
-      <description>This post is about how I got STM32cubeIDE up and running on Ubuntu 20.</description>
-    </item>
-    
-    <item>
       <title>ASTM D638 Tensile Test Specimens</title>
       <link>https://eddieliberato.github.io/blog/2020-05-14-dogbones/</link>
       <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
@@ -77,7 +68,7 @@ Weird? Cool? Wizardry?</description>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/blog/2018-06-26-cadquery-chess-set/</guid>
-      <description>This is my debute 3d printing project. A chess set designed in cadquery.</description>
+      <description>An weird project to test my new 3d printer: A chess set designed in cadquery.</description>
     </item>
     
   </channel>
