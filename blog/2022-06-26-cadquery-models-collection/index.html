@@ -113,7 +113,7 @@
           
         </div>
         
-        <img src="https://eddieliberato.github.io/images/post/cadquery-montage-new.png" class="mainimg mb-4" alt="A collection of Cadquery parametric models (2018-2020)">
+        <img src="https://eddieliberato.github.io/images/post/cadquery-collection/montage.svg" class="img mb-4" alt="A collection of Cadquery parametric models (2018-2020)">
         
         <div class ="tags-border">
           <div class="content mb-5">
@@ -128,21 +128,22 @@
   <ul>
     <li><a href="#turners-cube-04072018">Turners Cube (04/07/2018)</a></li>
     <li><a href="#cd-organizer-18082018">CD Organizer (18/08/2018)</a></li>
-    <li><a href="#kugellwellenhorn-19082018">Kugellwellenhorn (19/08/2018)</a></li>
+    <li><a href="#kugelwellenhorn-19082018">Kugelwellenhorn (19/08/2018)</a></li>
     <li><a href="#dovetail-guide-01042019">Dovetail Guide (01/04/2019)</a></li>
     <li><a href="#sawing-guides-08052020">Sawing Guides (08/05/2020)</a></li>
     <li><a href="#parametric-spiral-lampshade-11052020">Parametric Spiral Lampshade (11/05/2020)</a></li>
     <li><a href="#plywood-connectors-13052020">Plywood Connectors (13/05/2020)</a></li>
     <li><a href="#man-against-washing-machine-15052020">Man Against Washing Machine (15/05/2020)</a></li>
-    <li><a href="#parametric-stepper-motor-bracket-01082020">Parametric Stepper Motor Bracket (01/08/2020)</a></li>
+    <li><a href="#parametric-stepper-motor-bracket-01022020">Parametric Stepper Motor Bracket (01/02/2020)</a></li>
+    <li><a href="#a-screwed-knob-10032022">A screwed knob (10/03/2022)</a></li>
   </ul>
 </nav>
 </div>
 
 <h3 id="turners-cube-04072018">Turners Cube (04/07/2018)</h3>
-<p><img src="../../images/post/tuners_cube_2.png" alt="turners_cube"></p>
-<p>Back in Brazil, during my machinist apprenticeship, one of the lathe tasks of the manual machining course was to make a turners cube. Basically you need to turn a cube in the lathe and make some holes, that if carefully bored to specific dimensions, you end up with usually two captive cubes inside one another. At the time I was only a young teenager and the captive cube was a very attractive challenge to me. I naively thought that only round parts could be made at the lathe, so I was impressed with the cube with other cubes inside coming out of the machine. Sadly nowadays I don&rsquo;t know anymore where mine is. Hopefully at my mom&rsquo;s place.</p>
-<p>You can have as many cubes as you want inside. Back then,  the ones who actually made the cube usually went for three, so I did and I still think that three is the right number if you&rsquo;re doing it on the manual lathe. Two is too easy. Four is annoying because there is a lot of repetition of the same operations. Three is a good number because you proved your point in showing the instructor what you&rsquo;re capable of, and is not as annoying to make as the four cubes version.</p>
+<p><img src="../../images/post/cadquery-collection/turners_cube.svg" alt="turners_cube"></p>
+<p>Back in Brazil, during my machinist apprenticeship, one of the lathe tasks of the manual machining course was to make a turners cube (outlined on the image above 👆). Basically you need to turn a cube in the lathe and make some holes, that if carefully bored to specific dimensions, you end up with usually two captive cubes inside one another. At the time I was only a young teenager and the captive cube was a very attractive challenge to me. I naively thought that only round parts could be made at the lathe, so I was impressed with the cube with other cubes inside coming out of the machine. Sadly nowadays I don&rsquo;t know anymore where mine is. Hopefully at my mom&rsquo;s place.</p>
+<p>You can have as many cubes as you want inside. Back then,  the ones who actually made the cube usually went for three and so I did and I still think that three is the right number if you&rsquo;re doing it on the manual lathe. Two is too easy. Four is annoying because there is a lot of repetition of the same operations. Three is a good number because you proved your point in showing the instructor what you&rsquo;re capable of, and is not as annoying to make as the four cubes version.</p>
 <p>Leaving 2003 behind and back to 2018, I was thinking that the repetitive nature of the object makes it a nice model for cadqquery. So here is the script that I came up with:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 <span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> sqrt
@@ -167,11 +168,9 @@ cube <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>
     cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(sh_size)
     cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(sh_size)
     cube <span style="color:#f92672">=</span> cube<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>hole(sh_size)
-
-show_object(cube)
 </code></pre></div><p>I based my script in the innermost captive cube and in the square root of 2, which is a number associated with circles and squares. That makes the cube look good and proportional. The drawback is that the final size grows quadratically with the number of cubes resulting in a big thing if you go for a lot of cubes.</p>
 <h3 id="cd-organizer-18082018">CD Organizer (18/08/2018)</h3>
-<p><img src="../../images/post/cd-org2.png" alt="cd-org2"></p>
+<p><img src="../../images/post/cadquery-collection/cdorg.svg" alt="cd-org2"></p>
 <p>I had some old CDs lying around the house and I decided to organize them in a single place. I thought of 3d printing something to help, but after a brief search around the internet I couldn&rsquo;t find anything that I liked. The ones I could find were big and clunky, leading to long printing times. The &ldquo;simple&rdquo; one (that wasn&rsquo;t simple at all) that I found had the slots a bit undersized and I couldn&rsquo;t fit the CDs. I could have re-scaled the model but that print took me around 3 hours and I started to wonder if I should repeat it.</p>
 <p>I decided to come up with my own design.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
@@ -188,13 +187,11 @@ spacing <span style="color:#f92672">=</span> slot_width <span style="color:#f926
 cdorg <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>box(slot_length<span style="color:#f92672">+</span>thickness_wall, spacing<span style="color:#f92672">*</span>slots<span style="color:#f92672">+</span>thickness_wall, slot_depth<span style="color:#f92672">+</span>thickness_bottom) <span style="color:#f92672">.</span>\
     faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>center(thickness_wall,<span style="color:#f92672">-</span>(spacing<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>(slots<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)))<span style="color:#f92672">.</span>pushPoints([(<span style="color:#ae81ff">0</span>, y <span style="color:#f92672">*</span> spacing) <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, slots)])<span style="color:#f92672">.</span>rect(slot_length<span style="color:#f92672">+</span>thickness_wall, slot_width)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>slot_depth)<span style="color:#f92672">.</span>\
     faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>rect(slot_length<span style="color:#f92672">/</span><span style="color:#ae81ff">1.6</span>, spacing<span style="color:#f92672">*</span>slots<span style="color:#f92672">+</span>thickness_wall)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>slot_depth)
-
-show_object(cdorg)
 </code></pre></div><p>The print took only 14 minutes because I could take advantage of the 0.8mm nozzle and print the walls in a single pass of the hotend. The design turned out to be not super visually appealing but the function was on point. It keeps the CDs more accessible than just piling them up and it makes everything more stable against tipping over.</p>
 <p>More important than the physical object itself was that I learned something. I find this method of using the for loop (python&rsquo;s list comprehension) inside the pushPoints method very elegant and I plan to reuse this code for lathe tools and drill bits organizers among others.</p>
-<p><img src="../../images/post/cd_organizer2.jpg" alt="cd_organizer"></p>
-<h3 id="kugellwellenhorn-19082018">Kugellwellenhorn (19/08/2018)</h3>
-<p><img src="../../images/post/horn_new.png" alt="horn-cad"></p>
+<p><img src="../../images/post/cadquery-collection/cd_organizer2.jpg" alt="cd_organizer"></p>
+<h3 id="kugelwellenhorn-19082018">Kugelwellenhorn (19/08/2018)</h3>
+<p><img src="../../images/post/cadquery-collection/kugelwellenhorn.svg" alt="horn-cad"></p>
 <p>I have always been intrigued by horns. Actually by passive devices in general; tuned mass dampers, RLC circuits to name a few. Researching more about horns I found two designs that I&rsquo;d like to explore more. One is the Kugelwellenhorn and the other is the Le Cleah&rsquo;c horn. More info about the former can be found <a href="http://www.rintelen.ch/download/JMMLC_horns_lecture_etf10.pdf" title="lecleach">here</a>, in a lecture apparently gaven by Le Cleach&rsquo;c himself when he was still alive.</p>
 <p>About Kugellwellen horn, the design that I decided to approach first, all the info you need you can probably find on the site of <a href="http://kolbrek.hoyttalerdesign.no/index.php/horns/horn-theory" title="kolbrek horn theory">Bjorn Kolbrek</a>. Kolbrek seems to be an expert on the subject, and I enjoyed reading his articles. The math on his reports was a bit beyond my comprehension and I didn&rsquo;t want to dive so deep into the subject. My goal was only to design and materialize the horn. Turns out that this is not hard at all, Just take a look at the script below and you&rsquo;ll see that all you need is about 30 lines of code.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
@@ -223,12 +220,10 @@ edg_points <span style="color:#f92672">=</span> []
 edg_points[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> [y0, <span style="color:#ae81ff">0</span>]
 
 horn <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>move(y0, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>spline(edg_points)<span style="color:#f92672">.</span>wire()<span style="color:#f92672">.</span>revolve()
-
-show_object(horn)
-</code></pre></div><p><img src="../../images/post/horn1.jpg" alt="3d printed horn"></p>
+</code></pre></div><p><img src="../../images/post/cadquery-collection/horn1.jpg" alt="3d printed horn"></p>
 <p>Lecleach suggests that it&rsquo;s important to shape the horn past 180 degrees but as you can see it can be tricky to 3d print the involute part of the horn. Would be interesting to come up with some 3D printing hack to print the involute. Maybe one day I will come back to this topic to try something in this direction. (<strong>Message from the future:</strong> It never happened, I never got back to this.)</p>
 <h3 id="dovetail-guide-01042019">Dovetail Guide (01/04/2019)</h3>
-<p><img src="../../images/post/dovetail_guide_with_mark.png" alt="dovetail-jig-embossed"></p>
+<p><img src="../../images/post/cadquery-collection/dovetail_guide.svg" alt="dovetail-jig-embossed"></p>
 <p>This is my take on dovetail guides, I designed this to be 3d printed and parametric. Using parametric design makes it very easy to tune the dovetail ratio and to fit different magnets that one may have at hand. Higher ratios (e.g 1:8) are good for hardwoods and lower ratios (e.g. 1:5) are better suited for softwoods.</p>
 <p>Several models can be found on the internet and I would like to buy one but with all the import taxes it becomes expensive. Also I don&rsquo;t know what ratio I want exactly, so it makes sense to print my own to experiment with.</p>
 <p>I was particularly inspired by <a href="http://www.davidbarronfurniture.co.uk/" title="David Barron website">David Barron</a> and as seen in his videos, the simple jig works with magnets that hold the saw in place, making the dovetail cutting process easier.</p>
@@ -253,10 +248,8 @@ dovetail_guide <span style="color:#f92672">=</span> cq<span style="color:#f92672
 
 <span style="color:#66d9ef">if</span> embossing:
     dovetail_guide <span style="color:#f92672">=</span> dovetail_guide<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>text(<span style="color:#e6db74">&#34;1:&#34;</span><span style="color:#f92672">+</span>str(ratio), <span style="color:#ae81ff">8</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, cut<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, combine<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, clean<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, font<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Arial&#39;</span>, kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;regular&#39;</span>, halign<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, valign<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>)
-
-show_object(dovetail_guide)
 </code></pre></div><h3 id="sawing-guides-08052020">Sawing Guides (08/05/2020)</h3>
-<p><img src="../../images/post/sawing_guides_new.png" alt="sawing-guides"></p>
+<p><img src="../../images/post/cadquery-collection/right_angle_guide.svg" alt="sawing-guides"></p>
 <p>The idea here is the same as my dovetail jig but now one is intended to aid making square cuts on wood with hand saws and the other 45 degrees cut for joinery.</p>
 <p>I put the option of having a recess on these two jigs for clearance between the saw and the jig itself. I realized that depending on how you execute the cut the saw may bite the jig. It doesn&rsquo;t alter the performance of the jig, but it leaves scratch marks. Cutting a recess on the dovetail jig makes it unbalanced but these two not, at least in my opinion.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
@@ -280,8 +273,6 @@ right_angle_guide <span style="color:#f92672">=</span> cq<span style="color:#f92
 
 <span style="color:#66d9ef">if</span> clearance:
     right_angle_guide <span style="color:#f92672">=</span> right_angle_guide<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#34;&gt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>tab_top)<span style="color:#f92672">.</span>rect(size, size)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>clearance_size)
-
-show_object(right_angle_guide)
 </code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 
 <span style="color:#75715e"># A simple 45 degrees hand saw guide for woodworking </span>
@@ -302,20 +293,10 @@ guide <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span
 
 <span style="color:#66d9ef">if</span> clearance:
     guide <span style="color:#f92672">=</span> guide<span style="color:#f92672">.</span>faces(<span style="color:#e6db74">&#39;&gt;(1,1,0)&#39;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>tab_top)<span style="color:#f92672">.</span>rect(size<span style="color:#f92672">*</span><span style="color:#ae81ff">1.6</span>, size)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>clearance_size)
-
-show_object(guide)
 </code></pre></div><p>Recently I got myself a Gyokucho 615 and I could test it with the jig. No need to say it works like a charm. The cut was square and the texture of the end grain after the cut was very smooth. What a saw, btw! I managed to make a few frames with this setup.</p>
-<p><img src="../../images/post/frames.jpg" alt="frames"></p>
+<p><img src="../../images/post/cadquery-collection/frames.jpg" alt="frames"></p>
 <h3 id="parametric-spiral-lampshade-11052020">Parametric Spiral Lampshade (11/05/2020)</h3>
-<p><img src="../../images/post/spiral_lampshade_new.png" alt="spiral-lampshade"></p>
-<p>My intention here was to make a 3D printed bedside lamp. I got really close to what I wanted with this cadquery one liner.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
-
-lampshade <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;front&#34;</span>)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">150.0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.618</span>, <span style="color:#ae81ff">150.0</span>)<span style="color:#f92672">.</span>twistExtrude(<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">90</span>)
-
-show_object(lampshade)
-</code></pre></div><p><img src="../../images/post/twisted_lampshade.png" alt="twisted lampshade"></p>
-<p>Even though I like simple, minimalistic things, this was just too simple. I thought it would look cooler if it had a gradual decrease of its size. Here’s the code I came up with for that:</p>
+<p><img src="../../images/post/cadquery-collection/spiral_lampshade.svg" alt="spiral-lampshade"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 
 length <span style="color:#f92672">=</span> <span style="color:#ae81ff">150.0</span>            <span style="color:#75715e"># mm</span>
@@ -340,9 +321,9 @@ rotation <span style="color:#f92672">=</span> rotation_step
     height <span style="color:#f92672">=</span> height<span style="color:#f92672">+</span>height_increment
 
 show_object(spiral_lampshade)
-</code></pre></div><p><img src="../../images/post/spiral_lampshade.jpg" alt="spiral lampshade"></p>
+</code></pre></div><p><img src="../../images/post/cadquery-collection/spiral_lampshade.jpg" alt="spiral lampshade"></p>
 <h3 id="plywood-connectors-13052020">Plywood Connectors (13/05/2020)</h3>
-<p><img src="../../images/post/ply-connectors.png" alt="ply-connector"></p>
+<p><img src="../../images/post/cadquery-collection/plywood_connectors.svg" alt="ply-connector"></p>
 <p>I made this about two years ago and even though I liked the outcome pretty much I decided not to post anything about it at the time.</p>
 <p>I didn&rsquo;t want to harm in any way the company that makes the original but at this point it doesn&rsquo;t make any sense to hold back, googling &ldquo;plywood connectors&rdquo; or &ldquo;wood connectors DIY furniture&rdquo; you will find a vast amount of Chinese knockoffs.</p>
 <p>At the time of writing I found <a href="https://cults3d.com/en/3d-model/home/parametric-furniture-joints-with-grasshopper-download-free-parameter-by-othmane-march-22-2020" title="cults 3d model">this</a> on the internet. Another interesting thing I found was this <a href="https://www.plyproducts.com/" title="plyproducts website">aluminium version</a> where they claim to be in business since 2013.</p>
@@ -388,14 +369,11 @@ ijaw <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span
     faces(<span style="color:#e6db74">&#34;&lt;Y&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(screw_clearance)<span style="color:#f92672">.</span>
     faces(<span style="color:#e6db74">&#34;&gt;Y[-2]&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>polygon(<span style="color:#ae81ff">6</span>, nut_widthAcrossCorners)<span style="color:#f92672">.</span>cutBlind(<span style="color:#f92672">-</span>nut_thickness)<span style="color:#f92672">.</span>
     translate((<span style="color:#ae81ff">0</span>,thickness<span style="color:#f92672">+</span>support_height,<span style="color:#ae81ff">0</span>)))
-
-show_object(ojaw)
-show_object(ijaw)
-</code></pre></div><p><img src="../../images/post/plywood_connector2.jpg" alt="plywood connector2"></p>
+</code></pre></div><p><img src="../../images/post/cadquery-collection/plywood_connector2.jpg" alt="plywood connector2"></p>
 <h3 id="man-against-washing-machine-15052020">Man Against Washing Machine (15/05/2020)</h3>
-<p><img src="../../images/post/washing_machine_foot_2.png" alt="washing_machine_foot"></p>
+<p><img src="../../images/post/cadquery-collection/washing_machine_foot.svg" alt="washing_machine_foot"></p>
 <p>One of my personal favorite uses of 3d printers at home is to fix broken stuff. This object is not special but I&rsquo;m posting it here because it involves modeling parametric threads.</p>
-<p>Modeling parametric threads can be demanding. On top of that if you have to model a thread, it is probably some funky special thread. Overall I&rsquo;m happy with how this trapezoidal thread came out, but I&rsquo;m not sure whether this is the best way to design threads in Cadquery. (<strong>Message from the future:</strong> Check my 3d printed door knob on this<a href="https://eddieliberato.github.io/blog/2022-03-10-screw-and-jetson-nano/#making-the-printer-usable">post</a>. It is a better way to design threads, with a smooth entry and exit of the threads)</p>
+<p>This is a simple trapezoidal thread. For something more elaborate, check the last entry of this post.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq 
 <span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> sin, cos, pi
 
@@ -420,12 +398,10 @@ foot <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>
     faces(<span style="color:#e6db74">&#34;&lt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>hole(<span style="color:#ae81ff">14.0</span>, <span style="color:#ae81ff">42.0</span>)<span style="color:#f92672">.</span>translate((<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,pitch<span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>))
 
 foot <span style="color:#f92672">=</span> foot<span style="color:#f92672">.</span>union(thread)
-
-show_object(foot)
 </code></pre></div><p>This object is a washing machine adjustment pad that went missing (don&rsquo;t ask me how). At least there were 3 left so I could replicate the missing one. The tolerance on the mating thread was big, because even printing without support on my cheap 3d printer, it worked in the first attempt! No second iteration was needed :)</p>
-<p><img src="../../images/post/washing_machine_foot.jpg" alt="washingMachineFoot"></p>
-<h3 id="parametric-stepper-motor-bracket-01082020">Parametric Stepper Motor Bracket (01/08/2020)</h3>
-<p><img src="../../images/post/stepper_bracket.png" alt="stepper-bracket"></p>
+<p><img src="../../images/post/cadquery-collection/washing_machine_foot.jpg" alt="Washing_Machine_Foot"></p>
+<h3 id="parametric-stepper-motor-bracket-01022020">Parametric Stepper Motor Bracket (01/02/2020)</h3>
+<p><img src="../../images/post/cadquery-collection/stepper_bracket.svg" alt="stepper-bracket"></p>
 <p>The price estimations that I received for this object to have it made out of welded steel (by professional welders), were in the 100-130 EUROS range, 10 days delivery time. As the application intended for it had a light load I decided to just model and 3d print it. Took me half an hour of 3d modeling and 4 hours for the 3d printing process. I printed it out of ABS on a professional grade printer from the university.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
 
@@ -463,7 +439,83 @@ stepper_bracket <span style="color:#f92672">=</span> cq<span style="color:#f9267
     line((bplate_length<span style="color:#f92672">+</span>fplate_thickness)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>line(<span style="color:#ae81ff">0</span>, fplate_height)<span style="color:#f92672">.</span>close()<span style="color:#f92672">.</span>extrude(<span style="color:#f92672">-</span>gusset_thickness) <span style="color:#f92672">.</span>\
     faces(<span style="color:#e6db74">&#34;&lt;X&#34;</span>)<span style="color:#f92672">.</span>workplane(centerOption<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;CenterOfBoundBox&#39;</span>)<span style="color:#f92672">.</span>move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>(fplate_height<span style="color:#f92672">+</span>bplate_thickness)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">.</span>\
     line(<span style="color:#f92672">-</span>(bplate_length<span style="color:#f92672">+</span>fplate_thickness)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>line(<span style="color:#ae81ff">0</span>, fplate_height)<span style="color:#f92672">.</span>close()<span style="color:#f92672">.</span>extrude(<span style="color:#f92672">-</span>gusset_thickness)
-</code></pre></div><p><img src="../../images/post/stepper_motor_bracket2.png" alt="stepper_bracket"></p>
+</code></pre></div><p><img src="../../images/post/cadquery-collection/stepper_motor_bracket2.png" alt="stepper_bracket"></p>
+<h3 id="a-screwed-knob-10032022">A screwed knob (10/03/2022)</h3>
+<p><img src="../../images/post/cadquery-collection/screwed_knob.svg" alt="screwed_knob_vectorial"></p>
+<p>I don&rsquo;t know why but the 3d printer comes from the factory with a lock and key. I decided to just swap it with a simple knob. It would be a nice test print, So I designed a knob with a threads that fit the nut from the keylock that came with the machine.</p>
+<p>Here follows the cadquery code for the design.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cadquery <span style="color:#66d9ef">as</span> cq
+<span style="color:#f92672">from</span> cadquery <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> sin, cos, pi
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">helix</span>(r0,r_eps,p,h,d<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,frac<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-1</span>):
+   
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>(t):
+       
+        <span style="color:#66d9ef">if</span> t<span style="color:#f92672">&gt;</span>frac <span style="color:#f92672">and</span> t<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>frac:
+            z <span style="color:#f92672">=</span> h<span style="color:#f92672">*</span>t <span style="color:#f92672">+</span> d
+            r <span style="color:#f92672">=</span> r0<span style="color:#f92672">+</span>r_eps
+        <span style="color:#66d9ef">elif</span> t<span style="color:#f92672">&lt;=</span>frac:
+            z <span style="color:#f92672">=</span> h<span style="color:#f92672">*</span>t <span style="color:#f92672">+</span> d<span style="color:#f92672">*</span>sin(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span>t<span style="color:#f92672">/</span>frac)
+            r <span style="color:#f92672">=</span> r0 <span style="color:#f92672">+</span> r_eps<span style="color:#f92672">*</span>sin(pi<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span>t<span style="color:#f92672">/</span>frac)
+        <span style="color:#66d9ef">else</span>:
+            z <span style="color:#f92672">=</span> h<span style="color:#f92672">*</span>t <span style="color:#f92672">-</span> d<span style="color:#f92672">*</span>sin(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi <span style="color:#f92672">-</span> pi<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>t)<span style="color:#f92672">/</span>frac)
+            r <span style="color:#f92672">=</span> r0 <span style="color:#f92672">-</span> r_eps<span style="color:#f92672">*</span>sin(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi <span style="color:#f92672">-</span> pi<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>t)<span style="color:#f92672">/</span>frac)
+           
+        x <span style="color:#f92672">=</span> r<span style="color:#f92672">*</span>sin(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">/</span>(p<span style="color:#f92672">/</span>h)<span style="color:#f92672">*</span>t)
+        y <span style="color:#f92672">=</span> r<span style="color:#f92672">*</span>cos(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">/</span>(p<span style="color:#f92672">/</span>h)<span style="color:#f92672">*</span>t)
+       
+        <span style="color:#66d9ef">return</span> x,y,z
+   
+    <span style="color:#66d9ef">return</span> func
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">thread</span>(radius, pitch, height, d, radius_eps, aspect<span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>):
+   
+    e1_bottom <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)
+        <span style="color:#f92672">.</span>parametricCurve(helix(radius,<span style="color:#ae81ff">0</span>,pitch,height,<span style="color:#f92672">-</span>d))<span style="color:#f92672">.</span>val())
+        
+    e1_top <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)
+        <span style="color:#f92672">.</span>parametricCurve(helix(radius,<span style="color:#ae81ff">0</span>,pitch,height,d))<span style="color:#f92672">.</span>val())
+   
+    e2_bottom <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)
+        <span style="color:#f92672">.</span>parametricCurve(helix(radius,radius_eps,pitch,height,<span style="color:#f92672">-</span>d<span style="color:#f92672">/</span>aspect))<span style="color:#f92672">.</span>val())
+        
+    e2_top <span style="color:#f92672">=</span> (cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)
+        <span style="color:#f92672">.</span>parametricCurve(helix(radius,radius_eps,pitch,height,d<span style="color:#f92672">/</span>aspect))<span style="color:#f92672">.</span>val())
+   
+    f1 <span style="color:#f92672">=</span> Face<span style="color:#f92672">.</span>makeRuledSurface(e1_bottom, e1_top)
+    f2 <span style="color:#f92672">=</span> Face<span style="color:#f92672">.</span>makeRuledSurface(e2_bottom, e2_top)
+    f3 <span style="color:#f92672">=</span> Face<span style="color:#f92672">.</span>makeRuledSurface(e1_bottom, e2_bottom)
+    f4 <span style="color:#f92672">=</span> Face<span style="color:#f92672">.</span>makeRuledSurface(e1_top, e2_top)
+   
+    sh <span style="color:#f92672">=</span> Shell<span style="color:#f92672">.</span>makeShell([f1,f2,f3,f4])
+    rv <span style="color:#f92672">=</span> Solid<span style="color:#f92672">.</span>makeSolid(sh)
+   
+    <span style="color:#66d9ef">return</span> rv
+
+radius <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.0</span>
+pitch <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.8</span>
+height <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+d <span style="color:#f92672">=</span> pitch<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>
+radius_eps <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>
+eps<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-3</span>
+
+core <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>,origin<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span>d))<span style="color:#f92672">.</span>circle(radius<span style="color:#f92672">+</span>eps)<span style="color:#f92672">.</span>extrude(height<span style="color:#f92672">+</span><span style="color:#ae81ff">1.75</span><span style="color:#f92672">*</span>d)
+th1 <span style="color:#f92672">=</span> thread(radius,pitch,height,d,radius_eps)
+
+handle <span style="color:#f92672">=</span> cq<span style="color:#f92672">.</span>Workplane(<span style="color:#e6db74">&#34;XY&#34;</span>)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">20.0</span>, <span style="color:#ae81ff">20.0</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">2.5</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">22.0</span>, <span style="color:#ae81ff">22.0</span>)<span style="color:#f92672">.</span>extrude(<span style="color:#ae81ff">3.0</span>) <span style="color:#f92672">.</span>\
+    faces(<span style="color:#e6db74">&#34;&gt;Z&#34;</span>)<span style="color:#f92672">.</span>workplane()<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">22.0</span>, <span style="color:#ae81ff">6.0</span>) <span style="color:#f92672">.</span>\
+    workplane(offset<span style="color:#f92672">=</span><span style="color:#ae81ff">16.0</span>)<span style="color:#f92672">.</span>rect(<span style="color:#ae81ff">14.0</span>, <span style="color:#ae81ff">2.0</span>)<span style="color:#f92672">.</span>loft(combine<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#f92672">.</span>\
+    edges(<span style="color:#e6db74">&#34;|Z&#34;</span>)<span style="color:#f92672">.</span>chamfer(<span style="color:#ae81ff">4.0</span>)<span style="color:#f92672">.</span>translate((<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5.3</span>))
+
+res <span style="color:#f92672">=</span> core<span style="color:#f92672">.</span>union(th1)<span style="color:#f92672">.</span>union(handle)
+</code></pre></div><p><img src="../../images/post/cadquery-collection/threaded_knob.png" alt="screwed_knob_vectorial"></p>
+<p>Can we take a moment to appreatiate the entry of the threads? (exit is similar, but not shown here). I think that&rsquo;s super nice!</p>
+<p><img src="../../images/post/cadquery-collection/thread_entry_detail.png" alt="thread_entry_detail"></p>
+<p>Well, that&rsquo;s it for the moment!</p>
+<p>Cheers,</p>
+<p>Edi</p>
 
           </div>
         </div>

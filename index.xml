@@ -17,12 +17,12 @@
     </item>
     
     <item>
-      <title>Jetson nano case and a simple screw</title>
+      <title>Jetson nano case</title>
       <link>https://eddieliberato.github.io/blog/2022-03-10-screw-and-jetson-nano/</link>
       <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://eddieliberato.github.io/blog/2022-03-10-screw-and-jetson-nano/</guid>
-      <description>My journey on upgrading an second hand 3d printer and my first project with it.</description>
+      <description>Sometime ago I acquired a jetson nano 2gb SBC (Single board Computer) and after using it a bit I felt I needed to overclock it.</description>
     </item>
     
     <item>
